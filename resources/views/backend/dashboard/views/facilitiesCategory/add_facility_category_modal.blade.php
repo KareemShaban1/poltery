@@ -31,7 +31,7 @@
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">Add New Product Category</h1>
+                        <h1 class="mb-3">Add New Facility Category</h1>
                         <!--end::Title-->
 
                     </div>
@@ -77,29 +77,32 @@
                         <!--end::Hint-->
                     </div>
 
-                    <div class="d-flex flex-column mb-8 fv-row">
+                    <div class="row">
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Name EN</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a product category english name"></i>
-                        </label>
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Name EN</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Specify a product category english name"></i>
+                            </label>
 
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter English Name"
-                            name="name_en" />
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter English Name" name="name_en" />
+                        </div>
+
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
+
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Name Ar</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Specify a product category arabic name "></i>
+                            </label>
+
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter Arabic Name" name="name_ar" />
+                        </div>
                     </div>
 
-                    <div class="d-flex flex-column mb-8 fv-row">
-
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Name Ar</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a product category arabic name "></i>
-                        </label>
-
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter Arabic Name"
-                            name="name_ar" />
-                    </div>
 
 
 

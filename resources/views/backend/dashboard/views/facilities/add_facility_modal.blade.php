@@ -86,11 +86,11 @@
                                     title="Specify a facility english title"></i>
                             </label>
 
-                            <input type="text" class="form-control form-control-solid" placeholder="Enter English Name"
-                                name="name_en" />
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter English Name" name="name_en" />
                         </div>
 
-                        <div class="d-flex flex-column mb-8 fv-row">
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                 <span class="required">Name Ar</span>
@@ -98,15 +98,20 @@
                                     title="Specify a facility arabic title "></i>
                             </label>
 
-                            <input type="text" class="form-control form-control-solid" placeholder="Enter Arabic Name"
-                                name="name_ar" />
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter Arabic Name" name="name_ar" />
                         </div>
                     </div>
 
 
                     <div class="d-flex flex-column mb-8 fv-row">
 
-                        <textarea id="summernote"></textarea>
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">Content</span>
+
+                        </label>
+
+                        <textarea id="summernote" name="content"></textarea>
 
                     </div>
 

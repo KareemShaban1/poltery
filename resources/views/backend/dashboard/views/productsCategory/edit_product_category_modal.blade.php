@@ -79,29 +79,33 @@
                         <!--end::Hint-->
                     </div>
 
-                    <div class="d-flex flex-column mb-8 fv-row">
 
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Name EN</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a product english title"></i>
-                        </label>
+                    <div class="row">
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter English Title"
-                            name="name_en" value="{{ $category->name_en }}" />
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Name EN</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Specify a product english title"></i>
+                            </label>
+
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter English Title" name="name_en" value="{{ $category->name_en }}" />
+                        </div>
+
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
+
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Name Ar</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Specify a product arabic name "></i>
+                            </label>
+
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter Arabic Tit;e" name="name_ar" value="{{ $category->name_ar }}" />
+                        </div>
                     </div>
 
-                    <div class="d-flex flex-column mb-8 fv-row">
-
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Name Ar</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a product arabic name "></i>
-                        </label>
-
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter Arabic Tit;e"
-                            name="name_ar" value="{{ $category->name_ar }}" />
-                    </div>
 
 
 

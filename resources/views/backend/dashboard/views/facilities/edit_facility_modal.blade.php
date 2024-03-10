@@ -79,29 +79,47 @@
                         <!--end::Hint-->
                     </div>
 
-                    <div class="d-flex flex-column mb-8 fv-row">
+                    <div class="row">
 
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Name EN</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a facility english name"></i>
-                        </label>
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter English Title"
-                            name="name_en" value="{{ $facility->name_en }}" />
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Name EN</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Specify a facility english name"></i>
+                            </label>
+
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter English Title" name="name_en" value="{{ $facility->name_en }}" />
+                        </div>
+
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
+
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Name Ar</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Specify a facility arabic name "></i>
+                            </label>
+
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter Arabic Tit;e" name="name_ar" value="{{ $facility->name_ar }}" />
+                        </div>
+
                     </div>
 
-                    <div class="d-flex flex-column mb-8 fv-row">
+
+                    <div>
 
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Name Ar</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a facility arabic name "></i>
+                            <span class="required">Content</span>
+
                         </label>
 
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter Arabic Tit;e"
-                            name="name_ar" value="{{ $facility->name_ar }}" />
+                        <textarea id="summernote" name="content"></textarea>
+
                     </div>
+
+
 
 
 
