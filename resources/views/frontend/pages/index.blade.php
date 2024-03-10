@@ -2,8 +2,8 @@
 
 @section('content')
     <!--==========================
-                                                                      Intro Section
-                                                                    ============================-->
+    Intro Section
+                                                                            ============================-->
     <section id="intro">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
@@ -18,8 +18,8 @@
 
         <div class="default-section" id="home-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center service-heading animate-box">
+                <div class="row" style="text-align: center">
+                    <div class="col-md-12 text-center service-heading animate-box">
                         <h2>Our Awesome Features</h2>
                         {{-- <p>Far far away, behind the word mountains, far from the
                             countries Vokalia and Consonantia, there live the

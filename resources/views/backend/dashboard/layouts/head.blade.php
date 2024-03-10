@@ -37,6 +37,9 @@
 
     <link href="{{ asset('backend/css/custom.css') }}" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/summernote@latest/dist/summernote-bs4.min.css" rel="stylesheet">
+
+
 
     @stack('styles')
 

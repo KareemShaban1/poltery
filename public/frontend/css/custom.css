@@ -5,6 +5,7 @@
 .service-heading {
           margin-bottom: 30px;
       }
+
 @media (min-width: 992px){
 .col-md-offset-3 {
     margin-left: 25%;
@@ -13,5 +14,7 @@
           width: 50%;
       }
 }
+
+
 
 

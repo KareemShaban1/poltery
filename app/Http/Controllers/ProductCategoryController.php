@@ -66,16 +66,31 @@ class ProductCategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $validatedData = $request->validate([
+            'name_en' => 'required|string',
+            'name_ar' => 'nullable|string',
+            'image' => 'nullable'
+        ], [
+            'name_en.required' => 'حقل الأسم مطلوب',
+        ]);
+        $productCategory = ProductCategory::findOrFail($id);
+        $validatedData['image'] = $request->image ? $this->ProcessImage($request, 'image', 'productsCategory') : $productCategory->image;
+        $productCategory->update($validatedData);
+        return redirect()->route('productsCategory.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
+        $productCategory = ProductCategory::findOrFail($id);
+        $productCategory->delete();
+        return redirect()->route('productsCategory.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
     }
 }

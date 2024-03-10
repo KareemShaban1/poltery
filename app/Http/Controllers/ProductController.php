@@ -85,7 +85,6 @@ class ProductController extends Controller
         ]);
         $product = Product::findOrFail($id);
         $validatedData['image'] = $request->image ? $this->ProcessImage($request, 'image', 'products') : $product->image;
-        // dd($request->all(), $validatedData);
         $product->update($validatedData);
         return redirect()->route('products.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
 
@@ -94,8 +93,12 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
+        $product = Product::findOrFail($id);
+        $product->delete();
+        return redirect()->route('products.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
+
     }
 }

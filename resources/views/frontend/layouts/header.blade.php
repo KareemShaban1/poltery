@@ -12,14 +12,47 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active"><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('about-us') }}">About Us</a></li>
-                <li><a href="#speakers">Facilities</a></li>
-                <li><a href="#schedule">Our Products</a></li>
-                <li><a href="#venue">Recipes</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+
+                <li class="{{ request()->routeIs('home') ? 'menu-active' : '' }}"><a href="{{ route('home') }}">
+                        {{ trans('frontend.home') }}</a>
+                </li>
+                <li class="{{ request()->routeIs('about-us') ? 'menu-active' : '' }}"><a
+                        href="{{ route('about-us') }}">About
+                        Us</a></li>
+                <li class="{{ request()->routeIs('facilities') ? 'menu-active' : '' }}"><a
+                        href="{{ route('facilities') }}">Facilities</a></li>
+                <li class="{{ request()->routeIs('products') ? 'menu-active' : '' }}"><a
+                        href="{{ route('products') }}">Our
+                        Products</a></li>
+                <li class="{{ request()->routeIs('recipes') ? 'menu-active' : '' }}"><a
+                        href="{{ route('recipes') }}">Recipes</a></li>
+                <li class="{{ request()->routeIs('contact-us') ? 'menu-active' : '' }}"><a
+                        href="{{ route('contact-us') }}">Contact Us</a></li>
+                @if (App::getLocale() == 'en')
+                    <li>
+                        <a href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">
+                            <img src="{{ URL::asset('backend/flags/EG.png') }}" alt="">
+                            <span class="mx-2 "> عربى </span>
+
+                        </a>
+                    </li>
+                @else
+                    <li><a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">
+                            <span class="mx-2">English</span> <img src="{{ URL::asset('backend/flags/US.png') }}"
+                                alt="">
+                        </a>
+                    </li>
+                @endif
                 {{-- <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li> --}}
             </ul>
+
+            <ul class="nav-menu" style="display: flex; gap:20px">
+
+                {{-- <li>عربى</li>
+                <li>english</li> --}}
+            </ul>
         </nav><!-- #nav-menu-container -->
+
+
     </div>
 </header><!-- #header -->

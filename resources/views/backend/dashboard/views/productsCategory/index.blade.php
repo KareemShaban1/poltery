@@ -40,7 +40,7 @@
 
 
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#kt_modal_edit_category{{ $category->id }}">
+                                            data-bs-target="#kt_modal_edit_product_category{{ $category->id }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
 

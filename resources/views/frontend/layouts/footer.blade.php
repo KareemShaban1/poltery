@@ -6,7 +6,7 @@
           <div class="container">
               <div class="row">
 
-                  <div class="col-lg-4 col-md-6 footer-info">
+                  <div class="col-lg-4 col-md-4 footer-info">
                       {{-- <img src="img/logo.png" alt="TheEvenet"> --}}
                       <h3>ElAbed Poultry</h3>
                       <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et
@@ -17,7 +17,7 @@
 
 
 
-                  <div class="col-lg-4 col-md-6 footer-links">
+                  <div class="col-lg-4 col-md-4 footer-links">
                       <h4>Useful Links</h4>
                       <ul>
                           <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
@@ -29,7 +29,7 @@
                       </ul>
                   </div>
 
-                  <div class="col-lg-4 col-md-6 footer-contact">
+                  <div class="col-lg-4 col-md-4 footer-contact">
                       <h4>Contact Us</h4>
                       <p>
                           A108 Adam Street <br>
@@ -58,7 +58,7 @@
               &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
           </div>
           <div class="credits">
-            
+
               Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div> --}}
       </div>

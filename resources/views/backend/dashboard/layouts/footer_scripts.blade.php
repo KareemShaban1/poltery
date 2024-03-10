@@ -27,5 +27,7 @@
 <script src="{{ asset('backend/datatables/export-tables/vfs_fonts.js') }}" defer></script>
 <script src="{{ asset('backend/datatables/export-tables/buttons.print.min.js') }}" defer></script>
 
+<script src="https://cdn.jsdelivr.net/npm/summernote@latest/dist/summernote-bs4.min.js"></script>
+
 
 @stack('scripts')

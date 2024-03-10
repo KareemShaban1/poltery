@@ -26,9 +26,20 @@
     <link href="{{ asset('frontend/lib/venobox/venobox.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
+    <!-- CSS file imports -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Main Stylesheet File -->
-    <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+
+    @if (App::getLocale() == 'en')
+        <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+    @else
+        <link href="{{ asset('frontend/css/rtl_style.css') }}" rel="stylesheet">
+    @endif
+
     <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
+
+    @stack('styles')
 
 
 </head>
@@ -59,11 +70,16 @@
     <script src="{{ asset('frontend/lib/venobox/venobox.min.js') }}"></script>
     <script src="{{ asset('frontend/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
     <!-- Contact Form JavaScript File -->
     <script src="{{ asset('frontend/contactform/contactform.js') }}"></script>
 
     <!-- Template Main Javascript File -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+
+
 </body>
 
 </html>

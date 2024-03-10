@@ -27,13 +27,13 @@
             <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
                 <!--begin:Form-->
                 <form id="kt_modal_new_product_form" class="form" enctype="multipart/form-data"
-                    action="{{ route('products.update', $category->id) }}" method="POST">
+                    action="{{ route('productsCategory.update', $category->id) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">Edit Product</h1>
+                        <h1 class="mb-3">Edit Product Category</h1>
                         <!--end::Title-->
 
                     </div>
@@ -82,46 +82,31 @@
                     <div class="d-flex flex-column mb-8 fv-row">
 
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Title EN</span>
+                            <span class="required">Name EN</span>
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Specify a product english title"></i>
                         </label>
 
                         <input type="text" class="form-control form-control-solid" placeholder="Enter English Title"
-                            name="title_en" value="{{ $category->title_en }}" />
+                            name="name_en" value="{{ $category->name_en }}" />
                     </div>
 
                     <div class="d-flex flex-column mb-8 fv-row">
 
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Title Ar</span>
+                            <span class="required">Name Ar</span>
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a product arabic title "></i>
+                                title="Specify a product arabic name "></i>
                         </label>
 
                         <input type="text" class="form-control form-control-solid" placeholder="Enter Arabic Tit;e"
-                            name="title_ar" value="{{ $category->title_ar }}" />
+                            name="name_ar" value="{{ $category->name_ar }}" />
                     </div>
 
 
 
 
-                    <div class="d-flex flex-column mb-8">
-                        <label class="fs-6 fw-bold mb-2">Content</label>
-                        <textarea class="form-control form-control-solid" rows="3" name="content" placeholder="Type Target Details">
-                            {{ $category->content }}
-                        </textarea>
-                    </div>
 
-
-                    <div class="d-flex flex-column mb-8">
-                        <label class="form-check form-switch form-check-custom form-check-solid">
-                            <input class="form-check-input" type="checkbox" name="active" value="1"
-                                {{ $category->active ? 'checked' : '' }} />
-
-                            <span class="form-check-label fw-bold text-muted">Active</span>
-                        </label>
-                    </div>
 
                     <!--begin::Actions-->
                     <div class="text-center">
