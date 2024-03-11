@@ -23,8 +23,11 @@ class Facility extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_ar','name_en','image','content','category_id'];
+    protected $fillable = ['name_ar','name_en','image','content_en','content_ar','category_id'];
 
+    public function facilityCategory(){
+        return $this->belongsTo(FacilityCategory::class,'category_id');
+    }
     public function getImageUrlAttribute()
     {
         if (!$this->image) {
@@ -46,5 +49,15 @@ class Facility extends Model
     public function getNameAttribute()
     {
         return App::getLocale() === 'en' ? $this->name_en : $this->name_ar;
+    }
+
+    /**
+    * Get the name attribute based on the current locale.
+    *
+    * @return string
+    */
+    public function getContentAttribute()
+    {
+        return App::getLocale() === 'en' ? $this->content_en : $this->content_ar;
     }
 }

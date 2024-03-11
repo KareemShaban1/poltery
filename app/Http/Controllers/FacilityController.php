@@ -30,7 +30,8 @@ class FacilityController extends Controller
         $validatedData = $request->validate([
             'name_en' => 'required|string',
             'name_ar' => 'nullable|string',
-            'content' => 'nullable|string',
+            'content_en' => 'nullable|string',
+            'content_ar' => 'nullable|string',
             'category_id' => 'required',
             'image' => 'required'
         ], [
@@ -61,6 +62,8 @@ class FacilityController extends Controller
         $validatedData = $request->validate([
            'name_en' => 'required|string',
            'name_ar' => 'nullable|string',
+           'content_en' => 'nullable|string',
+           'content_ar' => 'nullable|string',
            'category_id' => 'required',
            'image' => 'sometimes'
         ], [

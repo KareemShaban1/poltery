@@ -16,18 +16,17 @@
                 <li class="{{ request()->routeIs('home') ? 'menu-active' : '' }}"><a href="{{ route('home') }}">
                         {{ trans('frontend.home') }}</a>
                 </li>
-                <li class="{{ request()->routeIs('about-us') ? 'menu-active' : '' }}"><a
-                        href="{{ route('about-us') }}">About
-                        Us</a></li>
+                <li class="{{ request()->routeIs('about-us') ? 'menu-active' : '' }}"><a href="{{ route('about-us') }}">
+                        {{ trans('frontend.about_us') }}
+                    </a></li>
                 <li class="{{ request()->routeIs('facilities') ? 'menu-active' : '' }}"><a
-                        href="{{ route('facilities') }}">Facilities</a></li>
+                        href="{{ route('facilities') }}">{{ trans('frontend.facilities') }}</a></li>
                 <li class="{{ request()->routeIs('products') ? 'menu-active' : '' }}"><a
-                        href="{{ route('products') }}">Our
-                        Products</a></li>
+                        href="{{ route('products') }}">{{ trans('frontend.products') }}</a></li>
                 <li class="{{ request()->routeIs('recipes') ? 'menu-active' : '' }}"><a
-                        href="{{ route('recipes') }}">Recipes</a></li>
+                        href="{{ route('recipes') }}">{{ trans('frontend.recipes') }}</a></li>
                 <li class="{{ request()->routeIs('contact-us') ? 'menu-active' : '' }}"><a
-                        href="{{ route('contact-us') }}">Contact Us</a></li>
+                        href="{{ route('contact-us') }}">{{ trans('frontend.contact_us') }}</a></li>
                 @if (App::getLocale() == 'en')
                     <li>
                         <a href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">

@@ -267,7 +267,7 @@
                                         <h3>My face not my heart</h3>
                                     </div> --}}
                                         <div class="description-prod">
-                                            <p>{{ $facility->content }}</p>
+                                            <p>{!! $facility->content !!}</p>
                                         </div>
                                         <div class="card-footer">
                                             <div class="wcf-left">

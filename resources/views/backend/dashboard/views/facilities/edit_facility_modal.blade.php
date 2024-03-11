@@ -1,7 +1,7 @@
 <div class="modal fade" id="kt_modal_edit_facility{{ $facility->id }}" tabindex="-1" aria-hidden="true"
     style="direction: ltr">
     <!--begin::Modal dialog-->
-    <div class="modal-dialog modal-dialog-centered mw-650px">
+    <div class="modal-dialog modal-dialog-centered mw-850px">
         <!--begin::Modal content-->
         <div class="modal-content rounded">
             <!--begin::Modal header-->
@@ -107,23 +107,6 @@
 
                     </div>
 
-
-                    <div>
-
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Content</span>
-
-                        </label>
-
-                        <textarea id="summernote" name="content"></textarea>
-
-                    </div>
-
-
-
-
-
-
                     <div class="mb-10">
                         <label class="form-label fs-6 fw-bold">Category:</label>
                         <select class="form-select form-select-solid fw-bolder" name="category_id"
@@ -136,6 +119,40 @@
 
                         </select>
                     </div>
+
+
+                    <div class="d-flex flex-column mb-8 fv-row">
+
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">Content En</span>
+
+                        </label>
+
+                        <textarea class="summernote" name="content_en">
+                            {{ $facility->content_en }}
+                        </textarea>
+
+                    </div>
+
+                    <div class="d-flex flex-column mb-8 fv-row">
+
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">Content Ar</span>
+
+                        </label>
+
+                        <textarea class="summernote" name="content_ar">
+                            {{ $facility->content_ar }}
+                        </textarea>
+
+                    </div>
+
+
+
+
+
+
+
 
                     <!--begin::Actions-->
                     <div class="text-center">
@@ -157,3 +174,11 @@
     </div>
     <!--end::Modal dialog-->
 </div>
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('.summernote').summernote();
+        });
+    </script>
+@endpush

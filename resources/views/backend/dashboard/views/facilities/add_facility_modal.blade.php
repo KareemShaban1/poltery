@@ -103,18 +103,6 @@
                         </div>
                     </div>
 
-
-                    <div class="d-flex flex-column mb-8 fv-row">
-
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Content</span>
-
-                        </label>
-
-                        <textarea id="summernote" name="content"></textarea>
-
-                    </div>
-
                     <div class="mb-10">
                         <label class="form-label fs-6 fw-bold">Category:</label>
                         <select class="form-select form-select-solid fw-bolder" name="category_id"
@@ -126,6 +114,31 @@
 
                         </select>
                     </div>
+
+
+                    <div class="d-flex flex-column mb-8 fv-row">
+
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">Content en</span>
+
+                        </label>
+
+                        <textarea class="summernote" name="content_en"></textarea>
+
+                    </div>
+
+                    <div class="d-flex flex-column mb-8 fv-row">
+
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">Content ar</span>
+
+                        </label>
+
+                        <textarea class="summernote" style="direction: rtl" name="content_ar"></textarea>
+
+                    </div>
+
+
 
 
 
@@ -155,7 +168,7 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            $('#summernote').summernote();
+            $('.summernote').summernote();
         });
     </script>
 @endpush

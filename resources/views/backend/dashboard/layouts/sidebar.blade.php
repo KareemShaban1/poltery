@@ -13,9 +13,9 @@
                 </div>
             </div>
             <div class="menu-item">
-                <a class="menu-link active" href="../../demo8/dist/index.html">
+                <a class="{{ request()->routeIs('dashboard') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('dashboard') }}">
                     <span class="menu-icon">
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
@@ -28,7 +28,6 @@
                                     fill="black" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->
                     </span>
                     <span class="menu-title">Dashboard</span>
                 </a>
@@ -128,7 +127,6 @@
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
-                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
@@ -143,7 +141,6 @@
                                     fill="black" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->
                     </span>
                     <span class="menu-title">Pages</span>
                     <span class="menu-arrow"></span>
@@ -151,7 +148,8 @@
                 <div class="menu-sub menu-sub-accordion">
 
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('pages.index') }}">
+                        <a class="{{ request()->routeIs('pages.index') ? 'menu-link active' : 'menu-link' }} "
+                            href="{{ route('pages.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -186,7 +184,8 @@
                 <div class="menu-sub menu-sub-accordion">
 
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('products.index') }}">
+                        <a class="{{ request()->routeIs('products.index') ? 'menu-link active' : 'menu-link' }} "
+                            href="{{ route('products.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -195,7 +194,8 @@
                     </div>
 
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('productsCategory.index') }}">
+                        <a class="{{ request()->routeIs('productsCategory.index') ? 'menu-link active' : 'menu-link' }}"
+                            href="{{ route('productsCategory.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -230,7 +230,8 @@
                 <div class="menu-sub menu-sub-accordion">
 
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('facilities.index') }}">
+                        <a class="{{ request()->routeIs('facilities.index') ? 'menu-link active' : 'menu-link' }}"
+                            href="{{ route('facilities.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -239,7 +240,8 @@
                     </div>
 
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('facilitiesCategory.index') }}">
+                        <a class="{{ request()->routeIs('facilitiesCategory.index') ? 'menu-link active' : 'menu-link' }}"
+                            href="{{ route('facilitiesCategory.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>

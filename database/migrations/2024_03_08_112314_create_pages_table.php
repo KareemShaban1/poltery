@@ -16,7 +16,8 @@ return new class () extends Migration {
             $table->string('title_ar')->nullable();
             $table->string('slug')->unique();
             $table->string('image');
-            $table->longText('content');
+            $table->longText('content_en')->nullable();
+            $table->longText('content_ar')->nullable();
             $table->boolean('active')->default(0);
             $table->timestamps();
         });

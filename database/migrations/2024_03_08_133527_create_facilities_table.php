@@ -15,7 +15,8 @@ return new class () extends Migration {
             $table->string('name_en');
             $table->string('name_ar')->nullable();
             $table->string('image')->nullable();
-            $table->longText('content');
+            $table->longText('content_en')->nullable();
+            $table->longText('content_ar')->nullable();
             $table->foreignId('category_id')->constrained('facilities_category', 'id')->cascadeOnDelete();
             $table->timestamps();
         });

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FacilityCategoryController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\Frontend\FacilitiesController;
@@ -29,9 +30,7 @@ Route::group(
     ],
     function () {
 
-        Route::get('/dashboard', function () {
-            return view('backend.dashboard.views.index');
-        })->name('dashboard');
+        Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 
 
         Route::get('/pages', [PageController::class,'index'])->name('pages.index');

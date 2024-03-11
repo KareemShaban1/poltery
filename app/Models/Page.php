@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Str;
 
 class Page extends Model
@@ -22,7 +23,7 @@ class Page extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_en','title_ar','image','content','active'];
+    protected $fillable = ['title_en','title_ar','image','content_en','content_ar','active'];
 
 
     // ----------------------------------------------------------------------------------- //
@@ -51,4 +52,23 @@ class Page extends Model
     } // $page->image_url
 
 
+    /**
+    * Get the name attribute based on the current locale.
+    *
+    * @return string
+    */
+    public function getNameAttribute()
+    {
+        return App::getLocale() === 'en' ? $this->name_en : $this->name_ar;
+    }
+
+    /**
+    * Get the name attribute based on the current locale.
+    *
+    * @return string
+    */
+    public function getContentAttribute()
+    {
+        return App::getLocale() === 'en' ? $this->content_en : $this->content_ar;
+    }
 }
