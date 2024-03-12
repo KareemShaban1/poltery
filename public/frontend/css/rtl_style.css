@@ -4,7 +4,7 @@
   src: url(../fonts/Almarai-Bold.ttf);
   src: url(../fonts/Almarai-Regular.ttf);
   src: url(../fonts/Almarai-Regular.ttf);
-  
+
   }
 
 body {
@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -1671,4 +1671,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   #subscribe button {
     margin-top: 10px;
   }
+}
+
+.card-footer .wcf-footer-left {
+    float: right;
+
+}
+
+.card-footer .wcf-footer-right {
+    float: left;
 }

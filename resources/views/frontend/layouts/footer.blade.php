@@ -17,7 +17,7 @@
 
 
 
-                  <div class="col-lg-4 col-md-4 footer-links">
+                  {{-- <div class="col-lg-4 col-md-4 footer-links">
                       <h4>Useful Links</h4>
                       <ul>
                           <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
@@ -27,7 +27,7 @@
                           <li><i class="fa fa-angle-right"></i> <a href="#">Recipes</a></li>
                           <li><i class="fa fa-angle-right"></i> <a href="#">Conatct Us</a></li>
                       </ul>
-                  </div>
+                  </div> --}}
 
                   <div class="col-lg-4 col-md-4 footer-contact">
                       <h4>Contact Us</h4>

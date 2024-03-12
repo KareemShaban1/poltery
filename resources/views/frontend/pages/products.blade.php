@@ -44,7 +44,7 @@
         }
 
         .wsk-cp-text {
-            padding-top: 120%;
+            padding-top: 100%;
         }
 
         .wsk-cp-text .category {
@@ -136,14 +136,14 @@
             clear: both;
         }
 
-        .card-footer .wcf-left {
-            float: left;
+        /* .card-footer .wcf-footer-left {
+                float: left;
 
-        }
+            }
 
-        .card-footer .wcf-right {
-            float: right;
-        }
+            .card-footer .wcf-footer-right {
+                float: right;
+            } */
 
         .price {
             font-size: 18px;
@@ -166,8 +166,8 @@
         a.buy-btn:hover,
         a.buy-btn:active,
         a.buy-btn:focus {
-            border-color: #FF9800;
-            background: #FF9800;
+            border-color: #f82249;
+            background: #f82249;
             color: #fff;
             text-decoration: none;
         }
@@ -223,8 +223,8 @@
             }
 
             a.buy-btn {
-                border-color: #FF9800;
-                background: #FF9800;
+                border-color: #f82249;
+                background: #f82249;
                 color: #fff;
             }
         }
@@ -243,8 +243,8 @@
     </section>
 
     <!--==========================
-                                                                                                                                          Venue Section
-                                                                                                                                        ============================-->
+                                                                                                                                                  Venue Section
+                                                                                                                                                ============================-->
     {{-- <section id="venue" class="wow fadeInUp">
 
         <div class="container-fluid">
@@ -332,7 +332,7 @@
 
         <div class="row pt-5">
             <div class="col-md-12 text-center service-heading animate-box">
-                <h2>Products</h2>
+                <h2>{{ trans('frontend.products') }}</h2>
             </div>
         </div>
         <div>
@@ -358,10 +358,10 @@
                                             player. player good work now check this link</p>
                                     </div> --}}
                                         <div class="card-footer">
-                                            <div class="wcf-left">
-                                                <span class="price">{{ $product->productCategory->name_en }}</span>
+                                            <div class="wcf-footer-left">
+                                                <span class="price">{{ $product->productCategory->name }}</span>
                                             </div>
-                                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                            <div class="wcf-footer-right"><a href="#" class="buy-btn"><i
                                                         class="zmdi zmdi-shopping-basket"></i></a></div>
                                         </div>
                                     </div>

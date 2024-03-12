@@ -1652,3 +1652,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 10px;
   }
 }
+
+
+.card-footer .wcf-footer-left {
+    float: left;
+
+}
+
+.card-footer .wcf-footer-right {
+    float: right;
+}
