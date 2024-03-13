@@ -38,22 +38,22 @@
 
                                     <td>
 
-                                        {{-- @php
+                                        @php
                                             $seo = App\Models\SeoData::where('entity_id', $product->id)
                                                 ->where('entity_type', 'product')
                                                 ->first();
                                         @endphp
                                         @if ($seo)
-                                            <a href="{{ Route('admin.seo.edit', [$product->id, 'product']) }}"
+                                            <a href="{{ Route('seo.edit', [$product->id, 'product']) }}"
                                                 class="btn btn-success btn-sm">
                                                 Edit Seo
                                             </a>
                                         @else
-                                            <a href="{{ Route('admin.seo.create', [$product->id, 'product']) }}"
+                                            <a href="{{ Route('seo.create', [$product->id, 'product']) }}"
                                                 class="btn btn-primary btn-sm">
                                                 Add Seo
                                             </a>
-                                        @endif --}}
+                                        @endif
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#kt_modal_edit_product{{ $product->id }}">
                                             <i class="fa fa-edit"></i>

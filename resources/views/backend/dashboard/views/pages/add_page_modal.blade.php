@@ -17,108 +17,121 @@
                                 transform="rotate(45 7.41422 6)" fill="black" />
                         </svg>
                     </span>
-                    <!--end::Svg Icon-->
                 </div>
-                <!--end::Close-->
             </div>
-            <!--begin::Modal header-->
-            <!--begin::Modal body-->
             <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
-                <!--begin:Form-->
-                <form id="kt_modal_new_page_form" class="form" enctype="multipart/form-data" action="{{ route('pages.store') }}" method="POST">
+                <form id="kt_modal_new_page_form" class="form" enctype="multipart/form-data"
+                    action="{{ route('pages.store') }}" method="POST">
                     @csrf
-                    <!--begin::Heading-->
                     <div class="mb-13 text-center">
-                        <!--begin::Title-->
                         <h1 class="mb-3">Add New Page</h1>
-                        <!--end::Title-->
 
                     </div>
-                    <!--end::Heading-->
 
-                    <div class="fv-row mb-7">
-                        <!--begin::Label-->
-                        <label class="d-block fw-bold fs-6 mb-5">Image</label>
-                        <!--end::Label-->
-                        <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true"
-                            style="background-image: url(assets/media/avatars/blank.png)">
-                            <!--begin::Preview existing avatar-->
-                            <div class="image-input-wrapper w-125px h-125px"
-                                style="background-image: url(assets/media/avatars/150-1.jpg);"></div>
-                            <!--end::Preview existing avatar-->
-                            <!--begin::Label-->
-                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                                <i class="bi bi-pencil-fill fs-7"></i>
-                                <!--begin::Inputs-->
-                                <input type="file" name="image" accept=".png, .jpg, .jpeg" />
-                                <input type="hidden" name="avatar_remove" />
-                                <!--end::Inputs-->
-                            </label>
-                            <!--end::Label-->
-                            <!--begin::Cancel-->
-                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-                                <i class="bi bi-x fs-2"></i>
-                            </span>
-                            <!--end::Cancel-->
-                            <!--begin::Remove-->
-                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-                                <i class="bi bi-x fs-2"></i>
-                            </span>
-                            <!--end::Remove-->
+                    <div class="row">
+
+                        <div class="fv-row mb-7 col-md-8">
+                            <label class="d-block fw-bold fs-6 mb-5">Image</label>
+
+                            <div class="image-input image-input-outline" data-kt-image-input="true"
+                                style="background-image: url(assets/media/avatars/blank.png)">
+                                <div class="image-input-wrapper w-125px h-125px"
+                                    style="background-image: url(assets/media/avatars/150-1.jpg);"></div>
+
+                                <label
+                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                    data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <input type="file" name="image" accept=".png, .jpg, .jpeg" />
+                                    <input type="hidden" name="avatar_remove" />
+                                </label>
+
+                                <span
+                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                    data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+
+                                <span
+                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                    data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                            </div>
+
+                            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
                         </div>
-                        <!--end::Image input-->
-                        <!--begin::Hint-->
-                        <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
-                        <!--end::Hint-->
+
+                        <div class="d-flex flex-column mb-8 col-md-4">
+                            <label class="form-check form-switch form-check-custom form-check-solid">
+                                <input class="form-check-input" type="checkbox" name="active" value="1"
+                                    checked="checked" />
+                                <span class="form-check-label fw-bold text-muted ml-2">Active</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
+
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Title EN</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Specify a page english title"></i>
+                            </label>
+
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter English Title" name="title_en" />
+                        </div>
+
+                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
+
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Title Ar</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Specify a page arabic title "></i>
+                            </label>
+
+                            <input type="text" class="form-control form-control-solid"
+                                placeholder="Enter Arabic Tit;e" name="title_ar" />
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="d-flex flex-column mb-8 fv-row">
+
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">Content en</span>
+
+                        </label>
+
+                        <textarea class="summernote" name="content_en"></textarea>
+
                     </div>
 
                     <div class="d-flex flex-column mb-8 fv-row">
 
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Title EN</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a page english title"></i>
+                            <span class="required">Content ar</span>
+
                         </label>
 
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter English Title"
-                            name="title_en" />
-                    </div>
+                        <textarea class="summernote" style="direction: rtl" name="content_ar"></textarea>
 
-                    <div class="d-flex flex-column mb-8 fv-row">
-
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Title Ar</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a page arabic title "></i>
-                        </label>
-
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter Arabic Tit;e"
-                            name="title_ar" />
                     </div>
 
 
-
-
-                    <div class="d-flex flex-column mb-8">
-                        <label class="fs-6 fw-bold mb-2">Content</label>
-                        <textarea class="form-control form-control-solid" rows="3" name="content" placeholder="Type Target Details"></textarea>
-                    </div>
-
-                    <div class="d-flex flex-column mb-8">
-                        <label class="form-check form-switch form-check-custom form-check-solid">
-                            <input class="form-check-input" type="checkbox" name="active" value="1"
-                                checked="checked" />
-                            <span class="form-check-label fw-bold text-muted">Active</span>
-                        </label>
-                    </div>
 
                     <!--begin::Actions-->
                     <div class="text-center">
-                        <button type="reset" id="kt_modal_new_page_cancel" class="btn btn-light me-3">Cancel</button>
+                        <button type="reset" id="kt_modal_new_page_cancel"
+                            class="btn btn-light me-3">Cancel</button>
                         <button type="submit" id="kt_modal_new_page_submit" class="btn btn-primary">
                             <span class="indicator-label">Submit</span>
                             <span class="indicator-progress">Please wait...
@@ -135,3 +148,10 @@
     </div>
     <!--end::Modal dialog-->
 </div>
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('.summernote').summernote();
+        });
+    </script>
+@endpush

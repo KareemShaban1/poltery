@@ -38,45 +38,59 @@
                     </div>
                     <!--end::Heading-->
 
-                    <div class="fv-row mb-7">
-                        <!--begin::Label-->
-                        <label class="d-block fw-bold fs-6 mb-5">Image</label>
-                        <!--end::Label-->
-                        <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true"
-                            style="background-image: url(assets/media/avatars/blank.png)">
-                            <!--begin::Preview existing avatar-->
-                            <div class="image-input-wrapper w-125px h-125px"
-                                style="background-image: url(assets/media/avatars/150-1.jpg);"></div>
-                            <!--end::Preview existing avatar-->
+                    <div class="row">
+                        <div class="fv-row mb-7 col-md-8">
                             <!--begin::Label-->
-                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                                <i class="bi bi-pencil-fill fs-7"></i>
-                                <!--begin::Inputs-->
-                                <input type="file" name="image" accept=".png, .jpg, .jpeg" />
-                                <input type="hidden" name="avatar_remove" />
-                                <!--end::Inputs-->
-                            </label>
+                            <label class="d-block fw-bold fs-6 mb-5">Image</label>
                             <!--end::Label-->
-                            <!--begin::Cancel-->
-                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-                                <i class="bi bi-x fs-2"></i>
-                            </span>
-                            <!--end::Cancel-->
-                            <!--begin::Remove-->
-                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-                                <i class="bi bi-x fs-2"></i>
-                            </span>
-                            <!--end::Remove-->
+                            <!--begin::Image input-->
+                            <div class="image-input image-input-outline" data-kt-image-input="true"
+                                style="background-image: url(assets/media/avatars/blank.png)">
+                                <!--begin::Preview existing avatar-->
+                                <div class="image-input-wrapper w-125px h-125px"
+                                    style="background-image: url(assets/media/avatars/150-1.jpg);"></div>
+                                <!--end::Preview existing avatar-->
+                                <!--begin::Label-->
+                                <label
+                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                    data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <!--begin::Inputs-->
+                                    <input type="file" name="image" accept=".png, .jpg, .jpeg" />
+                                    <input type="hidden" name="avatar_remove" />
+                                    <!--end::Inputs-->
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Cancel-->
+                                <span
+                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                    data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Cancel-->
+                                <!--begin::Remove-->
+                                <span
+                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                    data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                    <i class="bi bi-x fs-2"></i>
+                                </span>
+                                <!--end::Remove-->
+                            </div>
+                            <!--end::Image input-->
+                            <!--begin::Hint-->
+                            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                            <!--end::Hint-->
                         </div>
-                        <!--end::Image input-->
-                        <!--begin::Hint-->
-                        <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
-                        <!--end::Hint-->
+                        <div class="d-flex flex-column mb-8 col-md-4">
+                            <label class="form-check form-switch form-check-custom form-check-solid">
+                                <input class="form-check-input" type="checkbox" name="active" value="1"
+                                    {{ $page->active ? 'checked' : '' }} />
+
+                                <span class="form-check-label fw-bold text-muted">Active</span>
+                            </label>
+                        </div>
                     </div>
+
 
                     <div class="d-flex flex-column mb-8 fv-row">
 
@@ -104,25 +118,36 @@
 
 
 
+                    <div class="d-flex flex-column mb-8 fv-row">
 
-                    <div class="d-flex flex-column mb-8">
-                        <label class="fs-6 fw-bold mb-2">Content</label>
-                        <textarea class="form-control form-control-solid" rows="3" name="content" placeholder="Type Target Details">
-                            {{ $page->content }}
-                        </textarea>
-                    </div>
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">Content En</span>
 
-
-                    <div class="d-flex flex-column mb-8">
-                        <label class="form-check form-switch form-check-custom form-check-solid">
-                            <input class="form-check-input" type="checkbox" name="active" value="1"
-                                {{ $page->active ? 'checked' : '' }} />
-
-                            <span class="form-check-label fw-bold text-muted">Active</span>
                         </label>
+
+                        <textarea class="summernote" name="content_en">
+                            {{ $facility->content_en }}
+                        </textarea>
+
                     </div>
 
-                    <!--begin::Actions-->
+                    <div class="d-flex flex-column mb-8 fv-row">
+
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">Content Ar</span>
+
+                        </label>
+
+                        <textarea class="summernote" name="content_ar">
+                            {{ $facility->content_ar }}
+                        </textarea>
+
+                    </div>
+
+
+
+
+
                     <div class="text-center">
                         <button type="reset" id="kt_modal_new_page_cancel"
                             class="btn btn-light me-3">Cancel</button>
@@ -132,13 +157,15 @@
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                         </button>
                     </div>
-                    <!--end::Actions-->
                 </form>
-                <!--end:Form-->
             </div>
-            <!--end::Modal body-->
         </div>
-        <!--end::Modal content-->
     </div>
-    <!--end::Modal dialog-->
 </div>
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('.summernote').summernote();
+        });
+    </script>
+@endpush

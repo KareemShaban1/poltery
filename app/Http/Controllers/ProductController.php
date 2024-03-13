@@ -21,13 +21,8 @@ class ProductController extends Controller
         return view('backend.dashboard.views.products.index', compact('products', 'categories'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+
+
 
     /**
      * Store a newly created resource in storage.

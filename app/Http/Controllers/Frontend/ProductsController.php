@@ -20,13 +20,14 @@ class ProductsController extends Controller
         return view('frontend.pages.products', compact('products', 'productCategory'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function productCategory($id)
     {
         //
+        $products = Product::with('productCategory')->where('category_id', $id)->get();
+        return view('frontend.pages.productsCategory', compact('products'));
+
     }
+
 
     /**
      * Store a newly created resource in storage.

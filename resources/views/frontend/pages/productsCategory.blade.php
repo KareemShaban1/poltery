@@ -1,7 +1,6 @@
 @extends('frontend.layouts.master')
 
 
-
 @section('content')
     <section id="intro">
         <div class="intro-container wow fadeIn">
@@ -45,9 +44,7 @@
                                     </div> --}}
                                         <div class="card-footer">
                                             <div class="wcf-footer-left">
-                                                <a style="text-decoration: none"
-                                                    href="{{ route('products.productCategory', $product->productCategory->id) }}">
-                                                    <span class="price">{{ $product->productCategory->name }}</span></a>
+                                                <span class="price">{{ $product->productCategory->name }}</span>
                                             </div>
                                             <div class="wcf-footer-right"><a href="#" class="buy-btn"><i
                                                         class="zmdi zmdi-shopping-basket"></i></a></div>

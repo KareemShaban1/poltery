@@ -1,14 +1,26 @@
 @extends('backend.dashboard.layouts.master')
 
+@section('title')
+    Meta Data
+@endsection
+@section('page-header')
+    <!-- breadcrumb -->
+    <div class="page-title">
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="mb-0"> Meta Data</h4>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
+                    <li class="breadcrumb-item"><a href="#" class="default-color">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Meta Data</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb -->
+@endsection
 @section('content')
-    <a href="#" class="btn btn-primary er fs-6 px-8 py-4 mb-5" data-bs-toggle="modal"
-        data-bs-target="#kt_modal_new_facility">Add
-        New Facility</a>
-
-
-    @include('backend.dashboard.views.facilities.add_facility_modal')
-
-
     <!-- row -->
     <div class="row">
         <div class="col-md-12 mb-30">
@@ -19,48 +31,27 @@
                             <tr>
 
                                 <th>Id</th>
-                                <th>Name</th>
-                                <th>الصورة</th>
+                                <th> الأسم</th>
+                                <th>القيمة</th>
                                 <th>التحكم</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($facilities as $facility)
+                            @foreach ($metaData as $meta)
                                 <tr>
 
-                                    <td>{{ $facility->id }}</td>
-                                    <td>{{ $facility->name_en }}</td>
-
-                                    <td>
-                                        <img src="{{ $facility->image_url }}" height="50" width="50" alt="">
-                                    </td>
-
+                                    <td>{{ $meta->id }}</td>
+                                    <td>{{ $meta->key }}</td>
+                                    <td>{{ $meta->value }}</td>
                                     <td>
 
-                                        @php
-                                            $seo = App\Models\SeoData::where('entity_id', $facility->id)
-                                                ->where('entity_type', 'facility')
-                                                ->first();
-                                        @endphp
-                                        @if ($seo)
-                                            <a href="{{ Route('seo.edit', [$facility->id, 'facility']) }}"
-                                                class="btn btn-success btn-sm">
-                                                Edit Seo
-                                            </a>
-                                        @else
-                                            <a href="{{ Route('seo.create', [$facility->id, 'facility']) }}"
-                                                class="btn btn-primary btn-sm">
-                                                Add Seo
-                                            </a>
-                                        @endif
-                                        <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#kt_modal_edit_facility{{ $facility->id }}">
+                                        <a href="{{ route('admin.metaData.edit', $meta->id) }}"
+                                            class="btn btn-warning btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>
 
-                                        @include('backend.dashboard.views.facilities.edit_facility_modal')
 
-                                        <form action="{{ Route('facilities.destroy', $facility->id) }}" method="post"
+                                        <form action="{{ Route('admin.metaData.destroy', $meta->id) }}" method="post"
                                             style="display:inline">
                                             @csrf
                                             @method('delete')
@@ -83,11 +74,7 @@
     </div>
     <!-- row closed -->
 @endsection
-
-
 @push('scripts')
-    <script src="{{ asset('backend/js/custom/modals/new-target.js') }}"></script>
-
     <script>
         $(document).ready(function() {
 
@@ -117,7 +104,7 @@
                     {
                         extend: 'excelHtml5',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6, 7, 8]
+                            columns: [1, 2, 3]
                         }
                     },
 
