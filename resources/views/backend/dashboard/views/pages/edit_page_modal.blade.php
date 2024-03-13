@@ -126,7 +126,7 @@
                         </label>
 
                         <textarea class="summernote" name="content_en">
-                            {{ $facility->content_en }}
+                            {{ $page->content_en }}
                         </textarea>
 
                     </div>
@@ -139,7 +139,7 @@
                         </label>
 
                         <textarea class="summernote" name="content_ar">
-                            {{ $facility->content_ar }}
+                            {{ $page->content_ar }}
                         </textarea>
 
                     </div>
@@ -149,7 +149,7 @@
 
 
                     <div class="text-center">
-                        <button type="reset" id="kt_modal_new_page_cancel"
+                        <button type="reset" id="kt_modal_new_page_cancel" data-bs-dismiss="modal"
                             class="btn btn-light me-3">Cancel</button>
                         <button type="submit" id="kt_modal_new_page_submit" class="btn btn-primary">
                             <span class="indicator-label">Submit</span>

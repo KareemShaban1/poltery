@@ -110,7 +110,7 @@
 
                     <!--begin::Actions-->
                     <div class="text-center">
-                        <button type="reset" id="kt_modal_new_product_category_cancel"
+                        <button type="reset" id="kt_modal_new_product_category_cancel" data-bs-dismiss="modal"
                             class="btn btn-light me-3">Cancel</button>
                         <button type="submit" id="kt_modal_new_product_category_submit" class="btn btn-primary">
                             <span class="indicator-label">Submit</span>

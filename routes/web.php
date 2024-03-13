@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\websiteInfoController;
 use App\Http\Controllers\SeoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FacilityCategoryController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -34,6 +36,15 @@ Route::group(
         Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 
         Route::group([], function () {
+            Route::get('users', [UserController::class,'index'])->name('users.index');
+            Route::get('users/create/{id}', [UserController::class,'create'])->name('users.create');
+            Route::post('users/store', [UserController::class,'store'])->name('users.store');
+            Route::get('users/edit/{id}', [UserController::class,'edit'])->name('users.edit');
+            Route::put('users/update/{id}', [UserController::class,'update'])->name('users.update');
+            Route::delete('users/destroy/{id}', [UserController::class,'destroy'])->name('users.destroy');
+        });
+
+        Route::group([], function () {
             Route::get('seo', [SeoController::class,'index'])->name('seo.index');
             Route::get('seo/create/{id}/{type}', [SeoController::class,'create'])->name('seo.create');
             Route::post('seo/store', [SeoController::class,'store'])->name('seo.store');
@@ -42,6 +53,14 @@ Route::group(
             Route::delete('seo/destroy/{id}', [SeoController::class,'destroy'])->name('seo.destroy');
         });
 
+        Route::group([], function () {
+            Route::get('websiteInfo', [websiteInfoController::class,'index'])->name('websiteInfo.index');
+            Route::get('websiteInfo/create', [websiteInfoController::class,'create'])->name('websiteInfo.create');
+            Route::post('websiteInfo/store', [websiteInfoController::class,'store'])->name('websiteInfo.store');
+            Route::get('websiteInfo/edit/{id}', [websiteInfoController::class,'edit'])->name('websiteInfo.edit');
+            Route::put('websiteInfo/update/{id}', [websiteInfoController::class,'update'])->name('websiteInfo.update');
+            Route::delete('websiteInfo/destroy/{id}', [websiteInfoController::class,'destroy'])->name('websiteInfo.destroy');
+        });
 
         Route::group([], function () {
             Route::get('/pages', [PageController::class,'index'])->name('pages.index');
@@ -106,5 +125,6 @@ Route::group(
         Route::get('/contact-us', function () {
             return view('frontend.pages.contact_us');
         })->name('contact-us');
+
     }
 );

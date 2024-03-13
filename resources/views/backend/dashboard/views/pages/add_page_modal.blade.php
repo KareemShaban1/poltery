@@ -95,7 +95,7 @@
                             </label>
 
                             <input type="text" class="form-control form-control-solid"
-                                placeholder="Enter Arabic Tit;e" name="title_ar" />
+                                placeholder="Enter Arabic Title" name="title_ar" />
                         </div>
 
                     </div>
@@ -130,7 +130,7 @@
 
                     <!--begin::Actions-->
                     <div class="text-center">
-                        <button type="reset" id="kt_modal_new_page_cancel"
+                        <button type="reset" id="kt_modal_new_page_cancel" data-bs-dismiss="modal"
                             class="btn btn-light me-3">Cancel</button>
                         <button type="submit" id="kt_modal_new_page_submit" class="btn btn-primary">
                             <span class="indicator-label">Submit</span>

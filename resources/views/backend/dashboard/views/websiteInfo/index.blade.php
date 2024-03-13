@@ -1,19 +1,19 @@
 @extends('backend.dashboard.layouts.master')
 
 @section('title')
-    Meta Data
+    website Info
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
     <div class="page-title">
         <div class="row">
             <div class="col-sm-6">
-                <h4 class="mb-0"> Meta Data</h4>
+                <h4 class="mb-0"> website Info</h4>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
                     <li class="breadcrumb-item"><a href="#" class="default-color">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Meta Data</li>
+                    <li class="breadcrumb-item active">website Info</li>
                 </ol>
             </div>
         </div>
@@ -37,7 +37,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($metaData as $meta)
+                            @foreach ($websiteInfo as $meta)
                                 <tr>
 
                                     <td>{{ $meta->id }}</td>
@@ -45,13 +45,13 @@
                                     <td>{{ $meta->value }}</td>
                                     <td>
 
-                                        <a href="{{ route('admin.metaData.edit', $meta->id) }}"
+                                        <a href="{{ route('websiteInfo.edit', $meta->id) }}"
                                             class="btn btn-warning btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>
 
 
-                                        <form action="{{ Route('admin.metaData.destroy', $meta->id) }}" method="post"
+                                        <form action="{{ Route('websiteInfo.destroy', $meta->id) }}" method="post"
                                             style="display:inline">
                                             @csrf
                                             @method('delete')
