@@ -43,4 +43,18 @@
     });
 </script>
 
+<script src="{{ asset('backend/js/toastr.js') }}"></script>
+<script>
+    @if (session('toast_success'))
+        toastr.success("{{ session('toast_success') }}", "", {
+            "timeOut": 1000
+        }); // Set timeOut to 1000 milliseconds (1 second)
+    @endif
+    @if (session('toast_error'))
+        toastr.error("{{ session('toast_error') }}", "", {
+            "timeOut": 1000
+        }); // Set timeOut to 1000 milliseconds (1 second)
+    @endif
+</script>
+
 @stack('scripts')

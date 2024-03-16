@@ -32,7 +32,7 @@ class FacilityController extends Controller
             'name_ar' => 'nullable|string',
             'content_en' => 'nullable|string',
             'content_ar' => 'nullable|string',
-            'category_id' => 'required',
+            'category_id' => 'nullable',
             'image' => 'required'
         ], [
             'name_en.required' => 'حقل العنوان مطلوب',
@@ -64,14 +64,17 @@ class FacilityController extends Controller
            'name_ar' => 'nullable|string',
            'content_en' => 'nullable|string',
            'content_ar' => 'nullable|string',
-           'category_id' => 'required',
+           'category_id' => 'nullable',
            'image' => 'sometimes'
         ], [
            'name_en.required' => 'حقل العنوان مطلوب',
            'category_id.required' => 'حقل المحتوى مطلوب',
         ]);
         $facility = Facility::findOrFail($id);
-        $validatedData['image'] = $request->image ? $this->ProcessImage($request, 'image', 'facilities') : $facility->image;
+        $oldImage = $facility->image;
+
+        $validatedData['image'] = $request->image ? $this->ProcessImage($request, 'image', 'facilities', $oldImage) : $oldImage;
+
         $facility->update($validatedData);
         return redirect()->route('facilities.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
 

@@ -3,13 +3,13 @@
 @section('page-title')
     <div class="page-title d-flex flex-column me-5">
         <!--begin::Title-->
-        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">All Recipes</h1>
+        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">{{ trans('backend.All_Recipes') }}</h1>
         <!--end::Title-->
         <!--begin::Breadcrumb-->
         <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 pt-1">
             <!--begin::Item-->
             <li class="breadcrumb-item text-muted">
-                <a href="{{ route('dashboard') }}" class="text-muted text-hover-primary">Dashboard</a>
+                <a href="{{ route('dashboard') }}" class="text-muted text-hover-primary">{{ trans('backend.Dashboard') }}</a>
             </li>
             <!--end::Item-->
             <!--begin::Item-->
@@ -18,7 +18,7 @@
             </li>
             <!--end::Item-->
             <!--begin::Item-->
-            <li class="breadcrumb-item text-dark">All Recipes</li>
+            <li class="breadcrumb-item text-dark">{{ trans('backend.All_Recipes') }}</li>
             <!--end::Item-->
         </ul>
         <!--end::Breadcrumb-->
@@ -41,10 +41,10 @@
                         <thead>
                             <tr>
 
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>الصورة</th>
-                                <th>التحكم</th>
+                                <th>{{ trans('backend.Id') }}</th>
+                                <th>{{ trans('backend.Name') }}</th>
+                                <th>{{ trans('backend.Image') }}</th>
+                                <th>{{ trans('backend.Actions') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -68,12 +68,12 @@
                                         @if ($recipes)
                                             <a href="{{ Route('recipes.edit', [$recipe->id, 'recipe']) }}"
                                                 class="btn btn-success btn-sm">
-                                                Edit Seo
+                                                {{ trans('backend.Edit_Seo') }}
                                             </a>
                                         @else
                                             <a href="{{ Route('recipes.create', [$recipe->id, 'recipe']) }}"
                                                 class="btn btn-primary btn-sm">
-                                                Add Seo
+                                                {{ trans('backend.Add_Seo') }}
                                             </a>
                                         @endif
                                         <a href="{{ route('recipes.edit', $recipe->id) }}" class="btn btn-warning btn-sm">

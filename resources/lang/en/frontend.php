@@ -6,5 +6,6 @@ return [
           'facilities' => 'Facilities',
           'products' => 'Our Products',
           'recipes' => 'Recipes',
-          'contact_us' => 'Contact Us'
+          'contact_us' => 'Contact Us',
+          'Our_Partners' => 'Our Retail Partners',
 ];

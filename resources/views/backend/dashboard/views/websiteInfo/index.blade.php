@@ -21,6 +21,13 @@
     <!-- breadcrumb -->
 @endsection
 @section('content')
+    <a href="#" class="btn btn-primary er fs-6 px-8 py-4 mb-5" data-bs-toggle="modal"
+        data-bs-target="#kt_modal_new_info">{{ trans('backend.Add_Info') }}</a>
+
+
+    @include('backend.dashboard.views.websiteInfo.add_info_modal')
+
+
     <!-- row -->
     <div class="row">
         <div class="col-md-12 mb-30">
@@ -45,10 +52,14 @@
                                     <td>{{ $meta->value }}</td>
                                     <td>
 
-                                        <a href="{{ route('websiteInfo.edit', $meta->id) }}"
-                                            class="btn btn-warning btn-sm">
+                                        <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#kt_modal_edit_info{{ $meta->id }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
+
+                                        @include('backend.dashboard.views.websiteInfo.edit_info_modal')
+
+
 
 
                                         <form action="{{ Route('websiteInfo.destroy', $meta->id) }}" method="post"

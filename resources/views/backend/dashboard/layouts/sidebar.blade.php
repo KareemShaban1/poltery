@@ -34,6 +34,7 @@
                 </a>
             </div>
 
+            {{-- user management --}}
             <div class="menu-item">
                 <div class="menu-content pt-8 pb-2">
                     <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ trans('backend.Pages') }}</span>
@@ -118,6 +119,7 @@
                 </div>
             </div>
 
+            {{-- pages --}}
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -136,7 +138,7 @@
                             </svg>
                         </span>
                     </span>
-                    <span class="menu-title">Pages</span>
+                    <span class="menu-title">{{ trans('backend.Pages') }}</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
@@ -147,12 +149,13 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Pages</span>
+                            <span class="menu-title">{{ trans('backend.All_Pages') }}</span>
                         </a>
                     </div>
                 </div>
             </div>
 
+            {{-- products --}}
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -172,7 +175,7 @@
                         </span>
                         <!--end::Svg Icon-->
                     </span>
-                    <span class="menu-title">Products</span>
+                    <span class="menu-title">{{ trans('backend.Products') }}</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
@@ -183,7 +186,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Products</span>
+                            <span class="menu-title">{{ trans('backend.All_Products') }}</span>
                         </a>
                     </div>
 
@@ -193,7 +196,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Products Category</span>
+                            <span class="menu-title">{{ trans('backend.All_Products_Category') }}</span>
                         </a>
                     </div>
                 </div>
@@ -218,7 +221,7 @@
                             </svg>
                         </span>
                     </span>
-                    <span class="menu-title">Facilities</span>
+                    <span class="menu-title">{{ trans('backend.Facilities') }}</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
@@ -229,7 +232,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Facilities</span>
+                            <span class="menu-title">{{ trans('backend.All_Facilities') }}</span>
                         </a>
                     </div>
 
@@ -239,7 +242,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Facilities Category</span>
+                            <span class="menu-title">{{ trans('backend.All_Facilities_Category') }}</span>
                         </a>
                     </div>
                 </div>
@@ -264,7 +267,7 @@
                             </svg>
                         </span>
                     </span>
-                    <span class="menu-title">Recipes</span>
+                    <span class="menu-title">{{ trans('backend.Recipes') }}</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
@@ -275,7 +278,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Recipes</span>
+                            <span class="menu-title">{{ trans('backend.All_Recipes') }}</span>
                         </a>
                     </div>
 
@@ -303,7 +306,7 @@
                         </span>
                         <!--end::Svg Icon-->
                     </span>
-                    <span class="menu-title">Sponsors</span>
+                    <span class="menu-title">{{ trans('backend.Sponsors') }}</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
@@ -314,7 +317,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Sponsors</span>
+                            <span class="menu-title">{{ trans('backend.All_Sponsors') }}</span>
                         </a>
                     </div>
 

@@ -163,5 +163,3 @@
     <!--end::Modal dialog-->
 </div>
 
-@push('scripts')
-@endpush

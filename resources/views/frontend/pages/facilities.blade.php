@@ -51,13 +51,13 @@
 @endpush
 
 @section('content')
-    <section id="intro">
+    <section id="intro" style="background: url({{ asset('frontend/img/Facilities.jpg') }}); background-size:cover">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
-            <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-                data-autoplay="true"></a>
-            {{-- <a href="#about" class="about-btn scrollto">About The Event</a> --}}
+            <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
+            {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+                data-autoplay="true"></a> --}}
+            {{-- <a href="#about" class="about-btn scrollto"></a> --}}
         </div>
     </section>
 
@@ -120,7 +120,7 @@
                                                 <div class="row no-gutters">
 
 
-                                                    <div class="col-lg-6 col-md-6">
+                                                    <div class="col-lg-6 col-md-6" style="padding: 0px 5px">
                                                         <div class="venue-gallery">
                                                             <a href="{{ $facility->image_url }}" class="venobox"
                                                                 data-gall="venue-gallery">
@@ -128,31 +128,42 @@
                                                                     class="img-fluid">
                                                             </a>
                                                         </div>
+
                                                     </div>
+
+                                                    @php
+                                                        $additional_image = App\Models\Image::where(
+                                                            'facility_id',
+                                                            $facility->id,
+                                                        )->first();
+                                                        // dd($additional_image);
+                                                    @endphp
+
+                                                    @isset($additional_image)
+                                                        <div class="col-lg-6 col-md-6" style="padding: 0px 5px">
+                                                            <div class="venue-gallery">
+                                                                <a href="{{ $additional_image->image_url }}" class="venobox"
+                                                                    data-gall="venue-gallery">
+                                                                    <img src="{{ $additional_image->image_url }}" alt=""
+                                                                        class="img-fluid">
+                                                                </a>
+                                                            </div>
+
+                                                        </div>
+                                                    @endisset
+
 
 
                                                 </div>
                                             </div>
 
-                                            {{-- <div class="owl-carousel gallery-carousel">
-                                            <a href="{{ $facility->image_url }}" class="venobox"
-                                                data-gall="gallery-carousel"><img src="{{ $facility->image_url }}"
-                                                    alt=""></a>
-                                            <a href="{{ $facility->image_url }}" class="venobox"
-                                                data-gall="gallery-carousel"><img src="{{ $facility->image_url }}"
-                                                    alt=""></a>
-                                            <a href="{{ $facility->image_url }}" class="venobox"
-                                                data-gall="gallery-carousel"><img src="{{ $facility->image_url }}"
-                                                    alt=""></a>
 
-                                        </div> --}}
                                         </div>
 
-                                        <div class="col-md-6 p-0">
+                                        <div class="col-md-6" style="padding: 0px 5px">
 
                                             <div class="category">
-                                                <span
-                                                    style="font-weight: bold; color:#f82249">{{ $facility->name }}</span>
+                                                <span style="font-weight: bold; color:#f82249">{{ $facility->name }}</span>
                                             </div>
 
                                             <div class="description-prod">

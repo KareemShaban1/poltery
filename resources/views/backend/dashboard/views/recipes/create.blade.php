@@ -1,7 +1,7 @@
 @extends('backend.dashboard.layouts.master')
 
 @section('title')
-    Create Recipe
+    {{ trans('backend.Add_Recipe') }}
 @endsection
 
 @section('page-header')
@@ -9,12 +9,13 @@
     <div class="page-title">
         <div class="row">
             <div class="col-sm-6">
-                <h4 class="mb-0">Create Recipe</h4>
+                <h4 class="mb-0">{{ trans('backend.Add_Recipe') }}</h4>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
-                    <li class="breadcrumb-item"><a href="#" class="default-color">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Create Recipe</li>
+                    <li class="breadcrumb-item"><a href="#" class="default-color">{{ trans('backend.Dashboard') }}</a>
+                    </li>
+                    <li class="breadcrumb-item active">{{ trans('backend.Add_Recipe') }}</li>
                 </ol>
             </div>
         </div>
@@ -34,13 +35,13 @@
 
                         <div class="mb-13 text-center">
 
-                            <h1 class="mb-3">Add New Recipe</h1>
+                            <h1 class="mb-3">{{ trans('backend.Add_Recipe') }}</h1>
 
                         </div>
 
                         <div class="fv-row mb-7">
                             <!--begin::Label-->
-                            <label class="d-block fw-bold fs-6 mb-5">Image</label>
+                            <label class="d-block fw-bold fs-6 mb-5">{{ trans('backend.Image') }}</label>
                             <!--end::Label-->
                             <!--begin::Image input-->
                             <div class="image-input image-input-outline" data-kt-image-input="true"
@@ -83,7 +84,7 @@
                             <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                    <span class="required">Title EN</span>
+                                    <span class="required">{{ trans('backend.Title_En') }}</span>
                                     <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                         title="Specify a recipe english title"></i>
                                 </label>
@@ -95,7 +96,7 @@
                             <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                    <span class="required">Title Ar</span>
+                                    <span class="required">{{ trans('backend.Title_Ar') }}</span>
                                     <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                         title="Specify a recipe arabic title "></i>
                                 </label>
@@ -110,7 +111,7 @@
                             <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                    <span class="required">Type EN</span>
+                                    <span class="required">{{ trans('backend.Type_En') }}</span>
                                     <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                         title="Specify a recipe english type"></i>
                                 </label>
@@ -122,7 +123,7 @@
                             <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                    <span class="required">Type Ar</span>
+                                    <span class="required">{{ trans('backend.Type_Ar') }}</span>
                                     <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                         title="Specify a recipe arabic type "></i>
                                 </label>
@@ -135,7 +136,7 @@
                         <div class="d-flex flex-column mb-8 fv-row" style="direction: ltr">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Description en</span>
+                                <span class="required">{{ trans('backend.Description_En') }}</span>
 
                             </label>
 
@@ -146,7 +147,7 @@
                         <div class="d-flex flex-column mb-8 fv-row">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span>Description ar</span>
+                                <span>{{ trans('backend.Description_Ar') }}</span>
 
                             </label>
 
@@ -157,7 +158,7 @@
                         <div class="d-flex flex-column mb-8 fv-row" style="direction: ltr">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Ingredients en</span>
+                                <span class="required">{{ trans('backend.Ingredients_En') }}</span>
 
                             </label>
 
@@ -168,7 +169,7 @@
                         <div class="d-flex flex-column mb-8 fv-row">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span>Ingredients ar</span>
+                                <span>{{ trans('backend.Ingredients_Ar') }}</span>
 
                             </label>
 
@@ -181,7 +182,7 @@
                         <div class="d-flex flex-column mb-8 fv-row" style="direction: ltr">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Preparation en</span>
+                                <span class="required">{{ trans('backend.Preparation_En') }}</span>
 
                             </label>
 
@@ -192,7 +193,7 @@
                         <div class="d-flex flex-column mb-8 fv-row">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span>Preparation ar</span>
+                                <span>{{ trans('backend.Preparation_Ar') }}</span>
 
                             </label>
 
@@ -200,7 +201,8 @@
 
                         </div>
 
-                        <button type="submit" class="btn btn-success btn-md nextBtn btn-lg ">أضافة</button>
+                        <button type="submit"
+                            class="btn btn-success btn-md nextBtn btn-lg ">{{ trans('backend.Add') }}</button>
 
 
                     </form>

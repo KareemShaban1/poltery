@@ -8,7 +8,7 @@
 
       <div class="container">
           <div class="section-header">
-              <h2>Sponsors</h2>
+              <h2>{{ trans('frontend.Our_Partners') }}</h2>
           </div>
 
           <div class="row no-gutters supporters-wrap clearfix">

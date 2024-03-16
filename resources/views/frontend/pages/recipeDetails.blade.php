@@ -103,9 +103,10 @@
     <section id="intro">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-                data-autoplay="true"></a>
-            {{-- <a href="#about" class="about-btn scrollto">About The Event</a> --}}
+            <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
+            {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+                data-autoplay="true"></a> --}}
+            {{-- <a href="#about" class="about-btn scrollto"></a> --}}
         </div>
     </section>
     <section>

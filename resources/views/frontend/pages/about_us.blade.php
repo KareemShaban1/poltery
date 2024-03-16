@@ -1,13 +1,13 @@
 @extends('frontend.layouts.master')
 
 @section('content')
-    <section id="intro">
+    <section id="intro" style="background: url({{ asset('frontend/img/About_Us.jpg') }}); background-size:cover">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
-            <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-                data-autoplay="true"></a>
-            {{-- <a href="#about" class="about-btn scrollto">About The Event</a> --}}
+            <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
+            {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+                data-autoplay="true"></a> --}}
+            {{-- <a href="#about" class="about-btn scrollto"></a> --}}
         </div>
     </section>
     <section class="default-section" id="about-us">
@@ -17,7 +17,7 @@
                     <h2>About Us</h2>
                 </div>
             </div>
-
+            {{-- elabed.png --}}
 
             <div class="row">
                 <div class="col-md-6 animate-box">
@@ -31,17 +31,6 @@
                                 into a thriving enterprise with over 40 farms spread across Egypt.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 animate-box">
-                    <div class="services">
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 animate-box">
                     <div class="services">
                         <i class="icon-laptop"></i>
                         <div class="desc">
@@ -59,13 +48,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 animate-box">
-                    <div class="services">
 
-                    </div>
+
+                <div class="col-md-6 animate-box" style="display: flex; justify-content:center">
+
+                    <img src="{{ asset('frontend/img/elabed.png') }}" alt="">
+
                 </div>
-
             </div>
+
 
         </div>
     </section>

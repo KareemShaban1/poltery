@@ -16,7 +16,7 @@ return [
           'Phone' => 'رقم الهاتف',
           'Email' => 'البريد الألكترونى',
           'Contact_Us' => 'تواصل معنا',
-          '' => '',
+          'Our_Partners' => 'Our Retail Partners',
           '' => '',
           '' => '',
           '' => '',

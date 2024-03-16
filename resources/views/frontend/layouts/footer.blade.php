@@ -17,6 +17,10 @@
 
 
 
+                  @php
+                      $website_info = App\Models\WebsiteInfo::pluck('value', 'key');
+
+                  @endphp
                   <div class="col-lg-4 col-md-4 footer-contact">
                       <h4>Contact Us</h4>
                       <p>
@@ -25,10 +29,15 @@
                           <strong>Email:</strong> info@elabedfarms.com<br>
                       </p>
 
+
                       <div class="social-links">
-                          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+
+                          <a @if (!empty($website_info['facebook_link'])) href="{{ $website_info['facebook_link'] }}" @endif
+                              class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                          <a @if (!empty($website_info['instgram_link'])) href="{{ $website_info['instgram_link'] }}" @endif
+                              class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                          <a @if (!empty($website_info['youtube_link'])) href="{{ $website_info['youtube_link'] }}" @endif
+                              class="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
 
                       </div>
 

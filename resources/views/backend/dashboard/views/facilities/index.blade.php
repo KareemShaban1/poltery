@@ -77,12 +77,19 @@
                                                 {{ trans('backend.Add_Seo') }}
                                             </a>
                                         @endif
+
+                                        <a href="#" class="btn btn-success btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#kt_modal_facility_image">
+                                            {{ trans('backend.Add_Image') }}
+                                            {{-- <i class="fa fa-create"></i> --}}
+                                        </a>
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#kt_modal_edit_facility{{ $facility->id }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
 
                                         @include('backend.dashboard.views.facilities.edit_facility_modal')
+                                        @include('backend.dashboard.views.facilities.add_facility_image_modal')
 
                                         <form action="{{ Route('facilities.destroy', $facility->id) }}" method="post"
                                             style="display:inline">

@@ -8,6 +8,7 @@ use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\Frontend\FacilitiesController;
 use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\Frontend\RecipesController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
@@ -99,6 +100,13 @@ Route::group(
             Route::post('/sponsor/store', [SponsorController::class,'store'])->name('sponsors.store');
             Route::put('/sponsor/update/{id}', [SponsorController::class,'update'])->name('sponsors.update');
             Route::delete('/sponsor/destroy/{id}', [SponsorController::class,'destroy'])->name('sponsors.destroy');
+        });
+
+        Route::group([], function () {
+            Route::get('/images', [ImageController::class,'index'])->name('images.index');
+            Route::post('/image/store', [ImageController::class,'store'])->name('images.store');
+            Route::put('/image/update/{id}', [ImageController::class,'update'])->name('images.update');
+            Route::delete('/image/destroy/{id}', [ImageController::class,'destroy'])->name('images.destroy');
         });
 
 
