@@ -22,10 +22,10 @@
             overflow: hidden;
             position: relative;
             /* top: 50%;
-                                                                                                                                                                                                                            right: 50%;
-                                                                                                                                                                                                                            bottom: 50%;
-                                                                                                                                                                                                                            left: 50%;
-                                                                                                                                                                                                                            position: absolute; */
+                                                                                                                                                                                                                                right: 50%;
+                                                                                                                                                                                                                                bottom: 50%;
+                                                                                                                                                                                                                                left: 50%;
+                                                                                                                                                                                                                                position: absolute; */
             /* transform: translate(-50%, -50%); */
         }
 
@@ -187,7 +187,7 @@
                                     <div class="ft-recipe">
 
                                         <div class="ft-recipe__thumb">
-                                            <h3>Today's Featured Recipe</h3><img src="{{ $recipe->image_url }}"
+                                            <h3>{{ $recipe->type }}</h3><img src="{{ $recipe->image_url }}"
                                                 alt="Strawberry Waffle" />
                                         </div>
                                         <div class="ft-recipe__content">
@@ -216,7 +216,8 @@
 
                                             </p>
                                             <footer class="content__footer"><a
-                                                    href="{{ route('recipeDetails', $recipe->id) }}">View Recipe</a></footer>
+                                                    href="{{ route('recipeDetails', $recipe->id) }}">View Recipe</a>
+                                            </footer>
                                         </div>
                                     </div>
                                 </div>

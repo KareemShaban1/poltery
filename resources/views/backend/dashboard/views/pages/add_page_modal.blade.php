@@ -24,14 +24,14 @@
                     action="{{ route('pages.store') }}" method="POST">
                     @csrf
                     <div class="mb-13 text-center">
-                        <h1 class="mb-3">Add New Page</h1>
+                        <h1 class="mb-3">{{ trans('backend.Add_Page') }}</h1>
 
                     </div>
 
                     <div class="row">
 
                         <div class="fv-row mb-7 col-md-8">
-                            <label class="d-block fw-bold fs-6 mb-5">Image</label>
+                            <label class="d-block fw-bold fs-6 mb-5">{{ trans('backend.Image') }}</label>
 
                             <div class="image-input image-input-outline" data-kt-image-input="true"
                                 style="background-image: url(assets/media/avatars/blank.png)">
@@ -66,7 +66,8 @@
                             <label class="form-check form-switch form-check-custom form-check-solid">
                                 <input class="form-check-input" type="checkbox" name="active" value="1"
                                     checked="checked" />
-                                <span class="form-check-label fw-bold text-muted ml-2">Active</span>
+                                <span
+                                    class="form-check-label fw-bold text-muted ml-2">{{ trans('backend.Active') }}</span>
                             </label>
                         </div>
                     </div>
@@ -77,7 +78,7 @@
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Title EN</span>
+                                <span class="required">{{ trans('backend.Title_En') }}</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                     title="Specify a page english title"></i>
                             </label>
@@ -89,7 +90,7 @@
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Title Ar</span>
+                                <span class="required">{{ trans('backend.Title_Ar') }}</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                     title="Specify a page arabic title "></i>
                             </label>
@@ -107,7 +108,7 @@
                     <div class="d-flex flex-column mb-8 fv-row">
 
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Content en</span>
+                            <span class="required">{{ trans('backend.Content_En') }}</span>
 
                         </label>
 
@@ -118,7 +119,7 @@
                     <div class="d-flex flex-column mb-8 fv-row">
 
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Content ar</span>
+                            <span class="required">{{ trans('backend.Content_Ar') }}</span>
 
                         </label>
 
@@ -131,9 +132,9 @@
                     <!--begin::Actions-->
                     <div class="text-center">
                         <button type="reset" id="kt_modal_new_page_cancel" data-bs-dismiss="modal"
-                            class="btn btn-light me-3">Cancel</button>
+                            class="btn btn-light me-3">{{ trans('backend.Cancel') }}</button>
                         <button type="submit" id="kt_modal_new_page_submit" class="btn btn-primary">
-                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-label">{{ trans('backend.Submit') }}</span>
                             <span class="indicator-progress">Please wait...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                         </button>

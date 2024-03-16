@@ -1,6 +1,9 @@
   <!--==========================
       Sponsors Section
     ============================-->
+  @php
+      $sponsors = App\Models\Sponsor::all();
+  @endphp
   <section id="supporters" class="section-with-bg wow fadeInUp">
 
       <div class="container">
@@ -10,53 +13,16 @@
 
           <div class="row no-gutters supporters-wrap clearfix">
 
-              <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/كارفور.png') }}" class="img-fluid" alt="">
+              @foreach ($sponsors as $sponsor)
+                  <div class="col-lg-3 col-md-4 col-xs-6">
+                      <div class="supporter-logo">
+                          <img src="{{ $sponsor->image_url }}" class="img-fluid" alt="">
+                      </div>
                   </div>
-              </div>
+              @endforeach
 
-              <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/2.png') }}" class="img-fluid" alt="">
-                  </div>
-              </div>
 
-              <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/3.png') }}" class="img-fluid" alt="">
-                  </div>
-              </div>
 
-              <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/4.png') }}" class="img-fluid" alt="">
-                  </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/5.png') }}" class="img-fluid" alt="">
-                  </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/6.png') }}" class="img-fluid" alt="">
-                  </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/7.png') }}" class="img-fluid" alt="">
-                  </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/8.png') }}" class="img-fluid" alt="">
-                  </div>
-              </div>
 
           </div>
 

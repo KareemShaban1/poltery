@@ -31,7 +31,7 @@
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">Add New Facility Category</h1>
+                        <h1 class="mb-3">{{ trans('backend.Add_Facility_Category') }}</h1>
                         <!--end::Title-->
 
                     </div>
@@ -39,7 +39,7 @@
 
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="d-block fw-bold fs-6 mb-5">Image</label>
+                        <label class="d-block fw-bold fs-6 mb-5">{{ trans('backend.Image') }}</label>
                         <!--end::Label-->
                         <!--begin::Image input-->
                         <div class="image-input image-input-outline" data-kt-image-input="true"
@@ -81,7 +81,7 @@
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Name EN</span>
+                                <span class="required">{{ trans('backend.Name_En') }}</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                     title="Specify a product category english name"></i>
                             </label>
@@ -93,7 +93,7 @@
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Name Ar</span>
+                                <span class="required">{{ trans('backend.Name_Ar') }}</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                     title="Specify a product category arabic name "></i>
                             </label>
@@ -110,9 +110,9 @@
                     <!--begin::Actions-->
                     <div class="text-center">
                         <button type="reset" id="kt_modal_new_facility_category_cancel" data-bs-dismiss="modal"
-                            class="btn btn-light me-3">Cancel</button>
+                            class="btn btn-light me-3">{{ trans('backend.Cancel') }}</button>
                         <button type="submit" id="kt_modal_new_facility_category_submit" class="btn btn-primary">
-                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-label">{{ trans('backend.Submit') }}</span>
                             <span class="indicator-progress">Please wait...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                         </button>

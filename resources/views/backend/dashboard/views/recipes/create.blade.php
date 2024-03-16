@@ -105,6 +105,33 @@
                             </div>
                         </div>
 
+                        <div class="row">
+
+                            <div class="d-flex flex-column mb-8 fv-row col-md-6">
+
+                                <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                    <span class="required">Type EN</span>
+                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                        title="Specify a recipe english type"></i>
+                                </label>
+
+                                <input type="text" class="form-control form-control-solid"
+                                    placeholder="Enter English Type" name="type_en" />
+                            </div>
+
+                            <div class="d-flex flex-column mb-8 fv-row col-md-6">
+
+                                <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                    <span class="required">Type Ar</span>
+                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                        title="Specify a recipe arabic type "></i>
+                                </label>
+
+                                <input type="text" class="form-control form-control-solid"
+                                    placeholder="Enter Arabic Type" name="type_ar" />
+                            </div>
+                        </div>
+
                         <div class="d-flex flex-column mb-8 fv-row" style="direction: ltr">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">

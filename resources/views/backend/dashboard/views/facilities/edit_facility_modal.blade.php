@@ -33,7 +33,7 @@
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">Edit facility</h1>
+                        <h1 class="mb-3">{{ trans('backend.Edit_Facility') }}</h1>
                         <!--end::Title-->
 
                     </div>
@@ -41,7 +41,7 @@
 
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="d-block fw-bold fs-6 mb-5">Image</label>
+                        <label class="d-block fw-bold fs-6 mb-5">{{ trans('backend.Image') }}</label>
                         <!--end::Label-->
                         <!--begin::Image input-->
                         <div class="image-input image-input-outline" data-kt-image-input="true"
@@ -84,7 +84,7 @@
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Name EN</span>
+                                <span class="required">{{ trans('backend.Name_En') }}</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                     title="Specify a facility english name"></i>
                             </label>
@@ -96,7 +96,7 @@
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Name Ar</span>
+                                <span class="required">{{ trans('backend.Name_Ar') }}</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                     title="Specify a facility arabic name "></i>
                             </label>
@@ -108,7 +108,7 @@
                     </div>
 
                     <div class="mb-10">
-                        <label class="form-label fs-6 fw-bold">Category:</label>
+                        <label class="form-label fs-6 fw-bold">{{ trans('backend.Category') }}:</label>
                         <select class="form-select form-select-solid fw-bolder" name="category_id"
                             data-placeholder="Select Category" data-allow-clear="true" data-kt-user-table-filter="role"
                             data-hide-search="true">
@@ -124,7 +124,7 @@
                     <div class="d-flex flex-column mb-8 fv-row">
 
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Content En</span>
+                            <span class="required">{{ trans('backend.Content_En') }}</span>
 
                         </label>
 
@@ -137,7 +137,7 @@
                     <div class="d-flex flex-column mb-8 fv-row">
 
                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Content Ar</span>
+                            <span class="required">{{ trans('backend.Content_Ar') }}</span>
 
                         </label>
 
@@ -157,9 +157,9 @@
                     <!--begin::Actions-->
                     <div class="text-center">
                         <button type="reset" id="kt_modal_new_facility_cancel" data-bs-dismiss="modal"
-                            class="btn btn-light me-3">Cancel</button>
+                            class="btn btn-light me-3">{{ trans('backend.Cancel') }}</button>
                         <button type="submit" id="kt_modal_new_facility_submit" class="btn btn-primary">
-                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-label">{{ trans('backend.Submit') }}</span>
                             <span class="indicator-progress">Please wait...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                         </button>

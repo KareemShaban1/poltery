@@ -3,13 +3,13 @@
 @section('page-title')
     <div class="page-title d-flex flex-column me-5">
         <!--begin::Title-->
-        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">All Facility Category</h1>
+        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">{{ trans('backend.All_Facilities_Categories') }}</h1>
         <!--end::Title-->
         <!--begin::Breadcrumb-->
         <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 pt-1">
             <!--begin::Item-->
             <li class="breadcrumb-item text-muted">
-                <a href="{{ route('dashboard') }}" class="text-muted text-hover-primary">Dashboard</a>
+                <a href="{{ route('dashboard') }}" class="text-muted text-hover-primary">{{ trans('backend.Dashboard') }}</a>
             </li>
             <!--end::Item-->
             <!--begin::Item-->
@@ -18,7 +18,7 @@
             </li>
             <!--end::Item-->
             <!--begin::Item-->
-            <li class="breadcrumb-item text-dark">All Facility Category</li>
+            <li class="breadcrumb-item text-dark">{{ trans('backend.All_Facilities_Categories') }}</li>
             <!--end::Item-->
         </ul>
         <!--end::Breadcrumb-->
@@ -27,8 +27,7 @@
 
 @section('content')
     <a href="#" class="btn btn-primary er fs-6 px-8 py-4 mb-5" data-bs-toggle="modal"
-        data-bs-target="#kt_modal_new_facility_category">Add
-        New category</a>
+        data-bs-target="#kt_modal_new_facility_category">{{ trans('backend.Add_Facility_Category') }}</a>
 
 
     @include('backend.dashboard.views.facilitiesCategory.add_facility_category_modal')
@@ -38,16 +37,15 @@
     <div class="row">
         <div class="col-md-12 mb-30">
             <div class="card card-statistics h-100">
-                {{-- @include('backend.dashboard.views.productsCategory.category_table') --}}
                 <div class="card-body">
                     <table id="custom_table" class="display">
                         <thead>
                             <tr>
 
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>الصورة</th>
-                                <th>التحكم</th>
+                                <th>{{ trans('backend.Id') }}</th>
+                                <th>{{ trans('backend.Name') }}</th>
+                                <th>{{ trans('backend.Image') }}</th>
+                                <th>{{ trans('backend.Actions') }}</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -49,6 +49,12 @@ class Recipe extends Model
         return App::getLocale() === 'en' ? $this->title_en : $this->title_ar;
     }
 
+
+    public function getTypeAttribute()
+    {
+        return App::getLocale() === 'en' ? $this->type_en : $this->type_ar;
+    }
+
     public function getDescriptionAttribute()
     {
         return App::getLocale() === 'en' ? $this->description_en : $this->description_ar;

@@ -79,7 +79,8 @@ class ProductController extends Controller
            'category_id.required' => 'حقل المحتوى مطلوب',
         ]);
         $product = Product::findOrFail($id);
-        $validatedData['image'] = $request->image ? $this->ProcessImage($request, 'image', 'products') : $product->image;
+        $oldImage = $product->image;
+        $validatedData['image'] = $request->image ? $this->ProcessImage($request, 'image', 'products', $oldImage) : $oldImage;
         $product->update($validatedData);
         return redirect()->route('products.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
 

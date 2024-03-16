@@ -3,13 +3,13 @@
 @section('page-title')
     <div class="page-title d-flex flex-column me-5">
         <!--begin::Title-->
-        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">All Facilities</h1>
+        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">{{ trans('backend.All_Facilities') }}</h1>
         <!--end::Title-->
         <!--begin::Breadcrumb-->
         <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 pt-1">
             <!--begin::Item-->
             <li class="breadcrumb-item text-muted">
-                <a href="{{ route('dashboard') }}" class="text-muted text-hover-primary">Dashboard</a>
+                <a href="{{ route('dashboard') }}" class="text-muted text-hover-primary">{{ trans('backend.Dashboard') }}</a>
             </li>
             <!--end::Item-->
             <!--begin::Item-->
@@ -18,7 +18,7 @@
             </li>
             <!--end::Item-->
             <!--begin::Item-->
-            <li class="breadcrumb-item text-dark">All Facilities</li>
+            <li class="breadcrumb-item text-dark">{{ trans('backend.All_Facilities') }}</li>
             <!--end::Item-->
         </ul>
         <!--end::Breadcrumb-->
@@ -27,8 +27,7 @@
 
 @section('content')
     <a href="#" class="btn btn-primary er fs-6 px-8 py-4 mb-5" data-bs-toggle="modal"
-        data-bs-target="#kt_modal_new_facility">Add
-        New Facility</a>
+        data-bs-target="#kt_modal_new_facility">{{ trans('backend.Add_Facility') }}</a>
 
 
     @include('backend.dashboard.views.facilities.add_facility_modal')
@@ -43,10 +42,10 @@
                         <thead>
                             <tr>
 
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>الصورة</th>
-                                <th>التحكم</th>
+                                <th>{{ trans('backend.Id') }}</th>
+                                <th>{{ trans('backend.Name') }}</th>
+                                <th>{{ trans('backend.Image') }}</th>
+                                <th>{{ trans('backend.Actions') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -70,12 +69,12 @@
                                         @if ($seo)
                                             <a href="{{ Route('seo.edit', [$facility->id, 'facility']) }}"
                                                 class="btn btn-success btn-sm">
-                                                Edit Seo
+                                                {{ trans('backend.Edit_Seo') }}
                                             </a>
                                         @else
                                             <a href="{{ Route('seo.create', [$facility->id, 'facility']) }}"
                                                 class="btn btn-primary btn-sm">
-                                                Add Seo
+                                                {{ trans('backend.Add_Seo') }}
                                             </a>
                                         @endif
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"

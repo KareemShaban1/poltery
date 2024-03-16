@@ -12,6 +12,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -91,6 +92,13 @@ Route::group(
             Route::post('/productCategory/store', [ProductCategoryController::class,'store'])->name('productsCategory.store');
             Route::put('/productCategory/update/{id}', [ProductCategoryController::class,'update'])->name('productsCategory.update');
             Route::delete('/productCategory/destroy/{id}', [ProductCategoryController::class,'destroy'])->name('productsCategory.destroy');
+        });
+
+        Route::group([], function () {
+            Route::get('/sponsors', [SponsorController::class,'index'])->name('sponsors.index');
+            Route::post('/sponsor/store', [SponsorController::class,'store'])->name('sponsors.store');
+            Route::put('/sponsor/update/{id}', [SponsorController::class,'update'])->name('sponsors.update');
+            Route::delete('/sponsor/destroy/{id}', [SponsorController::class,'destroy'])->name('sponsors.destroy');
         });
 
 
