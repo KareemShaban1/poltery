@@ -2,12 +2,12 @@
     <!--begin::Brand-->
     <div class="header-brand">
         <!--begin::Logo-->
-        <a href="../../demo8/dist/index.html">
+        {{-- <a href="../../demo8/dist/index.html">
             <img alt="Logo" src="{{ asset('backend/media/logos/logo-1-dark.svg') }}" class="h-25px h-lg-25px" />
-        </a>
+        </a> --}}
         <!--end::Logo-->
         <!--begin::Aside minimize-->
-        <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
+        {{-- <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
             data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
             data-kt-toggle-name="aside-minimize">
             <!--begin::Svg Icon | path: icons/duotune/arrows/arr092.svg-->
@@ -39,7 +39,7 @@
                 </svg>
             </span>
             <!--end::Svg Icon-->
-        </div>
+        </div> --}}
         <!--end::Aside minimize-->
         <!--begin::Aside toggle-->
         <div class="d-flex align-items-center d-lg-none ms-n3 me-1" title="Show aside menu">
@@ -74,7 +74,27 @@
                 <div class="d-flex align-items-center">
 
                     <!--begin::Actions-->
-                    <div class="d-flex">
+                    <div
+                        style="display: flex !important;
+                    flex-wrap: wrap;
+
+                    align-items: center">
+
+                        @if (App::getLocale() == 'en')
+                            <span>
+                                <a href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">
+                                    <img src="{{ URL::asset('backend/flags/EG.png') }}" alt="">
+                                    <span class="mx-2 "> عربى </span>
+
+                                </a>
+                            </span>
+                        @else
+                            <span><a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">
+                                    <span class="mx-2">English</span> <img
+                                        src="{{ URL::asset('backend/flags/US.png') }}" alt="">
+                                </a>
+                            </span>
+                        @endif
 
 
                         <div>

@@ -12,7 +12,7 @@
 
               <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="supporter-logo">
-                      <img src="{{ asset('frontend/img/supporters/1.png') }}" class="img-fluid" alt="">
+                      <img src="{{ asset('frontend/img/supporters/كارفور.png') }}" class="img-fluid" alt="">
                   </div>
               </div>
 

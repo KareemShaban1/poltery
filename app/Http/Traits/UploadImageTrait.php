@@ -19,26 +19,26 @@ trait UploadImageTrait
             $newImageName =  time() . '.' . $image->getClientOriginalExtension();
 
             $thumbnailPath = public_path('../storage/app/uploads/thumbnail/'.$folder_name);
-            $uploadPath = public_path('../storage/app/uploads/'.$folder_name);
+            // $uploadPath = public_path('../storage/app/uploads/'.$folder_name);
 
             // Ensure the thumbnail and upload directories exist
             if (!file_exists($thumbnailPath)) {
                 mkdir($thumbnailPath, 0755, true);
             }
 
-            if (!file_exists($uploadPath)) {
-                mkdir($uploadPath, 0755, true);
-            }
+            // if (!file_exists($uploadPath)) {
+            //     mkdir($uploadPath, 0755, true);
+            // }
 
-            $imgFile = Image::make($image->getRealPath());
+            // $imgFile = Image::make($image->getRealPath());
 
-            $imgFile->resize(
-                900,
-                900,
-                function ($constraint) {
-                    $constraint->aspectRatio();
-                }
-            )->save($uploadPath . '/' . $newImageName);
+            // $imgFile->resize(
+            //     900,
+            //     900,
+            //     function ($constraint) {
+            //         $constraint->aspectRatio();
+            //     }
+            // )->save($uploadPath . '/' . $newImageName);
 
 
 
@@ -68,14 +68,14 @@ trait UploadImageTrait
     {
         // Delete the image file from the storage directory
         $thumbnailPath = public_path('../storage/app/uploads/thumbnail/') . '/' . $folder_name . '/' . $imagePath;
-        $uploadPath = public_path('../storage/app/uploads/') . '/' . $folder_name  . '/' . $imagePath;
+        // $uploadPath = public_path('../storage/app/uploads/') . '/' . $folder_name  . '/' . $imagePath;
 
         if (file_exists($thumbnailPath)) {
             unlink($thumbnailPath);
         }
 
-        if (file_exists($uploadPath)) {
-            unlink($uploadPath);
-        }
+        // if (file_exists($uploadPath)) {
+        //     unlink($uploadPath);
+        // }
     }
 }

@@ -10,14 +10,11 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('facilities', function (Blueprint $table) {
+        Schema::create('sponsors', function (Blueprint $table) {
             $table->id();
             $table->string('name_en');
             $table->string('name_ar')->nullable();
-            $table->string('image')->nullable();
-            $table->longText('content_en')->nullable();
-            $table->longText('content_ar')->nullable();
-            $table->foreignId('category_id')->nullable()->constrained('facilities_category', 'id')->nullOnDelete();
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('facilities');
+        Schema::dropIfExists('sponsors');
     }
 };

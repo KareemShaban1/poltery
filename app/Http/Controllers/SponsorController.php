@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Recipe;
+use App\Models\Sponsor;
 use Illuminate\Http\Request;
 
-class RecipesController extends Controller
+class SponsorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,19 +13,31 @@ class RecipesController extends Controller
     public function index()
     {
         //
-        $recipes = Recipe::all();
+        $sponsors = Sponsor::all();
+    }
 
-        return view('frontend.pages.recipes', compact('recipes'));
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(string $id)
     {
         //
-        $recipe = Recipe::findOrFail($id);
-        return view('frontend.pages.recipeDetails', compact('recipe'));
     }
 
     /**

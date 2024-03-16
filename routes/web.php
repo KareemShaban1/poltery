@@ -7,9 +7,11 @@ use App\Http\Controllers\FacilityCategoryController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\Frontend\FacilitiesController;
 use App\Http\Controllers\Frontend\ProductsController;
+use App\Http\Controllers\Frontend\RecipesController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,6 +53,15 @@ Route::group(
             Route::get('seo/edit/{id}/{type}', [SeoController::class,'edit'])->name('seo.edit');
             Route::put('seo/update/{id}', [SeoController::class,'update'])->name('seo.update');
             Route::delete('seo/destroy/{id}', [SeoController::class,'destroy'])->name('seo.destroy');
+        });
+
+        Route::group([], function () {
+            Route::get('recipes', [RecipeController::class,'index'])->name('recipes.index');
+            Route::get('recipes/create', [RecipeController::class,'create'])->name('recipes.create');
+            Route::post('recipes/store', [RecipeController::class,'store'])->name('recipes.store');
+            Route::get('recipes/edit/{id}', [RecipeController::class,'edit'])->name('recipes.edit');
+            Route::put('recipes/update/{id}', [RecipeController::class,'update'])->name('recipes.update');
+            Route::delete('recipes/destroy/{id}', [RecipeController::class,'destroy'])->name('recipes.destroy');
         });
 
         Route::group([], function () {
@@ -118,9 +129,9 @@ Route::group(
         Route::get('/product/productCategory/{id}', [ProductsController::class,'productCategory'])->name('products.productCategory');
 
 
-        Route::get('/recipes', function () {
-            return view('frontend.pages.recipes');
-        })->name('recipes');
+        Route::get('/recipes', [RecipesController::class,'index'])->name('recipes');
+        Route::get('/recipeDetails/{id}', [RecipesController::class,'show'])->name('recipeDetails');
+
 
         Route::get('/contact-us', function () {
             return view('frontend.pages.contact_us');

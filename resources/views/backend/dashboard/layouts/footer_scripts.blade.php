@@ -29,5 +29,18 @@
 
 <script src="https://cdn.jsdelivr.net/npm/summernote@latest/dist/summernote-bs4.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        $('.summernote').summernote({
+            height: 150,
+
+        });
+    });
+
+    $(document).on('click', '#button-toggle', function(e) {
+        $(".dropdown.open > .dropdown-toggle").dropdown("toggle");
+        return false;
+    });
+</script>
 
 @stack('scripts')
