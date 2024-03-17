@@ -118,7 +118,7 @@
                                         <div class="col-md-6 p-0 ">
 
                                             <div class="container-fluid venue-gallery-container">
-                                                <div class="row no-gutters">
+                                                <div class="row no-gutters" style="justify-content: center">
 
 
                                                     <div class="col-lg-6 col-md-6" style="padding: 0px 5px">
