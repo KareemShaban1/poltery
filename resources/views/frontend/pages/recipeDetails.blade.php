@@ -101,7 +101,7 @@
 @endpush
 
 @section('content')
-    <section id="intro">
+    <section id="intro" style="background: url({{ asset('frontend/img/Recipes.jpg') }}); background-size:cover">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
             <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
