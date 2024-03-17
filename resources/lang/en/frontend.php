@@ -8,4 +8,5 @@ return [
           'recipes' => 'Recipes',
           'contact_us' => 'Contact Us',
           'Our_Partners' => 'Our Retail Partners',
+          'recipes_details'=>'Recipe Details'
 ];

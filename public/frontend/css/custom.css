@@ -257,3 +257,16 @@
         #header.header-scrolled, #header.header-fixed {
             background:#094499;
         }
+
+@media (max-width: 991px){
+#header {
+    background: #094499;
+}
+#footer .footer-top {
+    background:#094499;
+}
+#mobile-nav {
+    background:#094499;
+}
+
+}

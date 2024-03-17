@@ -80,6 +80,7 @@
             /* background: url('https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1290&q=80'); */
             overflow: hidden;
             height: 450px;
+            width: 972px;
             background-size: cover;
         }
 
@@ -119,9 +120,10 @@
             </div>
 
             <div id="card-container">
+
                 <div id="card-title">{{ $recipe->title }}</div>
                 <div id="recipe-image">
-                    <img src="{{ $recipe->image_url }}" alt="">
+                    <img src="{{ $recipe->image_url }}" style="height: 100%; width:100%" alt="">
                 </div>
                 {{-- <div id="details">Prep time: <span class="detail-value">10 minutes</span> | Cook time: <span
                         class="detail-value">55 minutes</span> | Yield: <span class="detail-value">Makes one loaf</span>

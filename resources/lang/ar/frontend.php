@@ -17,7 +17,7 @@ return [
           'Email' => 'البريد الألكترونى',
           'Contact_Us' => 'تواصل معنا',
           'Our_Partners' => 'Our Retail Partners',
-          '' => '',
+          'recipes_details' => 'تفاصيل الوصفة',
           '' => '',
           '' => '',
           '' => '',
