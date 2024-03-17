@@ -257,7 +257,11 @@
         #header.header-scrolled, #header.header-fixed {
             background:#094499;
         }
-
+        #card-container {
+            margin: 5% auto;
+            width: 65%;
+        }
+/* small devices */
 @media (max-width: 991px){
 #header {
     background: #094499;
@@ -268,5 +272,8 @@
 #mobile-nav {
     background:#094499;
 }
-
+#card-container {
+    width: 90%;
+    margin: 0px auto;
+}
 }

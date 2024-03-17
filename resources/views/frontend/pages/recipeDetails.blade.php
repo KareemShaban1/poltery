@@ -6,9 +6,9 @@
             background: #ededed;
             box-shadow: 0px 0px 200px #999;
             font-family: 'Oxygen', sans-serif;
-            width: 65%;
+            /* width: 65%; */
             /* height: 385px; */
-            margin: 5% auto;
+            /* margin: 5% auto; */
         }
 
         #card-title {
@@ -76,13 +76,20 @@
             list-style-type: none;
         }
 
+        /* #recipe-image {
+                                            overflow: hidden;
+                                            height: 450px;
+                                            width: 972px;
+                                            background-size: cover;
+                                        } */
+
         #recipe-image {
-            /* background: url('https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1290&q=80'); */
-            overflow: hidden;
-            height: 450px;
-            width: 972px;
-            background-size: cover;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
         }
+
 
         ol {
             counter-reset: item;
@@ -101,7 +108,9 @@
 @endpush
 
 @section('content')
-    <section id="intro" style="background: url({{ asset('frontend/img/Recipes.jpg') }}); background-size:cover">
+    <section id="intro"
+        style="background: url({{ asset('frontend/img/Recipes.jpg') }}); background-size:cover; background-attachment: fixed;
+        height:100%; width: 100%;">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
             <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
@@ -123,23 +132,15 @@
 
                 <div id="card-title">{{ $recipe->title }}</div>
                 <div id="recipe-image">
-                    <img src="{{ $recipe->image_url }}" style="height: 100%; width:100%" alt="">
+                    {{-- <img src="{{ $recipe->image_url }}" style="height: 100%; width:100%" alt=""> --}}
+                    <img src="{{ $recipe->image_url }}" style="max-width: 100%; height: auto; width:100%" alt="">
+
                 </div>
-                {{-- <div id="details">Prep time: <span class="detail-value">10 minutes</span> | Cook time: <span
-                        class="detail-value">55 minutes</span> | Yield: <span class="detail-value">Makes one loaf</span>
-                </div> --}}
+
                 <div id="card-items">
                     <span class="card-item-title">Ingredients</span>
                     <ul class="checkmark">
-                        {{-- {!! $recipe->ingredients_en !!} --}}
-                        {{-- <li>2 to 3 very ripe bananas, peeled</li>
-                        <li>1/3 cup melted butter</li>
-                        <li>1 teaspoon baking soda</li>
-                        <li>Pinch of salt</li>
-                        <li>3/4 cup sugar (1/2 cup if you would like it less sweet, 1 cup if more sweet)</li>
-                        <li>1 large egg, beaten</li>
-                        <li>1 teaspoon vanilla extract</li>
-                        <li>1 1/2 cups of all-purpose flour</li> --}}
+
                         @php
                             // Split the ingredients string into an array using a delimiter (e.g., newline)
                             $ingredients = explode("\n", $recipe->ingredients_en);
