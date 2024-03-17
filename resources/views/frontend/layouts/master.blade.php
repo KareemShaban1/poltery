@@ -9,8 +9,8 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('frontend/img/Icon.jpg') }}" rel="icon">
+    <link href="{{ asset('frontend/img/Icon.jpg') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
