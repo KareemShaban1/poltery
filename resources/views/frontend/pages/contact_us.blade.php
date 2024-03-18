@@ -13,10 +13,14 @@
     </section>
 
 
-    <section id="contact" class="section-bg wow fadeInUp">
+    <section id="contact" class="default-section section-bg wow fadeInUp">
 
         <div class="container">
-
+            <div class="row pt-5">
+                <div class="col-md-12 text-center service-heading animate-box section-header">
+                    <h2>{{ trans('frontend.Contact_Us') }}</h2>
+                </div>
+            </div>
 
 
             <div class="row">
@@ -27,10 +31,8 @@
 
                 </div>
                 <div class="col-md-7">
-                    <div class="section-header">
-                        <h2>{{ trans('frontend.Contact_Us') }}</h2>
-                        {{-- <p>Nihil officia ut sint molestiae tenetur.</p> --}}
-                    </div>
+                    {{-- <div class="section-header">
+                    </div> --}}
                     <div class="row contact-info">
 
                         <div class="col-md-4">

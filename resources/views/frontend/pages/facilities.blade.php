@@ -62,19 +62,21 @@
         </div>
     </section>
 
-    <div class="container">
+    <section class="default-section" id="facilities">
+        <div class="container">
 
-        <div class="row pt-5">
-            <div class="col-md-12 text-center service-heading animate-box">
-                <h2>Facilities</h2>
+            <div class="row" style="text-align: center">
+                <div class="col-md-12 text-center service-heading animate-box section-header">
+                    <h2>Facilities</h2>
+
+                </div>
             </div>
-        </div>
-        <div>
-            <div class="shell">
-                <div class="container">
-                    <div class="row">
-                        @foreach ($facilities as $facility)
-                            {{-- <div class="col-md-4">
+            <div>
+                <div class="shell">
+                    <div class="container">
+                        <div class="row">
+                            @foreach ($facilities as $facility)
+                                {{-- <div class="col-md-4">
                                 <div class="wsk-cp-product">
                                     <div class="wsk-cp-img">
                                         <img src="{{ $facility->image_url }}" alt="Product" class="img-responsive" />
@@ -111,69 +113,70 @@
                                 </div>
                             </div> --}}
 
-                            <div class="col-md-12">
-                                <div class="wsk-cp-product">
+                                <div class="col-md-12">
+                                    <div class="wsk-cp-product">
 
-                                    <div class="row">
-                                        <div class="col-md-6 p-0 ">
+                                        <div class="row">
+                                            <div class="col-md-6 p-0 ">
 
-                                            <div class="container-fluid venue-gallery-container">
-                                                <div class="row no-gutters" style="justify-content: center">
+                                                <div class="container-fluid venue-gallery-container">
+                                                    <div class="row no-gutters" style="justify-content: center">
 
 
-                                                    <div class="col-lg-6 col-md-6" style="padding: 0px 5px">
-                                                        <div class="venue-gallery">
-                                                            <a href="{{ $facility->image_url }}" class="venobox"
-                                                                data-gall="venue-gallery">
-                                                                <img src="{{ $facility->image_url }}" alt=""
-                                                                    class="img-fluid">
-                                                            </a>
-                                                        </div>
-
-                                                    </div>
-
-                                                    @php
-                                                        $additional_image = App\Models\Image::where(
-                                                            'facility_id',
-                                                            $facility->id,
-                                                        )->first();
-                                                        // dd($additional_image);
-                                                    @endphp
-
-                                                    @isset($additional_image)
                                                         <div class="col-lg-6 col-md-6" style="padding: 0px 5px">
                                                             <div class="venue-gallery">
-                                                                <a href="{{ $additional_image->image_url }}" class="venobox"
+                                                                <a href="{{ $facility->image_url }}" class="venobox"
                                                                     data-gall="venue-gallery">
-                                                                    <img src="{{ $additional_image->image_url }}" alt=""
+                                                                    <img src="{{ $facility->image_url }}" alt=""
                                                                         class="img-fluid">
                                                                 </a>
                                                             </div>
 
                                                         </div>
-                                                    @endisset
+
+                                                        @php
+                                                            $additional_image = App\Models\Image::where(
+                                                                'facility_id',
+                                                                $facility->id,
+                                                            )->first();
+                                                            // dd($additional_image);
+                                                        @endphp
+
+                                                        @isset($additional_image)
+                                                            <div class="col-lg-6 col-md-6" style="padding: 0px 5px">
+                                                                <div class="venue-gallery">
+                                                                    <a href="{{ $additional_image->image_url }}" class="venobox"
+                                                                        data-gall="venue-gallery">
+                                                                        <img src="{{ $additional_image->image_url }}"
+                                                                            alt="" class="img-fluid">
+                                                                    </a>
+                                                                </div>
+
+                                                            </div>
+                                                        @endisset
 
 
 
+                                                    </div>
                                                 </div>
+
+
                                             </div>
 
+                                            <div class="col-md-6" style="padding: 0px 5px">
 
+                                                <div class="category text-center ">
+                                                    <span
+                                                        style="font-weight: bold; color:#f82249">{{ $facility->name }}</span>
+                                                </div>
+
+                                                <div class="description-prod">
+                                                    <p>{!! $facility->content !!}</p>
+                                                </div>
+
+                                            </div>
                                         </div>
-
-                                        <div class="col-md-6" style="padding: 0px 5px">
-
-                                            <div class="category">
-                                                <span style="font-weight: bold; color:#f82249">{{ $facility->name }}</span>
-                                            </div>
-
-                                            <div class="description-prod">
-                                                <p>{!! $facility->content !!}</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    {{-- <div class="wsk-cp-text">
+                                        {{-- <div class="wsk-cp-text">
                                         <div class="category">
                                             <span>{{ $facility->name }}</span>
                                         </div>
@@ -190,15 +193,16 @@
                                                         class="zmdi zmdi-shopping-basket"></i></a></div>
                                         </div>
                                     </div> --}}
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+
+                        </div>
 
                     </div>
-
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
+    </section>
 @endsection

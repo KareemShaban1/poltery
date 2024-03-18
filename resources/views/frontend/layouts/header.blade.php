@@ -4,10 +4,11 @@
 <header id="header">
     <div class="container">
 
-        <div id="logo" class="pull-left">
+        <div id="logo">
             <!-- Uncomment below if you prefer to use a text logo -->
             <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-            <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
+            <a href="#intro" class="scrollto"><img src="{{ asset('frontend/img/logo.png') }}" alt=""
+                    title=""></a>
         </div>
 
         <nav id="nav-menu-container">

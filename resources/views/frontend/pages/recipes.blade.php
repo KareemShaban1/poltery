@@ -22,10 +22,10 @@
             overflow: hidden;
             position: relative;
             /* top: 50%;
-                                                                                                                                                                                                                                                right: 50%;
-                                                                                                                                                                                                                                                bottom: 50%;
-                                                                                                                                                                                                                                                left: 50%;
-                                                                                                                                                                                                                                                position: absolute; */
+                                                                                                                                                                                                                                                                            right: 50%;
+                                                                                                                                                                                                                                                                            bottom: 50%;
+                                                                                                                                                                                                                                                                            left: 50%;
+                                                                                                                                                                                                                                                                            position: absolute; */
             /* transform: translate(-50%, -50%); */
         }
 
@@ -163,16 +163,15 @@
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
             <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
-            {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-                data-autoplay="true"></a> --}}
-            {{-- <a href="#about" class="about-btn scrollto"></a> --}}
+
         </div>
     </section>
-    <section>
+    <section class="default-section" id="recipes">
+
         <div class="container-fluid">
 
             <div class="row pt-5">
-                <div class="col-md-12 text-center service-heading animate-box">
+                <div class="col-md-12 text-center service-heading animate-box section-header">
                     <h2>{{ trans('frontend.recipes') }}</h2>
                 </div>
             </div>
@@ -184,7 +183,8 @@
                             @foreach ($recipes as $recipe)
                                 <div class="col-md-4 p-0"
                                     style="display: flex;
-                                justify-content: center;">
+                                justify-content: center;
+                                margin-bottom: 20px">
                                     <div class="ft-recipe">
 
                                         <div class="ft-recipe__thumb">
@@ -197,22 +197,9 @@
                                                     <h4 class="recipe-title">{{ $recipe->title }}</h4>
                                                     <div class="user-rating"></div>
                                                 </div>
-                                                {{-- <ul class="recipe-details">
-                                                    <li class="recipe-details-item time"><i
-                                                            class="ion ion-ios-clock-outline"></i><span
-                                                            class="value">20</span><span class="title">Minutes</span></li>
-                                                    <li class="recipe-details-item ingredients"><i
-                                                            class="ion ion-ios-book-outline"></i><span
-                                                            class="value">5</span><span class="title">Ingredients</span>
-                                                    </li>
-                                                    <li class="recipe-details-item servings"><i
-                                                            class="ion ion-ios-person-outline"></i><span
-                                                            class="value">4-6</span><span class="title">Serving</span>
-                                                    </li>
-                                                </ul> --}}
+
                                             </header>
                                             <p class="description">
-                                                {{-- {{ $recipe->description }} --}}
                                                 {!! \Illuminate\Support\Str::words(strip_tags($recipe->description), 25, '...') !!}
 
                                             </p>

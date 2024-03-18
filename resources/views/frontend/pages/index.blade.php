@@ -2,8 +2,8 @@
 
 @section('content')
     <!--==========================
-                        Intro Section
-                                                                                                ============================-->
+                                Intro Section
+                                                                                                        ============================-->
     <section id="intro"
         style="background: url({{ asset('frontend/img/Home.jpg') }}); background-size:cover; background-attachment: fixed">
         <div class="intro-container wow fadeIn">
@@ -20,11 +20,9 @@
         <div class="default-section" id="home-section">
             <div class="container">
                 <div class="row" style="text-align: center">
-                    <div class="col-md-12 text-center service-heading animate-box">
+                    <div class="col-md-12 text-center service-heading animate-box section-header">
                         <h2>Our Awesome Features</h2>
-                        {{-- <p>Far far away, behind the word mountains, far from the
-                            countries Vokalia and Consonantia, there live the
-                            blind texts. </p> --}}
+
                     </div>
                 </div>
                 <div class="row">

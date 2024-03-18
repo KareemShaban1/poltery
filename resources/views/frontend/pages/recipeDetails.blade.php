@@ -77,11 +77,11 @@
         }
 
         /* #recipe-image {
-                                                overflow: hidden;
-                                                height: 450px;
-                                                width: 972px;
-                                                background-size: cover;
-                                            } */
+                                                                            overflow: hidden;
+                                                                            height: 450px;
+                                                                            width: 972px;
+                                                                            background-size: cover;
+                                                                        } */
 
         #recipe-image {
             max-width: 100%;
@@ -114,16 +114,14 @@
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
             <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
-            {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-                data-autoplay="true"></a> --}}
-            {{-- <a href="#about" class="about-btn scrollto"></a> --}}
+
         </div>
     </section>
-    <section>
+    <section class="default-section" id="recipesDetails">
         <div class="container-fluid">
 
             <div class="row pt-5">
-                <div class="col-md-12 text-center service-heading animate-box">
+                <div class="col-md-12 text-center service-heading animate-box section-header">
                     <h2>{{ trans('frontend.recipes_details') }}</h2>
                 </div>
             </div>
@@ -132,7 +130,6 @@
 
                 <div id="card-title">{{ $recipe->title }}</div>
                 <div id="recipe-image">
-                    {{-- <img src="{{ $recipe->image_url }}" style="height: 100%; width:100%" alt=""> --}}
                     <img src="{{ $recipe->image_url }}" style="max-width: 100%; height: auto; width:100%" alt="">
 
                 </div>
@@ -163,17 +160,7 @@
                     <ol>
                         {!! $recipe->preparation_en !!}
                     </ol>
-                    {{-- <li>Preheat the oven to 350°F (175°C), and butter a 4x8-inch loaf pan.</li>
-                        <li>In a mixing bowl, mash the ripe bananas with a fork until completely smooth. Stir the melted
-                            butter into the mashed bananas.</li>
-                        <li>Mix in the baking soda and salt. Stir in the sugar, beaten egg, and vanilla extract. Mix in the
-                            flour.</li>
-                        <li>Pour the batter into your prepared loaf pan. Bake for 50 minutes to 1 hour at 350°F (175°C), or
-                            until a tester inserted into the center comes out clean.</li>
-                        <li>Remove from oven and let cool in the pan for a few minutes. Then remove the banana bread from
-                            the pan and let cool completely before serving. Slice and serve. (A bread knife helps to make
-                            slices that aren't crumbly.)</li>
-                        </ul> --}}
+
                 </div>
             </div>
         </div>

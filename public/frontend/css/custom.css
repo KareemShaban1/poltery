@@ -261,6 +261,13 @@
             margin: 5% auto;
             width: 65%;
         }
+
+.logo-image {
+    height: 100px;
+    margin-top: 30px
+}
+
+
 /* small devices */
 @media (max-width: 991px){
 #header {
@@ -275,5 +282,14 @@
 #card-container {
     width: 90%;
     margin: 0px auto;
+}
+.owner-image {
+    width:90%
+}
+.venue-gallery {
+    margin-bottom: 10px;
+}
+.shell {
+    padding: 0px;
 }
 }

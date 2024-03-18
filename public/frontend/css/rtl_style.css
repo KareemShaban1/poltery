@@ -1431,9 +1431,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-#footer .footer-top .footer-info img {
+/* #footer .footer-top .footer-info img {
   height: 40px;
   margin-bottom: 10px;
+} */
+
+#logo {
+float: right;
 }
 
 #footer .footer-top .footer-info p {

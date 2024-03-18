@@ -6,11 +6,14 @@
           <div class="container">
               <div class="row">
 
-                  <div class="col-lg-3 col-md-4 footer-info">
-                      {{-- <img src="img/logo.png" alt="TheEvenet"> --}}
+                  <div class="col-lg-3 col-md-4 footer-info"
+                      style="display: flex;
+                  flex-direction: column;
+                  align-items: center;">
                       <h3>ElAbed Poultry</h3>
                       <p>El Abed Meat & Poultry Co.
                       </p>
+                      <img class="logo-image" src="{{ asset('frontend/img/logo.png') }}" alt="" title="">
                   </div>
 
                   <div class="col-lg-5 col-md-4 footer-info">
@@ -30,7 +33,10 @@
                       $website_info = App\Models\WebsiteInfo::pluck('value', 'key');
 
                   @endphp
-                  <div class="col-lg-4 col-md-4 footer-contact">
+                  <div class="col-lg-4 col-md-4 footer-contact"
+                      style="display: flex;
+                  flex-direction: column;
+                  align-items: center;">
                       <h4>Contact Us</h4>
                       <p>
                           <strong>Address:</strong> 28 Ahmed Helmy Street, Shobra, Cairo, Egypt 11231 <br>
@@ -57,10 +63,11 @@
       </div>
 
       <div class="container">
-          {{-- <div class="copyright">
-              &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+          <div class="copyright">
+              All Copyright Reserved &copy; <strong> Magic Stick Agency </strong>
+              {{-- &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved --}}
           </div>
-          <div class="credits">
+          {{-- <div class="credits">
 
               Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div> --}}
