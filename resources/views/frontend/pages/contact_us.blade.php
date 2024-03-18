@@ -24,15 +24,9 @@
 
 
             <div class="row">
-                <div class="col-md-5 d-flex" style="align-items:center">
-                    <iframe allowtransparency="true" frameborder="0" scrolling="no" title="elabed_poultry_map"
-                        style="width: 100%; height: 350px; margin-top: 20px; margin-bottom: 20px;"
-                        src="//www.weebly.com/weebly/apps/generateMap.php?map=google&elementid=369949245161704105&ineditor=0&control=3&width=auto&height=250px&overviewmap=0&scalecontrol=0&typecontrol=0&zoom=16&long=31.2476834&lat=30.0650099&domain=www&point=1&align=1&reseller=false"></iframe>
 
-                </div>
-                <div class="col-md-7">
-                    {{-- <div class="section-header">
-                    </div> --}}
+                <div class="col-md-12">
+                    
                     <div class="row contact-info">
 
                         <div class="col-md-4">
@@ -61,6 +55,12 @@
 
                     </div>
 
+                    <div>
+                        <iframe allowtransparency="true" frameborder="0" scrolling="no" title="elabed_poultry_map"
+                            style="width: 100%; height: 350px; margin-top: 20px; margin-bottom: 20px;"
+                            src="//www.weebly.com/weebly/apps/generateMap.php?map=google&elementid=369949245161704105&ineditor=0&control=3&width=auto&height=250px&overviewmap=0&scalecontrol=0&typecontrol=0&zoom=16&long=31.2476834&lat=30.0650099&domain=www&point=1&align=1&reseller=false"></iframe>
+
+                    </div>
                     <div class="form">
                         <div id="sendmessage">Your message has been sent. Thank you!</div>
                         <div id="errormessage"></div>

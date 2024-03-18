@@ -267,6 +267,9 @@
     margin-top: 30px
 }
 
+.facility-name {
+    text-align: left;
+}
 
 /* small devices */
 @media (max-width: 991px){
@@ -291,5 +294,8 @@
 }
 .shell {
     padding: 0px;
+}
+.facility-name {
+    text-align: center;
 }
 }
