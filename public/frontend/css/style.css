@@ -1420,6 +1420,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
 
+.facility-name {
+    text-align: left;
+}
+
+
 #footer .footer-top .footer-info p {
   font-size: 14px;
   line-height: 24px;

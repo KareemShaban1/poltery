@@ -78,7 +78,9 @@
                                     <div class="wsk-cp-product">
 
                                         <div class="row">
-                                            <div class="col-md-6 p-0 ">
+                                            <div class="col-md-6 p-0"
+                                                style="display: flex;
+                                            align-items: center">
 
                                                 <div class="container-fluid venue-gallery-container">
                                                     <div class="row no-gutters"
