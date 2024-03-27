@@ -1,9 +1,22 @@
 
+@font-face {
+    font-family: "Merriweather";
+    src: url(../fonts/Merriweather-Black.ttf);
+    src: url(../fonts/Merriweather-BlackItalic.ttf);
+    src: url(../fonts/Merriweather-Bold.ttf);
+    src: url(../fonts/Merriweather-BoldItalic.ttf);
+    src: url(../fonts/Merriweather-Italic.ttf);
+    src: url(../fonts/Merriweather-Light.ttf);
+    src: url(../fonts/Merriweather-LightItalic.ttf);
+    src: url(../fonts/Merriweather-Regular.ttf);
 
+    }
 body {
   background: #fff;
   color: #2f3138;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Merriweather";
+
 }
 
 /* old => f82249 */
@@ -155,6 +168,10 @@ h6 {
   transition: all 0.5s;
 }
 
+#header.header-scrolled img {
+border-color: #094499;
+}
+
 #header #logo h1 {
   font-size: 36px;
   margin: 0;
@@ -178,7 +195,7 @@ h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 70px;
 }
 
 /*--------------------------------------------------------------
@@ -257,7 +274,8 @@ h6 {
   padding: 8px;
   text-decoration: none;
   display: inline-block;
-  color: rgba(202, 206, 221, 0.8);
+  color: rgb(255 255 255);
+  /* color: rgba(202, 206, 221, 0.8); */
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -460,13 +478,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100%;
-  height: 100vh;
-  background-size: cover;
+  /* height: 100vh; */
+  /* background-size: cover; */
   overflow: hidden;
   position: relative;
 }
 
-#intro:before {
+/* #intro:before {
   content: "";
   background: rgba(6, 12, 34, 0.8);
   position: absolute;
@@ -474,14 +492,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 
 #intro .intro-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 90px;
-  right: 0;
+    background: rgba(6, 12, 34, 0.8);
+
+position: absolute;
+height: 150px;
+bottom: 0;
+left: 0;
+top: 260px;
+right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1609,7 +1630,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #intro .intro-container {
-    top: 70px;
+    top: 260px;
+  }
+  #header #logo .intro-img {
+    
   }
 
   #intro h1 {

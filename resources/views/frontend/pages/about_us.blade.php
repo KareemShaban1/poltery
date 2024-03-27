@@ -4,8 +4,14 @@
     <style>
         .intro-section {
             background: url({{ asset('frontend/img/About_Us.jpg') }});
-            background-size: cover;
+            /* background-size: cover;
+                background-attachment: fixed; */
             background-attachment: fixed;
+            width: 100%;
+            height: 800px;
+            /* background-size: contain; */
+            background-size: 100% auto;
+            background-repeat: no-repeat;
         }
 
         /* Media query for smaller devices */
@@ -69,9 +75,14 @@
                 </div>
 
 
-                <div class="col-md-6 animate-box" style="display: flex; justify-content:center">
+                <div class="col-md-6 animate-box"
+                    style="display: flex; justify-content:center;flex-direction: column;
+                align-items: center; gap:20px">
 
                     <img class="owner-image" src="{{ asset('frontend/img/elabed.png') }}" alt="">
+
+                    <h2 class="m-0">Abed Ramsis</h2>
+                    <p class="m-0">Founder & CEO</p>
 
                 </div>
             </div>

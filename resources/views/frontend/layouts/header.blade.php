@@ -5,10 +5,15 @@
     <div class="container">
 
         <div id="logo">
-            <!-- Uncomment below if you prefer to use a text logo -->
-            <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-            <a href="#intro" class="scrollto"><img src="{{ asset('frontend/img/logo.png') }}" alt=""
-                    title=""></a>
+
+            <a href="#intro" class="scrollto">
+                <div class="intro-img">
+
+                </div>
+                <div class="intro-img-2">
+
+                </div>
+            </a>
         </div>
 
         <nav id="nav-menu-container">

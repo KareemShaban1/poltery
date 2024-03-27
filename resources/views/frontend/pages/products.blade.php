@@ -5,8 +5,13 @@
     <style>
         .intro-section {
             background: url({{ asset('frontend/img/Our_Products.jpg') }});
-            background-size: cover;
+            /* background-size: cover;
+                    background-attachment: fixed; */
             background-attachment: fixed;
+            width: 100%;
+            height: 800px;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
         }
 
         /* Media query for smaller devices */

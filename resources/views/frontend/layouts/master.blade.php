@@ -39,6 +39,45 @@
 
     <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
 
+    <style>
+        #header #logo .intro-img {
+            position: relative;
+            bottom: 15px;
+            background: url('{{ asset('frontend/img/logo.png') }}');
+            height: 70px;
+            width: 135px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+
+
+        .header-scrolled #logo .intro-img-2 {
+            position: relative;
+            bottom: 15px;
+            background: url('{{ asset('frontend/img/logo_2.png') }}');
+            height: 90px;
+            width: 150px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .header-scrolled #logo .intro-img {
+            display: none
+        }
+
+        @media (max-width: 991px) {
+            #header #logo .intro-img {
+                height: 45px;
+                bottom: 0;
+            }
+            .header-scrolled #logo .intro-img-2{
+                height: 65px;
+                bottom: 0;
+            }
+        }
+    </style>
+
     @stack('styles')
 
 
