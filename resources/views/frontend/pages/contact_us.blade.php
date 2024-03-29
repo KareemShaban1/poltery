@@ -3,7 +3,7 @@
 @push('styles')
     <style>
         .intro-section {
-            background: url({{ asset('frontend/img/Contact_Us.jpg') }});
+            background: url({{ asset('frontend/img/new/contact-us.jpg') }});
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="number" class="form-control" name="number" id="number"
+                                <input type="text" class="form-control" name="number" id="number"
                                     placeholder="{{ trans('frontend.Number') }}" data-rule="minlen:11"
                                     data-msg="Please enter your number" />
                                 <div class="validation"></div>

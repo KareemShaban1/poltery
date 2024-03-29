@@ -55,6 +55,7 @@
         .header-scrolled #logo .intro-img-2 {
             position: relative;
             bottom: 15px;
+            left: -10px;
             background: url('{{ asset('frontend/img/logo_2.png') }}');
             height: 90px;
             width: 150px;
@@ -71,7 +72,8 @@
                 height: 45px;
                 bottom: 0;
             }
-            .header-scrolled #logo .intro-img-2{
+
+            .header-scrolled #logo .intro-img-2 {
                 height: 65px;
                 bottom: 0;
             }

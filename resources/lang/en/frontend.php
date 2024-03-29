@@ -23,5 +23,5 @@ return [
     'Email' => 'Email',
     'Subject' => 'Subject',
     'Message' => 'Message',
-    'Number' => 'Number'
+    'Number' => 'Phone Number'
 ];

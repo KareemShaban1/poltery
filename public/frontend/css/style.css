@@ -1,4 +1,4 @@
-
+/*
 @font-face {
     font-family: "Merriweather";
     src: url(../fonts/Merriweather-Black.ttf);
@@ -9,13 +9,20 @@
     src: url(../fonts/Merriweather-Light.ttf);
     src: url(../fonts/Merriweather-LightItalic.ttf);
     src: url(../fonts/Merriweather-Regular.ttf);
-
+    } */
+    @font-face {
+        font-family: "Mirza-Font";
+        src: url(../fonts/Mirza-Regular.ttf);
+        src: url(../fonts/Mirza-Medium.ttf);
+        src: url(../fonts/Mirza-SemiBold.ttf);
+        src: url(../fonts/Mirza-Bold.ttf);
     }
+
 body {
   background: #fff;
   color: #2f3138;
   /* font-family: "Open Sans", sans-serif; */
-  font-family: "Merriweather";
+  font-family: "Mirza-Font";
 
 }
 
@@ -36,6 +43,8 @@ a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
+  font-family: "Mirza-Font";
+
 }
 
 h1,
@@ -44,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -177,7 +186,9 @@ border-color: #094499;
   margin: 0;
   padding: 6px 0;
   line-height: 1;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Mirza";
+
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -276,7 +287,9 @@ border-color: #094499;
   display: inline-block;
   color: rgb(255 255 255);
   /* color: rgba(202, 206, 221, 0.8); */
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Mirza";
+
   font-weight: 600;
   font-size: 14px;
   outline: none;
@@ -496,33 +509,35 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro .intro-container {
     background: rgba(6, 12, 34, 0.8);
+    position: absolute;
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    top: 260px;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
 
-position: absolute;
-height: 150px;
-bottom: 0;
-left: 0;
-top: 260px;
-right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
 }
 
 #intro h1 {
   color: #fff;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Mirza";
+
   font-size: 56px;
   font-weight: 600;
   text-transform: uppercase;
@@ -613,7 +628,9 @@ right: 0;
 }
 
 #intro .about-btn {
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Mirza";
+
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -1136,7 +1153,9 @@ right: 0;
   padding: 18px 0;
   display: block;
   position: relative;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Mirza";
+
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -1425,7 +1444,9 @@ right: 0;
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Mirza";
+
   font-weight: 700;
   color: #fff;
 }
@@ -1449,7 +1470,9 @@ right: 0;
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Mirza";
+
   color: #fff;
 }
 
@@ -1633,7 +1656,7 @@ right: 0;
     top: 260px;
   }
   #header #logo .intro-img {
-    
+
   }
 
   #intro h1 {

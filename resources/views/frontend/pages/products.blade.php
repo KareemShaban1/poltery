@@ -4,9 +4,9 @@
 @push('styles')
     <style>
         .intro-section {
-            background: url({{ asset('frontend/img/Our_Products.jpg') }});
+            background: url({{ asset('frontend/img/new/products.jpg') }});
             /* background-size: cover;
-                    background-attachment: fixed; */
+                        background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;

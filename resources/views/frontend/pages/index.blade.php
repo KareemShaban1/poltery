@@ -5,7 +5,7 @@
         .intro-section {
             background: url({{ asset('frontend/img/Home.jpg') }});
             /* background-size: cover;
-                                                                                                                        background-attachment: fixed; */
+                                                                                                                                                        background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -171,18 +171,33 @@
                 padding-bottom: 4.5rem !important;
             }
         }
+
+        #intro .intro-container {
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .intro-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
     </style>
 @endpush
 
 @section('content')
     <!--==========================
-                                                                                                                                                                                                        Intro Section
-                                                                                                                                                                                                                                                                                ============================-->
+                                                                                                                                                                                                                                        Intro Section
+                                                                                                                                                                                                                                                                                                                ============================-->
     <section id="intro" class="intro-section">
         <div class="intro-container wow fadeIn">
             <div class="intro-content">
                 <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
                 <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
+                <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+                    data-autoplay="true"></a>
             </div>
         </div>
     </section>
@@ -299,97 +314,46 @@
                                 <div class="text-center">
                                     <div
                                         class="d-flex align-items-center justify-content-center bg-primary rounded-circle w-100px h-100px mb-3 mx-auto">
-                                        {{-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            fill="currentColor" class="bi bi-people text-white" viewBox="0 0 16 16">
-                                            <path
-                                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
-                                        </svg> --}}
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"
-                                            viewBox="0 0 24 24">
-                                            <!-- Duck body -->
-                                            <circle cx="12" cy="15" r="6" fill="#FFD700" />
-
-                                            <!-- Duck head -->
-                                            <circle cx="10" cy="11" r="4" fill="#FFD700" />
-
-                                            <!-- Duck eye -->
-                                            <circle cx="11.5" cy="10" r="0.5" fill="black" />
-
-                                            <!-- Duck beak -->
-                                            <path d="M12,12 L12,14 L14,13 Z" fill="#FFA500" />
-
-                                            <!-- Duck wing -->
-                                            <path d="M16,13 Q18,11 16,9" fill="#FFD700" />
-
-                                            <!-- Duck feet -->
-                                            <path d="M11,18 L10,20 M13,18 L14,20" stroke="#FFA500" stroke-width="1" />
-                                        </svg>
+                                        <img src="{{ asset('frontend/img/icons/duck_icon.png') }}" alt="">
 
 
                                     </div>
                                     <h5 class="display-6 fw-bold m-1">5</h5>
-                                    <p class="text-secondary m-0">million ducks per year</p>
+                                    <p class="text-secondary m-0">Million ducks per year</p>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
                                 <div class="text-center">
                                     <div
                                         class="d-flex align-items-center justify-content-center bg-primary rounded-circle w-100px h-100px mb-3 mx-auto">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100"
-                                            height="100">
-                                            <!-- Quail body -->
-                                            <circle cx="12" cy="15" r="6" fill="#A0522D" />
-
-                                            <!-- Quail head -->
-                                            <circle cx="10" cy="11" r="4" fill="#A0522D" />
-
-                                            <!-- Quail eye -->
-                                            <circle cx="11.5" cy="10" r="0.5" fill="black" />
-
-                                            <!-- Quail beak -->
-                                            <path d="M12,12 L12,14 L14,13 Z" fill="#FFA500" />
-
-                                            <!-- Quail wing -->
-                                            <path d="M16,13 Q18,11 16,9 Q14,11 16,13 Z" fill="#A0522D" />
-
-                                            <!-- Quail feet -->
-                                            <path d="M11,18 L10,20 M13,18 L14,20" stroke="#FFA500" stroke-width="1" />
-                                        </svg>
+                                        <img src="{{ asset('frontend/img/icons/quail_icon.png') }}" alt="">
 
 
                                     </div>
                                     <h5 class="display-6 fw-bold m-1">X</h5>
-                                    <p class="text-secondary m-0">quails per year</p>
+                                    <p class="text-secondary m-0">Quails per year</p>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
                                 <div class="text-center">
                                     <div
                                         class="d-flex align-items-center justify-content-center bg-primary rounded-circle w-100px h-100px mb-3 mx-auto">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            fill="currentColor" class="bi bi-briefcase text-white" viewBox="0 0 16 16">
-                                            <path
-                                                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
-                                        </svg>
+                                        <img src="{{ asset('frontend/img/icons/retail_icon.png') }}" alt="">
+
                                     </div>
                                     <h5 class="display-6 fw-bold m-1">+2000</h5>
-                                    <p class="text-secondary m-0">retail outlets</p>
+                                    <p class="text-secondary m-0">Retail outlets</p>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
                                 <div class="text-center">
                                     <div
                                         class="d-flex align-items-center justify-content-center bg-primary rounded-circle w-100px h-100px mb-3 mx-auto">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            fill="currentColor" class="bi bi-award text-white" viewBox="0 0 16 16">
-                                            <path
-                                                d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z" />
-                                            <path
-                                                d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
-                                        </svg>
+                                        <img src="{{ asset('frontend/img/icons/farm_icon.png') }}" alt="">
+
                                     </div>
                                     <h5 class="display-6 fw-bold m-1">X</h5>
-                                    <p class="text-secondary m-0">farms across egypt</p>
+                                    <p class="text-secondary m-0">Farms across egypt</p>
                                 </div>
                             </div>
                         </div>
