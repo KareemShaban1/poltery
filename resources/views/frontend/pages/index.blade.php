@@ -1,11 +1,15 @@
 @extends('frontend.layouts.master')
 
+@section('seo_data')
+    @include('frontend.layouts.default_seo_data')
+@endsection
+
 @push('styles')
     <style>
         .intro-section {
             background: url({{ asset('frontend/img/Home.jpg') }});
             /* background-size: cover;
-                                                                                                                                                        background-attachment: fixed; */
+                                                                                                                                                                    background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -188,9 +192,6 @@
 @endpush
 
 @section('content')
-    <!--==========================
-                                                                                                                                                                                                                                        Intro Section
-                                                                                                                                                                                                                                                                                                                ============================-->
     <section id="intro" class="intro-section">
         <div class="intro-container wow fadeIn">
             <div class="intro-content">
@@ -269,43 +270,7 @@
                     </div>
                 </div>
 
-                {{-- <div class="d-flex" style="justify-content: space-between;">
-                    <div style="display: flex; display: flex;flex-direction: column;align-items: center;">
-                        <div>
-                            <img src="{{ asset('frontend/img/Home_mob.jpg') }}" height="50" width="50"
-                                alt="">
-                        </div>
-                        <p style="margin: 5px 0px">5</p>
-                        <p> million ducks per year</p>
-                    </div>
 
-                    <div style="display: flex; display: flex;flex-direction: column;align-items: center;">
-                        <div>
-                            <img src="{{ asset('frontend/img/Home_mob.jpg') }}" height="50" width="50"
-                                alt="">
-                        </div>
-                        <p style="margin: 5px 0px">X</p>
-                        <p> quails per year</p>
-                    </div>
-
-                    <div style="display: flex; display: flex;flex-direction: column;align-items: center;">
-                        <div>
-                            <img src="{{ asset('frontend/img/Home_mob.jpg') }}" height="50" width="50"
-                                alt="">
-                        </div>
-                        <p style="margin: 5px 0px">+2000</p>
-                        <p> retail outlets </p>
-                    </div>
-
-                    <div style="display: flex; display: flex;flex-direction: column;align-items: center;">
-                        <div>
-                            <img src="{{ asset('frontend/img/Home_mob.jpg') }}" height="50" width="50"
-                                alt="">
-                        </div>
-                        <p style="margin: 5px 0px">X</p>
-                        <p>farms across egypt</p>
-                    </div>
-                </div> --}}
                 <section class="bg-light py-5 py-xl-6">
 
                     <div class="container overflow-hidden">

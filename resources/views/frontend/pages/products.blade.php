@@ -1,12 +1,13 @@
 @extends('frontend.layouts.master')
 
+@section('seo_data')
+    @include('frontend.layouts.default_seo_data')
+@endsection
 
 @push('styles')
     <style>
         .intro-section {
             background: url({{ asset('frontend/img/new/products.jpg') }});
-            /* background-size: cover;
-                        background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -61,16 +62,15 @@
                                                 <span>{{ $product->name }}</span>
                                             </div>
 
-                                            <div class="card-footer">
+                                            {{-- <div class="card-footer">
                                                 <div class="wcf-footer-left">
                                                     <a style="text-decoration: none"
                                                         href="{{ route('products.productCategory', $product->productCategory->id) }}">
                                                         <span
                                                             class="price">{{ $product->productCategory->name }}</span></a>
                                                 </div>
-                                                {{-- <div class="wcf-footer-right"><a href="#" class="buy-btn"><i
-                                                            class="zmdi zmdi-shopping-basket"></i></a></div> --}}
-                                            </div>
+
+                                            </div> --}}
                                         </div>
                                     </div>
                                 </div>

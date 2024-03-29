@@ -1,5 +1,9 @@
 @extends('frontend.layouts.master')
 
+@section('seo_data')
+    @include('frontend.layouts.default_seo_data')
+@endsection
+
 @push('styles')
     <style>
         .intro-section {

@@ -1,5 +1,9 @@
 @extends('frontend.layouts.master')
 
+@section('seo_data')
+    @include('frontend.layouts.default_seo_data')
+@endsection
+
 @push('styles')
     <style>
         img {
@@ -22,10 +26,10 @@
             overflow: hidden;
             position: relative;
             /* top: 50%;
-                                                                                                                                                                                                                                                                                            right: 50%;
-                                                                                                                                                                                                                                                                                            bottom: 50%;
-                                                                                                                                                                                                                                                                                            left: 50%;
-                                                                                                                                                                                                                                                                                            position: absolute; */
+                                                                                                                                                                                                                                                                                                right: 50%;
+                                                                                                                                                                                                                                                                                                bottom: 50%;
+                                                                                                                                                                                                                                                                                                left: 50%;
+                                                                                                                                                                                                                                                                                                position: absolute; */
             /* transform: translate(-50%, -50%); */
         }
 
@@ -158,7 +162,7 @@
         .intro-section {
             background: url({{ asset('frontend/img/Recipes.jpg') }});
             /* background-size: cover;
-                    background-attachment: fixed; */
+                        background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;

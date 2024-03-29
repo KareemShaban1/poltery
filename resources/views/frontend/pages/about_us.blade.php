@@ -1,11 +1,15 @@
 @extends('frontend.layouts.master')
 
+@section('seo_data')
+    @include('frontend.layouts.default_seo_data')
+@endsection
+
 @push('styles')
     <style>
         .intro-section {
             background: url({{ asset('frontend/img/new/about-us.jpg') }});
             /* background-size: cover;
-                    background-attachment: fixed; */
+                        background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
