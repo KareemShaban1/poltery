@@ -9,7 +9,7 @@
         .intro-section {
             background: url({{ asset('frontend/img/Home.jpg') }});
             /* background-size: cover;
-                                                                                                                                                                    background-attachment: fixed; */
+                                                                                                                                                                                background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -191,13 +191,18 @@
     </style>
 @endpush
 
+@php
+    $metaData = App\Models\WebsiteInfo::pluck('value', 'key')->toArray();
+@endphp
+
+
 @section('content')
     <section id="intro" class="intro-section">
         <div class="intro-container wow fadeIn">
             <div class="intro-content">
                 <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
                 <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
-                <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+                <a href="{{ $metaData['home_video'] }}" class="venobox play-btn mb-4" data-vbtype="video"
                     data-autoplay="true"></a>
             </div>
         </div>
