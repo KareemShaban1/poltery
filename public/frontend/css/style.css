@@ -1,4 +1,4 @@
-/*
+
 @font-face {
     font-family: "Merriweather";
     src: url(../fonts/Merriweather-Black.ttf);
@@ -9,7 +9,7 @@
     src: url(../fonts/Merriweather-Light.ttf);
     src: url(../fonts/Merriweather-LightItalic.ttf);
     src: url(../fonts/Merriweather-Regular.ttf);
-    } */
+    }
     @font-face {
         font-family: "Mirza-Font";
         src: url(../fonts/Mirza-Regular.ttf);
@@ -22,8 +22,12 @@ body {
   background: #fff;
   color: #2f3138;
   /* font-family: "Open Sans", sans-serif; */
-  font-family: "Mirza-Font";
+  font-family: "Merriweather";
 
+}
+
+.company-title {
+    margin-top: 20px;
 }
 
 /* old => f82249 */
@@ -43,7 +47,7 @@ a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
-  font-family: "Mirza-Font";
+  /* font-family: "Mirza-Font"; */
 
 }
 
@@ -53,11 +57,15 @@ h3,
 h4,
 h5,
 h6 {
-  /* font-family: "Raleway", sans-serif; */
+    font-family: "Mirza-Font";
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
   color: #094499;
+}
+
+#mobile-nav ul li a {
+    font-family: "Mirza";
 }
 
 .main-page {
@@ -286,12 +294,9 @@ border-color: #094499;
   text-decoration: none;
   display: inline-block;
   color: rgb(255 255 255);
-  /* color: rgba(202, 206, 221, 0.8); */
-  /* font-family: "Raleway", sans-serif; */
   font-family: "Mirza";
-
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
 }
 
@@ -1637,6 +1642,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 991px) {
+
+    h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Mirza-Font";}
+
   #header {
     background: rgba(6, 12, 34, 0.98);
     height: 70px;
@@ -1654,9 +1668,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #intro .intro-container {
     top: 260px;
-  }
-  #header #logo .intro-img {
-
   }
 
   #intro h1 {
@@ -1719,3 +1730,4 @@ body.mobile-nav-active #mobile-nav-toggle {
 .card-footer .wcf-footer-right {
     float: right;
 }
+

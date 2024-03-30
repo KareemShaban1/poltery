@@ -38,6 +38,8 @@
     <!-- Template Main Javascript File -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
 
+    @stack('scripts')
+
 
 </body>
 

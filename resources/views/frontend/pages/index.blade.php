@@ -5,11 +5,15 @@
 @endsection
 
 @push('styles')
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+
     <style>
         .intro-section {
             background: url({{ asset('frontend/img/Home.jpg') }});
             /* background-size: cover;
-                                                                                                                                                                                background-attachment: fixed; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -200,12 +204,24 @@
     <section id="intro" class="intro-section">
         <div class="intro-container wow fadeIn">
             <div class="intro-content">
-                <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
+                <h1 class="mb-4 pb-0 company-title">ElAbed <span>Poultry</span></h1>
                 <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
-                <a href="{{ $metaData['home_video'] }}" class="venobox play-btn mb-4" data-vbtype="video"
+                <a id="autoplayButton" href="{{ $metaData['home_video'] }}" class="venobox play-btn mb-4" data-vbtype="video"
                     data-autoplay="true"></a>
             </div>
         </div>
+        {{-- <div id="video-popup" class="white-popup mfp-hide"
+            style="display: flex; justify-content: center; flex-direction: column;align-items: center">
+
+            <iframe class="venoframe vbvid figlio" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
+                allow="autoplay" frameborder="0"src="{{ asset('frontend/img/home_video.mp4') }}?autoplay=true"
+                style="padding: 0px;"></iframe>
+            <video id="video-player" width="560" height="315" controls autoplays>
+                <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="close-btn" style="width:70px; height:50px">Close</button> <!-- Button to close the popup -->
+        </div> --}}
     </section>
 
     <main id="main">
@@ -335,3 +351,31 @@
 
     </main>
 @endsection
+
+@push('scripts')
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // Initialize Magnific Popup
+            // $.magnificPopup.open({
+            //     items: {
+            //         src: '#video-popup' // ID of the video popup content
+            //     },
+            //     type: 'inline',
+            //     preloader: true,
+            //     modal: true
+            // });
+
+            // // Close the popup when the close button is clicked
+            // $('#close-btn').on('click', function() {
+            //     $.magnificPopup.close(); // Close the popup when the button is clicked
+            // });
+        });
+    </script>
+@endpush
