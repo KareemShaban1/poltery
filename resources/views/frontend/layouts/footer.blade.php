@@ -39,7 +39,7 @@
 
                           <a @if (!empty($website_info['facebook_link'])) href="{{ $website_info['facebook_link'] }}" @endif
                               class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                          <a @if (!empty($website_info['instgram_link'])) href="{{ $website_info['instgram_link'] }}" @endif
+                          <a @if (!empty($website_info['instagram_link'])) href="{{ $website_info['instgram_link'] }}" @endif
                               class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
                           <a @if (!empty($website_info['youtube_link'])) href="{{ $website_info['youtube_link'] }}" @endif
                               class="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
