@@ -11,9 +11,8 @@
 
     <style>
         .intro-section {
-            background: url({{ asset('frontend/img/Home.jpg') }});
-            /* background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            background-attachment: fixed; */
+            background: url({{ asset('frontend/img/Home_1.jpg') }});
+            /* background-size: cover;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -226,6 +225,16 @@
 
     <main id="main">
 
+        @php
+            if (App::getLocale() == 'ar') {
+                $home_info = App\Models\WebsiteInfo::where('type', 'home_content')->where('language', 'arabic')->get();
+            } else {
+                $home_info = App\Models\WebsiteInfo::where('type', 'home_content')->where('language', 'english')->get();
+            }
+
+            $counts = App\Models\WebsiteInfo::where('type', 'counts')->pluck('value', 'key')->toArray();
+
+        @endphp
         <div class="default-section" id="home-section">
             <div class="container">
                 <div class="row" style="text-align: center">
@@ -235,7 +244,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 animate-box">
+                    @foreach ($home_info as $info)
+                        <div class="col-md-6 animate-box">
+                            <div class="services">
+                                <i class="icon-laptop"></i>
+                                <div class="desc">
+                                    <h3>{{ $info->key }}</h3>
+                                    <p>{!! $info->value !!}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- <div class="col-md-6 animate-box">
                         <div class="services">
                             <i class="icon-laptop"></i>
                             <div class="desc">
@@ -288,7 +308,7 @@
                                     heritage, yet constantly evolving to meet the demands of the modern market.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
 
@@ -304,7 +324,7 @@
 
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1">5</h5>
+                                    <h5 class="display-6 fw-bold m-1">{!! $counts['ducks_counts'] !!}</h5>
                                     <p class="text-secondary m-0">Million ducks per year</p>
                                 </div>
                             </div>
@@ -316,7 +336,7 @@
 
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1">X</h5>
+                                    <h5 class="display-6 fw-bold m-1">{!! $counts['quails_counts'] !!}</h5>
                                     <p class="text-secondary m-0">Quails per year</p>
                                 </div>
                             </div>
@@ -327,7 +347,7 @@
                                         <img src="{{ asset('frontend/img/icons/retail_icon.png') }}" alt="">
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1">+2000</h5>
+                                    <h5 class="display-6 fw-bold m-1">{!! $counts['retail_counts'] !!}</h5>
                                     <p class="text-secondary m-0">Retail outlets</p>
                                 </div>
                             </div>
@@ -338,7 +358,7 @@
                                         <img src="{{ asset('frontend/img/icons/farm_icon.png') }}" alt="">
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1">X</h5>
+                                    <h5 class="display-6 fw-bold m-1">{!! $counts['farms_count'] !!}</h5>
                                     <p class="text-secondary m-0">Farms across egypt</p>
                                 </div>
                             </div>

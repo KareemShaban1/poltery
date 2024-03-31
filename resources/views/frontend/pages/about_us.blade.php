@@ -9,7 +9,7 @@
         .intro-section {
             background: url({{ asset('frontend/img/new/about-us.jpg') }});
             /* background-size: cover;
-                        background-attachment: fixed; */
+                                    background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -46,11 +46,31 @@
                     <h2>About Us</h2>
                 </div>
             </div>
-            {{-- elabed.png --}}
 
+            @php
+                if (App::getLocale() == 'ar') {
+                    $about_info = App\Models\WebsiteInfo::where('type', 'about_content')
+                        ->where('language', 'arabic')
+                        ->get();
+                } else {
+                    $about_info = App\Models\WebsiteInfo::where('type', 'about_content')
+                        ->where('language', 'english')
+                        ->get();
+                }
+
+            @endphp
             <div class="row">
                 <div class="col-md-6 animate-box">
-                    <div class="services">
+                    @foreach ($about_info as $info)
+                        <div class="services">
+                            <i class="icon-laptop"></i>
+                            <div class="desc">
+                                <h3>{{ $info->key }}</h3>
+                                <p>{!! $info->value !!}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- <div class="services">
                         <i class="icon-laptop"></i>
                         <div class="desc">
                             <h3>Our Story</h3>
@@ -75,7 +95,7 @@
                                 poultry that meets the highest standards of quality, integrity, and customer satisfaction.
                             </p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
 

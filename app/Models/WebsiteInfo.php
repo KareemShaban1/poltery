@@ -21,5 +21,5 @@ class WebsiteInfo extends Model
      *
      * @var array
      */
-    protected $fillable = ['key','value'];
+    protected $fillable = ['key','value','type','language'];
 }

@@ -13,7 +13,9 @@ return new class () extends Migration {
         Schema::create('website_info', function (Blueprint $table) {
             $table->id();
             $table->string('key');
-            $table->string('value');
+            $table->longText('value');
+            $table->string('type')->nullable();
+            $table->string('language')->nullable();
             $table->timestamps();
         });
     }

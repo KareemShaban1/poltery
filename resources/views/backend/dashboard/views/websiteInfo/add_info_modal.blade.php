@@ -29,28 +29,53 @@
 
                     @csrf
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="key">الأسم </label>
-                                <input name="key" id="key" type="text" class="form-control" />
-                                @error('key')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="value">القيمة</label>
-                                <input name="value" id="value" type="text" class="form-control" />
-                                @error('value')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="key">{{ trans('backend.Name') }} </label>
+                            <input name="key" id="key" type="text" class="form-control" />
+                            @error('key')
+                                <p class="text-danger">{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
 
+                    <div class="d-flex flex-column mb-8 fv-row">
+
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">{{ trans('backend.Value') }}</span>
+
+                        </label>
+
+                        <textarea class="summernote" name="value"></textarea>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fs-6 fw-bold">Type:</label>
+                        <select class="form-select form-select-solid fw-bolder" name="type"
+                            data-placeholder="Select Type" data-allow-clear="true" data-kt-user-table-filter="role"
+                            data-hide-search="true">
+                            <option value="home_content">Home Content</option>
+                            <option value="about_content">About Content</option>
+                            <option value="seo">Seo</option>
+                            <option value="links">Links</option>
+                            <option value="counts">Counts</option>
+                            <option value="other">Other</option>
+
+                        </select>
+
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fs-6 fw-bold">Language:</label>
+                        <select class="form-select form-select-solid fw-bolder" name="language"
+                            data-placeholder="Select Language" data-allow-clear="true" data-kt-user-table-filter="role"
+                            data-hide-search="true">
+                            <option value="arabic">Arabic</option>
+                            <option value="english">English</option>
+
+                        </select>
+
+                    </div>
                     <button type="submit" class="btn btn-success btn-md nextBtn btn-lg m-3">أضافة</button>
 
 

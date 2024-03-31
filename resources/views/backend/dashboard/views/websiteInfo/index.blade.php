@@ -40,6 +40,8 @@
                                 <th>Id</th>
                                 <th> الأسم</th>
                                 <th>القيمة</th>
+                                <th>النوع</th>
+                                <th>اللغة</th>
                                 <th>التحكم</th>
                             </tr>
                         </thead>
@@ -49,7 +51,9 @@
 
                                     <td>{{ $meta->id }}</td>
                                     <td>{{ $meta->key }}</td>
-                                    <td>{{ $meta->value }}</td>
+                                    <td>{!! $meta->value !!}</td>
+                                    <td>{{ $meta->type }}</td>
+                                    <td>{{ $meta->language }}</td>
                                     <td>
 
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
