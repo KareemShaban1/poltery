@@ -10,31 +10,9 @@
 @endphp
 @push('styles')
     <style>
-        .intro-section {
-            background: url({{ $bg_image->image_url }});
-            /* background-size: cover;
-                                                background-attachment: fixed; */
-            background-attachment: fixed;
-            width: 100%;
-            height: 800px;
-            /* background-size: contain; */
-            background-size: 100% auto;
-            background-repeat: no-repeat;
-        }
-
-        /* Media query for smaller devices */
-        @media (max-width: 768px) {
-            .intro-section {
-                background: url({{ $mob_bg_image->image_url }});
-                background-size: cover;
-                background-attachment: fixed;
-                /* Adjust other styles as needed for smaller devices */
-            }
-        }
-
         img {
             max-width: 100%;
-            vertical-align: top;
+            /* vertical-align: top; */
         }
 
         .gallery {
@@ -77,6 +55,28 @@
 
         .gallery__selector:checked~.gallery__thumb>img {
             box-shadow: 0 0 0 3px #0be2f6;
+        }
+
+        .intro-section {
+            background: url({{ $bg_image->image_url }});
+            /* background-size: cover;
+                                                    background-attachment: fixed; */
+            background-attachment: fixed;
+            width: 100%;
+            height: 800px;
+            /* background-size: contain; */
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+
+        /* Media query for smaller devices */
+        @media (max-width: 768px) {
+            .intro-section {
+                background: url({{ $mob_bg_image->image_url }});
+                background-size: cover;
+                background-attachment: fixed;
+                /* Adjust other styles as needed for smaller devices */
+            }
         }
     </style>
 @endpush
