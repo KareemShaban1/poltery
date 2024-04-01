@@ -7,7 +7,7 @@ use Intervention\Image\Facades\Image;
 
 trait UploadImageTrait
 {
-    public function ProcessImage(Request $request, $file_name, $folder_name, $currentImage = null)
+    public function ProcessImage(Request $request, $file_name, $folder_name, $currentImage = null, $normal = false)
     {
         // Check if a new image file has been uploaded
         if ($request->hasFile($file_name)) {
@@ -44,13 +44,27 @@ trait UploadImageTrait
 
             $imgFile = Image::make($image->getRealPath());
 
-            $imgFile->resize(
-                400,
-                400,
-                function ($constraint) {
-                    $constraint->aspectRatio();
-                }
-            )->save($thumbnailPath . '/' . $newImageName);
+            // Resize the image if $normal parameter is true (default behavior)
+            if (!$normal) {
+                $imgFile->resize(
+                    900,
+                    900,
+                    function ($constraint) {
+                        $constraint->aspectRatio();
+                    }
+                )->save($thumbnailPath . '/' . $newImageName);
+                ;
+            } else {
+                $imgFile->save($thumbnailPath . '/' . $newImageName);
+            }
+
+            // $imgFile->resize(
+            //     400,
+            //     400,
+            //     function ($constraint) {
+            //         $constraint->aspectRatio();
+            //     }
+            // )->save($thumbnailPath . '/' . $newImageName);
 
             // If updating, delete the old image
             if ($currentImage) {

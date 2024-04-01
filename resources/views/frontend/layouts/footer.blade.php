@@ -8,8 +8,8 @@
 
                   <div class="col-lg-5 col-md-5 footer-info"
                       style="display: flex; flex-direction: column; align-items: center;">
-                      <h3>ElAbed Poultry</h3>
-                      <p>El Abed Meat & Poultry Co.
+                      <h3 style="font-family: 'Rubic'">ElAbed Poultry</h3>
+                      <p style="font-size:18px; font-family: 'Rubic'">El Abed Meat & Poultry Co.
                       </p>
                       <img class="logo-image" src="{{ asset('frontend/img/logo_1.png') }}" alt="" title="">
                   </div>
@@ -27,8 +27,8 @@
                       style="display: flex;
                   flex-direction: column;
                   align-items: center;">
-                      <h4 style="font-size:25px">Contact Us</h4>
-                      <p style="font-size:20px">
+                      <h4 style="font-size:22px; font-family: 'Rubic'">Contact Us</h4>
+                      <p style="font-size:18px; font-family: 'Rubic'">
                           <strong>Address:</strong> 28 Ahmed Helmy Street, Shobra, Cairo, Egypt 11231 <br>
                           <strong>Phone:</strong> +2 015 222 222 50<br>
                           <strong>Email:</strong> info@elabedfarms.com<br>

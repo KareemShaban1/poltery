@@ -15,6 +15,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\UserController;
+use App\Models\Image;
 use Illuminate\Support\Facades\Route;
 
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -73,6 +74,15 @@ Route::group(
             Route::get('websiteInfo/edit/{id}', [websiteInfoController::class,'edit'])->name('websiteInfo.edit');
             Route::put('websiteInfo/update/{id}', [websiteInfoController::class,'update'])->name('websiteInfo.update');
             Route::delete('websiteInfo/destroy/{id}', [websiteInfoController::class,'destroy'])->name('websiteInfo.destroy');
+        });
+
+        Route::group([], function () {
+            Route::get('images', [ImageController::class,'index'])->name('images.index');
+            Route::get('images/create', [ImageController::class,'create'])->name('images.create');
+            Route::post('images/store', [ImageController::class,'store'])->name('images.store');
+            Route::get('images/edit/{id}', [ImageController::class,'edit'])->name('images.edit');
+            Route::put('images/update/{id}', [ImageController::class,'update'])->name('images.update');
+            Route::delete('images/destroy/{id}', [ImageController::class,'destroy'])->name('images.destroy');
         });
 
         Route::group([], function () {

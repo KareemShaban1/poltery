@@ -4,10 +4,16 @@
     @include('frontend.layouts.default_seo_data')
 @endsection
 
+@php
+    $bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Products BG')->first();
+    $mob_bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Products Mob BG')->first();
+
+@endphp
+
 @push('styles')
     <style>
         .intro-section {
-            background: url({{ asset('frontend/img/new/products.jpg') }});
+            background: url({{ $bg_image->image_url }});
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -18,7 +24,7 @@
         /* Media query for smaller devices */
         @media (max-width: 768px) {
             .intro-section {
-                background: url({{ asset('frontend/img/Our_Products_mob.jpg') }});
+                background: url({{ $mob_bg_image->image_url }});
                 background-size: cover;
                 background-attachment: fixed;
                 background-position-y: 60px;
@@ -33,7 +39,7 @@
     <section id="intro" class="intro-section">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
-            <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
+            <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
 
         </div>
     </section>
@@ -59,7 +65,7 @@
                                         </div>
                                         <div class="wsk-cp-text">
                                             <div class="category">
-                                                <span>{{ $product->name }}</span>
+                                                <span style="font-family: 'Rubic';">{{ $product->name }}</span>
                                             </div>
 
                                             {{-- <div class="card-footer">

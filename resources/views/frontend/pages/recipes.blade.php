@@ -4,8 +4,35 @@
     @include('frontend.layouts.default_seo_data')
 @endsection
 
+@php
+    $bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Recipes BG')->first();
+    $mob_bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Recipes Mob BG')->first();
+
+@endphp
 @push('styles')
     <style>
+        .intro-section {
+            background: url({{ $bg_image->image_url }});
+            /* background-size: cover;
+                                                        background-attachment: fixed; */
+            background-attachment: fixed;
+            width: 100%;
+            height: 800px;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+
+        /* Media query for smaller devices */
+        @media (max-width: 768px) {
+            .intro-section {
+                background: url({{ $mob_bg_image->image_url }});
+                background-size: cover;
+                background-attachment: fixed;
+                background-position-y: 60px;
+                /* Adjust other styles as needed for smaller devices */
+            }
+        }
+
         img {
             vertical-align: text-bottom;
         }
@@ -26,10 +53,10 @@
             overflow: hidden;
             position: relative;
             /* top: 50%;
-                                                                                                                                                                                                                                                                                                right: 50%;
-                                                                                                                                                                                                                                                                                                bottom: 50%;
-                                                                                                                                                                                                                                                                                                left: 50%;
-                                                                                                                                                                                                                                                                                                position: absolute; */
+                                                                                                                                                                                                                                                                                                                                    right: 50%;
+                                                                                                                                                                                                                                                                                                                                    bottom: 50%;
+                                                                                                                                                                                                                                                                                                                                    left: 50%;
+                                                                                                                                                                                                                                                                                                                                    position: absolute; */
             /* transform: translate(-50%, -50%); */
         }
 
@@ -158,28 +185,6 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 34px 0 rgba(255, 79, 135, 0.32);
         }
-
-        .intro-section {
-            background: url({{ asset('frontend/img/Recipes.jpg') }});
-            /* background-size: cover;
-                        background-attachment: fixed; */
-            background-attachment: fixed;
-            width: 100%;
-            height: 800px;
-            background-size: 100% auto;
-            background-repeat: no-repeat;
-        }
-
-        /* Media query for smaller devices */
-        @media (max-width: 768px) {
-            .intro-section {
-                background: url({{ asset('frontend/img/Recipes_mob.jpg') }});
-                background-size: cover;
-                background-attachment: fixed;
-                background-position-y: 60px;
-                /* Adjust other styles as needed for smaller devices */
-            }
-        }
     </style>
 @endpush
 
@@ -187,7 +192,7 @@
     <section id="intro" class="intro-section">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
-            <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
+            <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
 
         </div>
     </section>
@@ -213,8 +218,8 @@
                                     <div class="ft-recipe">
 
                                         <div class="ft-recipe__thumb">
-                                            <h3>{{ $recipe->type }}</h3><img src="{{ $recipe->image_url }}"
-                                                alt="Strawberry Waffle" />
+                                            <h3 style="font-family: 'Rubic';">{{ $recipe->type }}</h3><img
+                                                src="{{ $recipe->image_url }}" alt="Strawberry Waffle" />
                                         </div>
                                         <div class="ft-recipe__content">
                                             <header class="content__header">

@@ -11,11 +11,28 @@
     src: url(../fonts/Merriweather-Regular.ttf);
     }
     @font-face {
-        font-family: "Mirza-Font";
+        font-family: "Mirza";
         src: url(../fonts/Mirza-Regular.ttf);
         src: url(../fonts/Mirza-Medium.ttf);
         src: url(../fonts/Mirza-SemiBold.ttf);
         src: url(../fonts/Mirza-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: "Rubic";
+        src: url(../fonts/Rubik-Black.ttf);
+        src: url(../fonts/Rubik-BlackItalic.ttf);
+        src: url(../fonts/Rubik-Bold.ttf);
+        src: url(../fonts/Rubik-BoldItalic.ttf);
+        src: url(../fonts/Rubik-ExtraBold.ttf);
+        src: url(../fonts/Rubik-ExtraBoldItalic.ttf);
+        src: url(../fonts/Rubik-Italic.ttf);
+        src: url(../fonts/Rubik-Light.ttf);
+        src: url(../fonts/Rubik-LightItalic.ttf);
+        src: url(../fonts/Rubik-Medium.ttf);
+        src: url(../fonts/Rubik-MediumItalic.ttf);
+        src: url(../fonts/Rubik-Regular.ttf);
+
     }
 
 body {
@@ -28,6 +45,10 @@ body {
 
 .company-title {
     margin-top: 20px;
+}
+
+.slogan {
+    font-family: 'Rubic';
 }
 
 /* old => f82249 */
@@ -47,7 +68,7 @@ a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
-  /* font-family: "Mirza-Font"; */
+  /* font-family: "Mirza"; */
 
 }
 
@@ -57,7 +78,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Mirza-Font";
+    font-family: "Mirza";
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -296,7 +317,7 @@ border-color: #094499;
   color: rgb(255 255 255);
   font-family: "Mirza";
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   outline: none;
 }
 
@@ -540,10 +561,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro h1 {
   color: #fff;
-  /* font-family: "Raleway", sans-serif; */
   font-family: "Mirza";
-
-  font-size: 56px;
+  font-size: 70px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -1649,7 +1668,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Mirza-Font";}
+    font-family: "Mirza";}
 
   #header {
     background: rgba(6, 12, 34, 0.98);

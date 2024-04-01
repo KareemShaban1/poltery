@@ -73,6 +73,7 @@ return [
     'Add_Info' => 'أضافة',
     'Edit Info' => 'تعديل',
     'Add_Image' => 'اضافة صورة',
+    'Edit_Image' => 'تعديل صورة',
     'total_products' => 'Total Products',
     'total_facilities' => 'Total Facilities',
     'total_recipes' => 'Total Recipes',

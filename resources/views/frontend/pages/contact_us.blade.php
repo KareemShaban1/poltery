@@ -3,11 +3,15 @@
 @section('seo_data')
     @include('frontend.layouts.default_seo_data')
 @endsection
+@php
+    $bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Contact BG')->first();
+    $mob_bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Contact Mob BG')->first();
 
+@endphp
 @push('styles')
     <style>
         .intro-section {
-            background: url({{ asset('frontend/img/new/contact-us.jpg') }});
+            background: url({{ $bg_image->image_url }});
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -24,7 +28,7 @@
         /* Media query for smaller devices */
         @media (max-width: 768px) {
             .intro-section {
-                background: url({{ asset('frontend/img/Contact_Us_mob.jpg') }});
+                background: url({{ $mob_bg_image->image_url }});
                 background-size: cover;
                 background-attachment: fixed;
                 background-position-y: 70px;
@@ -38,7 +42,7 @@
     <section id="intro" class="intro-section">
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
-            <p class="mb-4 pb-0">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
+            <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
         </div>
     </section>
 
@@ -62,24 +66,26 @@
                         <div class="col-md-4">
                             <div class="contact-address">
                                 <i class="ion-ios-location-outline"></i>
-                                <h3>{{ trans('frontend.Address') }}</h3>
-                                <address>28 Ahmed Helmy Street, Shobra, Cairo, Egypt 11231</address>
+                                <h3 style="font-family: 'Rubic';">{{ trans('frontend.Address') }}</h3>
+                                <address style="font-family: 'Rubic';">28 Ahmed Helmy Street, Shobra, Cairo, Egypt 11231
+                                </address>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="contact-phone">
                                 <i class="ion-ios-telephone-outline"></i>
-                                <h3>{{ trans('frontend.Phone') }}</h3>
-                                <p><a href="tel:+201522222250">+2 015 222 222 50</a></p>
+                                <h3 style="font-family: 'Rubic';">{{ trans('frontend.Phone') }}</h3>
+                                <p style="font-family: 'Rubic';"><a href="tel:+201522222250">+2 015 222 222 50</a></p>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="contact-email">
                                 <i class="ion-ios-email-outline"></i>
-                                <h3>{{ trans('frontend.Email') }}</h3>
-                                <p><a href="mailto:info@elabedfarms.com">info@elabedfarms.com</a></p>
+                                <h3 style="font-family: 'Rubic';">{{ trans('frontend.Email') }}</h3>
+                                <p style="font-family: 'Rubic';"><a
+                                        href="mailto:info@elabedfarms.com">info@elabedfarms.com</a></p>
                             </div>
                         </div>
 

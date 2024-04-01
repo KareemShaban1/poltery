@@ -74,4 +74,6 @@ return [
     'Edit Info' => 'Edit Info',
     '' => '',
     'Add_Image' => 'Add Image',
+    'Edit_Image' => 'Edit Image',
+
 ];

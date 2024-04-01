@@ -15,7 +15,7 @@ class ImageController extends Controller
     public function index()
     {
         $images = Image::all();
-        // return view('backend.das');
+        return view('backend.dashboard.views.images.index', compact('images'));
 
     }
 
@@ -25,6 +25,8 @@ class ImageController extends Controller
     public function create()
     {
         //
+        return view('backend.dashboard.views.images.create');
+
     }
 
     /**
@@ -42,7 +44,12 @@ class ImageController extends Controller
           "facility_id" => "sometimes|exists:facilities,id",
           "recipe_id" => "sometimes|exists:recipes,id",
         ]);
-        $validatedData['image'] = $this->ProcessImage($request, 'image', 'images');
+        if($request->type == 'main_image') {
+            $validatedData['image'] = $this->ProcessImage($request, 'image', 'images',null,true);
+        } else {
+            $validatedData['image'] = $this->ProcessImage($request, 'image', 'images');
+
+        }
         Image::create($validatedData);
 
         if($request->type == "facility_image") {
@@ -50,7 +57,7 @@ class ImageController extends Controller
 
         }
 
-        // return redirect()->route('images.index')->with('toast_success', 'تم أنشاء الصورة بنجاح');
+        return redirect()->route('images.index')->with('toast_success', 'تم أنشاء الصورة بنجاح');
 
     }
 
