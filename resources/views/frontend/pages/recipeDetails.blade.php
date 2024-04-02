@@ -77,11 +77,11 @@
         }
 
         /* #recipe-image {
-                                                                                                overflow: hidden;
-                                                                                                height: 450px;
-                                                                                                width: 972px;
-                                                                                                background-size: cover;
-                                                                                            } */
+                                                                                                    overflow: hidden;
+                                                                                                    height: 450px;
+                                                                                                    width: 972px;
+                                                                                                    background-size: cover;
+                                                                                                } */
 
         #recipe-image {
             max-width: 100%;
@@ -108,7 +108,7 @@
         .intro-section {
             background: url({{ asset('frontend/img/Recipes.jpg') }});
             /* background-size: cover;
-                    background-attachment: fixed; */
+                        background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -133,7 +133,7 @@
 @section('content')
     <section id="intro" class="intro-section">
         <div class="intro-container wow fadeIn">
-            <h1 class="mb-4 pb-0">ElAbed <span>Poultry</span></h1>
+            <h1 class="mb-4 pb-0 company-title">ElAbed <span>Poultry</span></h1>
             <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
 
         </div>
