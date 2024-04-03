@@ -214,8 +214,8 @@
             <div class="intro-content">
                 <h1 class="mb-1 pb-0 company-title">ElAbed <span>Poultry</span></h1>
                 <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
-                <a id="autoplayButton" href="{{ $metaData['home_video'] }}" class="venobox play-btn mb-4"
-                    data-vbtype="video" data-autoplay="true"></a>
+                {{-- <a id="autoplayButton" href="{{ $metaData['home_video'] }}" class="venobox play-btn mb-4"
+                    data-vbtype="video" data-autoplay="true"></a> --}}
             </div>
         </div>
         {{-- <div id="video-popup" class="white-popup mfp-hide"
