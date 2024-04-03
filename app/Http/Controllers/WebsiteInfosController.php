@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\WebsiteInfo;
 use Illuminate\Http\Request;
 
-class websiteInfoController extends Controller
+class websiteInfosController extends Controller
 {
     //
     public function index()

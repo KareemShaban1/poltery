@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\websiteInfoController;
+use App\Http\Controllers\websiteInfosController;
 use App\Http\Controllers\SeoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FacilityCategoryController;
@@ -68,12 +68,12 @@ Route::group(
         });
 
         Route::group([], function () {
-            Route::get('websiteInfo', [websiteInfoController::class,'index'])->name('websiteInfo.index');
-            Route::get('websiteInfo/create', [websiteInfoController::class,'create'])->name('websiteInfo.create');
-            Route::post('websiteInfo/store', [websiteInfoController::class,'store'])->name('websiteInfo.store');
-            Route::get('websiteInfo/edit/{id}', [websiteInfoController::class,'edit'])->name('websiteInfo.edit');
-            Route::put('websiteInfo/update/{id}', [websiteInfoController::class,'update'])->name('websiteInfo.update');
-            Route::delete('websiteInfo/destroy/{id}', [websiteInfoController::class,'destroy'])->name('websiteInfo.destroy');
+            Route::get('websiteInfo', [websiteInfosController::class,'index'])->name('websiteInfo.index');
+            Route::get('websiteInfo/create', [websiteInfosController::class,'create'])->name('websiteInfo.create');
+            Route::post('websiteInfo/store', [websiteInfosController::class,'store'])->name('websiteInfo.store');
+            Route::get('websiteInfo/edit/{id}', [websiteInfosController::class,'edit'])->name('websiteInfo.edit');
+            Route::put('websiteInfo/update/{id}', [websiteInfosController::class,'update'])->name('websiteInfo.update');
+            Route::delete('websiteInfo/destroy/{id}', [websiteInfosController::class,'destroy'])->name('websiteInfo.destroy');
         });
 
         Route::group([], function () {
