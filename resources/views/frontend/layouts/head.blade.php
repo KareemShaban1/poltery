@@ -40,8 +40,10 @@
             position: relative;
             bottom: 15px;
             background: url('{{ asset('frontend/img/logo.png') }}');
-            height: 70px;
-            width: 135px;
+            /* height: 70px;
+            width: 135px; */
+            height: 105px;
+            width: 180px;
             background-size: contain;
             background-repeat: no-repeat;
         }
@@ -53,8 +55,10 @@
             bottom: 15px;
             left: -10px;
             background: url('{{ asset('frontend/img/logo_2.png') }}');
-            height: 90px;
-            width: 150px;
+            /* height: 90px;
+            width: 150px; */
+            height: 105px;
+            width: 180px;
             background-size: contain;
             background-repeat: no-repeat;
         }
