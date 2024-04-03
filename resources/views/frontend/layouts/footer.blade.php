@@ -8,9 +8,9 @@
 
                   <div class="col-lg-5 col-md-5 footer-info"
                       style="display: flex; flex-direction: column; align-items: center;">
-                      <h3 style="font-family: 'Rubic'">ElAbed Poultry</h3>
-                      <p style="font-size:18px; font-family: 'Rubic'">El Abed Meat & Poultry Co.
-                      </p>
+                      <h3 style="font-family: 'Rubic'">El Abed Meat & Poultry Co.</h3>
+                      {{-- <p style="font-size:18px; font-family: 'Rubic'">El Abed Meat & Poultry Co.
+                      </p> --}}
                       <img class="logo-image" src="{{ asset('frontend/img/logo_1.png') }}" alt="" title="">
                   </div>
 

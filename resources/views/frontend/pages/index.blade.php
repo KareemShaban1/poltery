@@ -214,18 +214,13 @@
                     data-autoplay="true"></a>
             </div>
         </div>
-        {{-- <div id="video-popup" class="white-popup mfp-hide"
-            style="display: flex; justify-content: center; flex-direction: column;align-items: center">
-
+        <div id="video-popup" class="white-popup mfp-hide"
+            style="display: flex; justify-content: center; flex-direction: column; align-items: center">
             <iframe class="venoframe vbvid figlio" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
-                allow="autoplay" frameborder="0"src="{{ asset('frontend/img/home_video.mp4') }}?autoplay=true"
+                allow="autoplay" frameborder="0" src="https://www.youtube.com/embed/i43raBmR_Ys?autoplay=1"
                 style="padding: 0px;"></iframe>
-            <video id="video-player" width="560" height="315" controls autoplays>
-                <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <button id="close-btn" style="width:70px; height:50px">Close</button> <!-- Button to close the popup -->
-        </div> --}}
+            <button id="close-btn" style="width: 70px; height: 50px">Close</button> <!-- Button to close the popup -->
+        </div>
     </section>
 
     <main id="main">
@@ -388,19 +383,20 @@
         document.addEventListener("DOMContentLoaded", function() {
 
             // Initialize Magnific Popup
-            // $.magnificPopup.open({
-            //     items: {
-            //         src: '#video-popup' // ID of the video popup content
-            //     },
-            //     type: 'inline',
-            //     preloader: true,
-            //     modal: true
-            // });
+            $.magnificPopup.open({
+                items: {
+                    src: '#video-popup' // ID of the video popup content
+                },
+                type: 'inline',
+                preloader: true,
+                modal: true
+            });
 
-            // // Close the popup when the close button is clicked
-            // $('#close-btn').on('click', function() {
-            //     $.magnificPopup.close(); // Close the popup when the button is clicked
-            // });
+            // Close the popup when the close button is clicked
+            $('#close-btn').on('click', function() {
+                $.magnificPopup.close(); // Close the popup when the button is clicked
+            });
+
         });
     </script>
 @endpush
