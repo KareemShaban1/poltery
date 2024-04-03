@@ -216,9 +216,9 @@
         </div>
         <div id="video-popup" class="white-popup mfp-hide"
             style="display: flex; justify-content: center; flex-direction: column; align-items: center">
-            <iframe class="venoframe vbvid figlio" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
-                allow="autoplay" frameborder="0" src="https://www.youtube.com/embed/i43raBmR_Ys?autoplay=1"
-                style="padding: 0px;"></iframe>
+            <iframe id="video-player" class="venoframe vbvid figlio" webkitallowfullscreen="" mozallowfullscreen=""
+                allowfullscreen="" allow="autoplay" frameborder="0"
+                src="https://www.youtube.com/embed/i43raBmR_Ys?autoplay=1&mute=1" style="padding: 0px;"></iframe>
             <button id="close-btn" style="width: 70px; height: 50px">Close</button> <!-- Button to close the popup -->
         </div>
     </section>
@@ -382,6 +382,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
 
+
+
             // Initialize Magnific Popup
             $.magnificPopup.open({
                 items: {
@@ -396,6 +398,17 @@
             $('#close-btn').on('click', function() {
                 $.magnificPopup.close(); // Close the popup when the button is clicked
             });
+
+            // Wait for the iframe to load
+            window.onload = function() {
+                var iframe = document.getElementById('video-player');
+
+                // Wait for the iframe's contentWindow to be available
+                if (iframe && iframe.contentWindow) {
+                    // Call the YouTube iframe API to unmute the video
+                    iframe.contentWindow.postMessage('{"event":"command","func":"mute","args":"0"}', '*');
+                }
+            };
 
         });
     </script>
