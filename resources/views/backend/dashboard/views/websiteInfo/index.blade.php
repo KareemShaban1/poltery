@@ -46,7 +46,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($info as $meta)
+                            @foreach ($websiteInfo as $meta)
                                 <tr>
 
                                     <td>{{ $meta->id }}</td>
