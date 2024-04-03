@@ -9,6 +9,7 @@ use App\Http\Controllers\Frontend\FacilitiesController;
 use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\Frontend\RecipesController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\InfoController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
@@ -68,12 +69,12 @@ Route::group(
         });
 
         Route::group([], function () {
-            Route::get('websiteInfo', [websiteInfosController::class,'index'])->name('websiteInfo.index');
-            Route::get('websiteInfo/create', [websiteInfosController::class,'create'])->name('websiteInfo.create');
-            Route::post('websiteInfo/store', [websiteInfosController::class,'store'])->name('websiteInfo.store');
-            Route::get('websiteInfo/edit/{id}', [websiteInfosController::class,'edit'])->name('websiteInfo.edit');
-            Route::put('websiteInfo/update/{id}', [websiteInfosController::class,'update'])->name('websiteInfo.update');
-            Route::delete('websiteInfo/destroy/{id}', [websiteInfosController::class,'destroy'])->name('websiteInfo.destroy');
+            Route::get('info', [InfoController::class,'index'])->name('info.index');
+            Route::get('info/create', [InfoController::class,'create'])->name('info.create');
+            Route::post('info/store', [InfoController::class,'store'])->name('info.store');
+            Route::get('info/edit/{id}', [InfoController::class,'edit'])->name('info.edit');
+            Route::put('info/update/{id}', [InfoController::class,'update'])->name('info.update');
+            Route::delete('info/destroy/{id}', [InfoController::class,'destroy'])->name('info.destroy');
         });
 
         Route::group([], function () {
