@@ -25,7 +25,7 @@
         data-bs-target="#kt_modal_new_info">{{ trans('backend.Add_Info') }}</a>
 
 
-    @include('backend.dashboard.views.info.add_info_modal')
+    @include('backend.dashboard.views.websiteInfo.add_info_modal')
 
 
     <!-- row -->
@@ -61,7 +61,7 @@
                                             <i class="fa fa-edit"></i>
                                         </a>
 
-                                        @include('backend.dashboard.views.info.edit_info_modal')
+                                        @include('backend.dashboard.views.websiteInfo.edit_info_modal')
 
 
 
