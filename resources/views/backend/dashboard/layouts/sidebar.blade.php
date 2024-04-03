@@ -433,8 +433,8 @@
                 <div class="menu-sub menu-sub-accordion">
 
                     <div class="menu-item">
-                        <a class="{{ request()->routeIs('websiteInfo.index') ? 'menu-link active' : 'menu-link' }} "
-                            href="{{ route('websiteInfo.index') }}">
+                        <a class="{{ request()->routeIs('info.index') ? 'menu-link active' : 'menu-link' }} "
+                            href="{{ route('info.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -442,8 +442,8 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a class="{{ request()->routeIs('websiteInfo.create') ? 'menu-link active' : 'menu-link' }} "
-                            href="{{ route('websiteInfo.create') }}">
+                        <a class="{{ request()->routeIs('info.create') ? 'menu-link active' : 'menu-link' }} "
+                            href="{{ route('info.create') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>

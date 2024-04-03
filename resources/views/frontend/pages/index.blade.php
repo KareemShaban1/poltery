@@ -206,6 +206,7 @@
 
 @section('content')
     <section id="intro" class="intro-section">
+
         <div class="intro-container wow fadeIn">
             <div class="intro-content">
                 <h1 class="mb-1 pb-0 company-title">ElAbed <span>Poultry</span></h1>
@@ -214,14 +215,37 @@
                     data-autoplay="true"></a>
             </div>
         </div>
-        <div id="video-popup" class="white-popup mfp-hide"
+        {{-- <div id="video-popup" class="white-popup mfp-hide"
             style="display: flex; justify-content: center; flex-direction: column; align-items: center">
             <iframe id="video-player" class="venoframe vbvid figlio" webkitallowfullscreen="" mozallowfullscreen=""
                 allowfullscreen="" allow="autoplay" frameborder="0"
-                src="https://www.youtube.com/embed/i43raBmR_Ys?autoplay=1&mute=1" style="padding: 0px;"></iframe>
+                src="https://www.youtube.com/embed/i43raBmR_Ys?autoplay=1" style="padding: 0px;"></iframe>
             <button id="close-btn" style="width: 70px; height: 50px">Close</button> <!-- Button to close the popup -->
-        </div>
+        </div> --}}
     </section>
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 align-items-end mb-4">
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <div class="video-container">
+                        <video controls preload="none" autoplay style="height:200px; width:200px">
+                            <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/mp4">
+                            <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/ogg">
+                        </video>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- About End -->
+
+
 
     <main id="main">
 
@@ -325,7 +349,7 @@
 
                                     </div>
                                     <h5 class="display-6 fw-bold m-1">{!! $counts['ducks_counts'] !!}</h5>
-                                    <p class="text-secondary m-0">Million ducks per year</p>
+                                    <p class="text-secondary m-0">Ducks per year</p>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
@@ -385,19 +409,19 @@
 
 
             // Initialize Magnific Popup
-            $.magnificPopup.open({
-                items: {
-                    src: '#video-popup' // ID of the video popup content
-                },
-                type: 'inline',
-                preloader: true,
-                modal: true
-            });
+            // $.magnificPopup.open({
+            //     items: {
+            //         src: '#video-popup' // ID of the video popup content
+            //     },
+            //     type: 'inline',
+            //     preloader: true,
+            //     modal: true
+            // });
 
-            // Close the popup when the close button is clicked
-            $('#close-btn').on('click', function() {
-                $.magnificPopup.close(); // Close the popup when the button is clicked
-            });
+            // // Close the popup when the close button is clicked
+            // $('#close-btn').on('click', function() {
+            //     $.magnificPopup.close(); // Close the popup when the button is clicked
+            // });
 
             // Wait for the iframe to load
             window.onload = function() {
@@ -410,6 +434,29 @@
                 }
             };
 
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.querySelector(".video-container video");
+            var aboutSection = document.querySelector(".container-xxl");
+
+            var options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.5,
+            };
+
+            var observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, options);
+
+            observer.observe(aboutSection);
         });
     </script>
 @endpush
