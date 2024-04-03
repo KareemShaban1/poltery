@@ -16,13 +16,12 @@
 
     <style>
         .intro-section {
-            background: url({{ $bg_image->image_url }});
-            /* background-size: cover;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-attachment: fixed; */
-            background-attachment: fixed;
+            /* background: url({{ $bg_image->image_url }}); */
+            /* background-attachment: fixed; */
             width: 100%;
             height: 800px;
-            background-size: 100% auto;
-            background-repeat: no-repeat;
+            /* background-size: 100% auto; */
+            /* background-repeat: no-repeat; */
 
         }
 
@@ -206,7 +205,7 @@
 
 @section('content')
     <section id="intro" class="intro-section">
-        <video preload="none" autoplay muted loop style="height:100%; width:100%">
+        <video preload="none" autoplay muted loop class="background-clip" style="height:100%; width:100%">
             <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/mp4">
             <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/ogg">
         </video>
@@ -283,60 +282,7 @@
                             </div>
                         </div>
                     @endforeach
-                    {{-- <div class="col-md-6 animate-box">
-                        <div class="services">
-                            <i class="icon-laptop"></i>
-                            <div class="desc">
-                                <h3>Integrated Poultry Production Process</h3>
-                                <p>At ElAbed Poultry, we take pride in our vertically integrated approach to production,
-                                    which enables us to maintain strict quality control at every stage. From raising day-old
-                                    parent stock at our specialized farms to hatching eggs in our state-of-the-art
-                                    incubation laboratories, and breeding the ducklings at our commercial farms, we
-                                    meticulously oversee every aspect of the production process. We even ensure the highest
-                                    standards of nutrition by feeding our birds with specially formulated vegetarian
-                                    products from ElAbed Feed Mill.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="services">
-                            <i class="icon-server"></i>
-                            <div class="desc">
-                                <h3>Customer Satisfaction</h3>
-                                <p>One of our core values is a commitment to meeting the diverse needs of our customers.
-                                    Whether you're a local or international market, we strive to provide you with the finest
-                                    poultry products that are both healthy and delicious. We understand that quality and
-                                    freshness are paramount, and that's why we prioritize ethical practices in our
-                                    operations. Our birds are slaughtered under Islamic ritual at ElAbed slaughterhouse,
-                                    ensuring adherence to religious guidelines and providing our customers with peace of
-                                    mind. All of our products are 100% Halal.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="services">
-                            <i class="icon-money"></i>
-                            <div class="desc">
-                                <h3>Commitment to Excellence</h3>
-                                <p>As we continue to grow, we remain committed to our core values of integrity, quality, and
-                                    customer satisfaction. We believe in fostering long-term partnerships with our customers
-                                    and stakeholders, and we strive to exceed expectations at every turn. Join us on our
-                                    journey as we continue to make a positive impact on the poultry industry, one delicious
-                                    and nutritious product at a time.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 animate-box">
-                        <div class="services">
-                            <i class="icon-tablet"></i>
-                            <div class="desc">
-                                <h3>Quality Assurance</h3>
-                                <p>Choose ElAbed Poultry for unrivaled quality, trusted expertise, and a commitment to
-                                    excellence. Experience the difference that comes from a company deeply rooted in its
-                                    heritage, yet constantly evolving to meet the demands of the modern market.</p>
-                            </div>
-                        </div>
-                    </div> --}}
+
                 </div>
 
 
@@ -352,7 +298,7 @@
 
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1">{!! $counts['ducks_counts'] !!}</h5>
+                                    <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['ducks_counts'] !!}</h5>
                                     <p class="text-secondary m-0">Ducks per year</p>
                                 </div>
                             </div>
@@ -364,7 +310,7 @@
 
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1">{!! $counts['quails_counts'] !!}</h5>
+                                    <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['quails_counts'] !!}</h5>
                                     <p class="text-secondary m-0">Quails per year</p>
                                 </div>
                             </div>
@@ -375,7 +321,7 @@
                                         <img src="{{ asset('frontend/img/icons/retail_icon.png') }}" alt="">
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1">{!! $counts['retail_counts'] !!}</h5>
+                                    <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retail_counts'] !!}</h5>
                                     <p class="text-secondary m-0">Retail outlets</p>
                                 </div>
                             </div>
@@ -386,7 +332,7 @@
                                         <img src="{{ asset('frontend/img/icons/farm_icon.png') }}" alt="">
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1">{!! $counts['farms_count'] !!}</h5>
+                                    <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_count'] !!}</h5>
                                     <p class="text-secondary m-0">Farms across egypt</p>
                                 </div>
                             </div>
@@ -403,9 +349,17 @@
 @push('scripts')
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script> --}}
+
+    <script>
+        $('[data-toggle="counter-up"]').counterUp({
+            delay: 10,
+            time: 2000,
+        });
+    </script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -427,40 +381,7 @@
             //     $.magnificPopup.close(); // Close the popup when the button is clicked
             // });
 
-            // Wait for the iframe to load
-            window.onload = function() {
-                var iframe = document.getElementById('video-player');
 
-                // Wait for the iframe's contentWindow to be available
-                if (iframe && iframe.contentWindow) {
-                    // Call the YouTube iframe API to unmute the video
-                    iframe.contentWindow.postMessage('{"event":"command","func":"mute","args":"0"}', '*');
-                }
-            };
-
-        });
-
-        document.addEventListener("DOMContentLoaded", function() {
-            var video = document.querySelector(".video-container video");
-            var aboutSection = document.querySelector(".container-xxl");
-
-            var options = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0.5,
-            };
-
-            var observer = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        video.play();
-                    } else {
-                        video.pause();
-                    }
-                });
-            }, options);
-
-            observer.observe(aboutSection);
         });
     </script>
 @endpush

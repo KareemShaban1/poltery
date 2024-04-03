@@ -263,10 +263,10 @@
             width: 65%;
         }
 
-.logo-image {
-    height: 115px;
-    margin-top: 30px
-}
+        .logo-image {
+            height: 135px;
+            margin-top: 15px;
+        }
 
 
 /* small devices */
@@ -304,5 +304,10 @@
 }
 
 
+.background-clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 
 
