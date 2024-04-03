@@ -24,7 +24,7 @@
             <!--begin::Modal header-->
             <!--begin::Modal body-->
             <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
-                <form method="post" enctype="multipart/form-data" action="{{ Route('websiteInfo.store') }}"
+                <form method="post" enctype="multipart/form-data" action="{{ Route('info.store') }}"
                     autocomplete="off">
 
                     @csrf

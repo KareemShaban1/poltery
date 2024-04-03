@@ -24,7 +24,7 @@
             <!--begin::Modal header-->
             <!--begin::Modal body-->
             <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
-                <form method="post" enctype="multipart/form-data" action="{{ Route('websiteInfo.update', $meta->id) }}"
+                <form method="post" enctype="multipart/form-data" action="{{ Route('info.update', $meta->id) }}"
                     autocomplete="off">
 
                     @csrf
