@@ -206,13 +206,17 @@
 
 @section('content')
     <section id="intro" class="intro-section">
+        <video preload="none" autoplay muted loop style="height:100%; width:100%">
+            <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/mp4">
+            <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/ogg">
+        </video>
 
         <div class="intro-container wow fadeIn">
             <div class="intro-content">
                 <h1 class="mb-1 pb-0 company-title">ElAbed <span>Poultry</span></h1>
                 <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
-                <a id="autoplayButton" href="{{ $metaData['home_video'] }}" class="venobox play-btn mb-4" data-vbtype="video"
-                    data-autoplay="true"></a>
+                <a id="autoplayButton" href="{{ $metaData['home_video'] }}" class="venobox play-btn mb-4"
+                    data-vbtype="video" data-autoplay="true"></a>
             </div>
         </div>
         {{-- <div id="video-popup" class="white-popup mfp-hide"
@@ -225,14 +229,14 @@
     </section>
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    {{-- <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-4 align-items-end mb-4">
 
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
 
                     <div class="video-container">
-                        <video controls preload="none" autoplay style="height:200px; width:200px">
+                        <video controls preload="none" autoplay style="height:100%; width:100%">
                             <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/mp4">
                             <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/ogg">
                         </video>
@@ -242,7 +246,7 @@
             </div>
 
         </div>
-    </div>
+    </div> --}}
     <!-- About End -->
 
 
