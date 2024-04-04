@@ -67,8 +67,8 @@
                             <div class="contact-address">
                                 <i class="ion-ios-location-outline"></i>
                                 <h3 style="font-family: 'Rubic';">{{ trans('frontend.Address') }}</h3>
-                                <address style="font-family: 'Rubic';">28 Ahmed Helmy Street, Shobra, Cairo, Egypt 11231
-                                </address>
+                                <p style="font-family: 'Rubic';">28 Ahmed Helmy Street, Shobra, Cairo, Egypt 11231
+                                </p>
                             </div>
                         </div>
 
@@ -76,7 +76,7 @@
                             <div class="contact-phone">
                                 <i class="ion-ios-telephone-outline"></i>
                                 <h3 style="font-family: 'Rubic';">{{ trans('frontend.Phone') }}</h3>
-                                <p style="font-family: 'Rubic';"><a href="tel:+201522222250">+2 015 222 222 50</a></p>
+                                <p style="font-family: 'Rubic';">+2 015 222 222 50</p>
                             </div>
                         </div>
 
@@ -84,8 +84,7 @@
                             <div class="contact-email">
                                 <i class="ion-ios-email-outline"></i>
                                 <h3 style="font-family: 'Rubic';">{{ trans('frontend.Email') }}</h3>
-                                <p style="font-family: 'Rubic';"><a
-                                        href="mailto:info@elabedfarms.com">info@elabedfarms.com</a></p>
+                                <p style="font-family: 'Rubic';">info@elabedfarms.com</p>
                             </div>
                         </div>
 

@@ -164,7 +164,7 @@
                                                 </div>
 
                                                 <div class="description-prod">
-                                                    <p>{!! $facility->content !!}</p>
+                                                    <p class="description">{!! $facility->content !!}</p>
                                                 </div>
 
                                             </div>

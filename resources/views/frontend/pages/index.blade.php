@@ -16,13 +16,18 @@
 
     <style>
         .intro-section {
-            /* background: url({{ $bg_image->image_url }}); */
-            /* background-attachment: fixed; */
             width: 100%;
             height: 800px;
-            /* background-size: 100% auto; */
-            /* background-repeat: no-repeat; */
 
+        }
+
+        .background-clip {
+            object-fit: fill;
+
+        }
+
+        .intro-section {
+            height: 705px;
         }
 
         /* Media query for smaller devices */
@@ -30,11 +35,6 @@
             .intro-section {
                 width: 100%;
                 height: 350px;
-                /* background: url({{ $mob_bg_image->image_url }});
-                                                                                                background-size: cover;
-                                                                                                background-attachment: fixed;
-                                                                                                background-position-y: 60px; */
-                /* Adjust other styles as needed for smaller devices */
             }
 
             #intro .intro-container {
@@ -248,7 +248,7 @@
             $counts = App\Models\WebsiteInfo::where('type', 'counts')->pluck('value', 'key')->toArray();
 
         @endphp
-        <div class="default-section" id="home-section">
+        <div id="home-section" style="padding: 7em 0;">
             <div class="container">
                 <div class="row" style="text-align: center">
                     <div class="col-md-12 text-center service-heading animate-box section-header">
@@ -284,7 +284,11 @@
 
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['ducks_counts'] !!}</h5>
+                                    <div style="display: flex; justify-content: center">
+                                        <h5 class="display-6 fw-bold m-1">+</h5>
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['ducks_counts'] !!}
+                                        </h5>
+                                    </div>
                                     <p class="text-secondary m-0">Ducks per year</p>
                                 </div>
                             </div>
@@ -296,7 +300,11 @@
 
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['quails_counts'] !!}</h5>
+                                    <div style="display: flex; justify-content: center">
+                                        <h5 class="display-6 fw-bold m-1">+</h5>
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['quails_counts'] !!}
+                                        </h5>
+                                    </div>
                                     <p class="text-secondary m-0">Quails per year</p>
                                 </div>
                             </div>
@@ -307,7 +315,11 @@
                                         <img src="{{ asset('frontend/img/icons/retail_icon.png') }}" alt="">
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retail_counts'] !!}</h5>
+                                    <div style="display: flex; justify-content: center">
+                                        <h5 class="display-6 fw-bold m-1">+</h5>
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retail_counts'] !!}
+                                        </h5>
+                                    </div>
                                     <p class="text-secondary m-0">Retail outlets</p>
                                 </div>
                             </div>
@@ -318,7 +330,11 @@
                                         <img src="{{ asset('frontend/img/icons/farm_icon.png') }}" alt="">
 
                                     </div>
-                                    <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_count'] !!}</h5>
+                                    <div style="display: flex; justify-content: center">
+                                        <h5 class="display-6 fw-bold m-1">+</h5>
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_count'] !!}
+                                        </h5>
+                                    </div>
                                     <p class="text-secondary m-0">Farms across egypt</p>
                                 </div>
                             </div>

@@ -110,7 +110,7 @@
                     <img class="owner-image" src="{{ asset('frontend/img/elabed.png') }}" alt="">
 
                     <h2 class="m-0">Abed Ramsis</h2>
-                    <p class="m-0">Founder & CEO</p>
+                    <p class="m-0" style="">Founder & CEO</p>
 
                 </div>
             </div>

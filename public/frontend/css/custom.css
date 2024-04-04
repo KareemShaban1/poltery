@@ -9,8 +9,19 @@
     height: 100%;
     width: 100%;
 }
+
+.slogan {
+    font-family: 'Rubic';
+    color: #ebebeb;
+    font-weight: 700;
+    font-size: 20px;
+}
+
 .service-heading {
           margin-bottom: 30px;
+      }
+      .description {
+        color: black;
       }
 
 @media (min-width: 992px){
@@ -319,7 +330,7 @@
     padding: 0;
 }
 .intro-container-home {
-    top: 135px;
+    top: 190px;
 }
 }
 

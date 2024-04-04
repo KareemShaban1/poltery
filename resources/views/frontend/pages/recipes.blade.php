@@ -14,7 +14,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                background-attachment: fixed; */
+                                                                    background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -53,10 +53,10 @@
             overflow: hidden;
             position: relative;
             /* top: 50%;
-                                                                                                                                                                                                                                                                                                                                            right: 50%;
-                                                                                                                                                                                                                                                                                                                                            bottom: 50%;
-                                                                                                                                                                                                                                                                                                                                            left: 50%;
-                                                                                                                                                                                                                                                                                                                                            position: absolute; */
+                                                                                                                                                                                                                                                                                                                                                right: 50%;
+                                                                                                                                                                                                                                                                                                                                                bottom: 50%;
+                                                                                                                                                                                                                                                                                                                                                left: 50%;
+                                                                                                                                                                                                                                                                                                                                                position: absolute; */
             /* transform: translate(-50%, -50%); */
         }
 
@@ -200,7 +200,7 @@
 
         <div class="container-fluid">
 
-            <div class="row pt-5">
+            <div class="row">
                 <div class="col-md-12 text-center service-heading animate-box section-header">
                     <h2>{{ trans('frontend.recipes') }}</h2>
                 </div>
