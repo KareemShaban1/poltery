@@ -248,7 +248,7 @@
             $counts = App\Models\WebsiteInfo::where('type', 'counts')->pluck('value', 'key')->toArray();
 
         @endphp
-        <div id="home-section" style="padding: 7em 0;">
+        <div id="home-section" style="padding: 5em 0;">
             <div class="container">
                 <div class="row" style="text-align: center">
                     <div class="col-md-12 text-center service-heading animate-box section-header">

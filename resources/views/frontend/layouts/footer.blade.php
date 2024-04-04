@@ -14,12 +14,6 @@
                       <img class="logo-image" src="{{ asset('frontend/img/logo_1.png') }}" alt="" title="">
                   </div>
 
-                  <div class="col-lg-1 col-md-1 footer-info" style="">
-                      <div style="height: 100%; width:2px; background-color:#f20311;">
-
-                      </div>
-
-                  </div>
                   @php
                       $website_info = App\Models\WebsiteInfo::pluck('value', 'key');
                   @endphp

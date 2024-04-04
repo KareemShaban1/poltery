@@ -50,7 +50,7 @@
     <section id="contact" class="default-section section-bg wow fadeInUp">
 
         <div class="container">
-            <div class="row pt-5">
+            <div class="row">
                 <div class="col-md-12 text-center service-heading animate-box section-header">
                     <h2>{{ trans('frontend.Contact_Us') }}</h2>
                 </div>

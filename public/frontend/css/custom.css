@@ -34,11 +34,6 @@
 }
 
 
-
-        .shell {
-            padding: 80px 0;
-        }
-
         .wsk-cp-product {
             background: #fff;
             padding: 15px;
@@ -327,11 +322,13 @@
     width: 100%;
 }
 .default-section {
-    padding: 0;
+    padding: 3rem 0px;
 }
 .intro-container-home {
     top: 190px;
 }
+
+
 }
 
 

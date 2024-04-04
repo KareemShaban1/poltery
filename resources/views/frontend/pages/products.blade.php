@@ -48,7 +48,7 @@
 
         <div class="container">
 
-            <div class="row pt-5">
+            <div class="row">
                 <div class="col-md-12 text-center service-heading animate-box section-header">
                     <h2>{{ trans('frontend.products') }}</h2>
                 </div>

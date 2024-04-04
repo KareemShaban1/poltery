@@ -16,6 +16,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VideoController;
 use App\Models\Image;
 use Illuminate\Support\Facades\Route;
 
@@ -77,13 +78,12 @@ Route::group(
             Route::delete('info/destroy/{id}', [InfoController::class,'destroy'])->name('info.destroy');
         });
 
+
         Route::group([], function () {
-            Route::get('images', [ImageController::class,'index'])->name('images.index');
-            Route::get('images/create', [ImageController::class,'create'])->name('images.create');
-            Route::post('images/store', [ImageController::class,'store'])->name('images.store');
-            Route::get('images/edit/{id}', [ImageController::class,'edit'])->name('images.edit');
-            Route::put('images/update/{id}', [ImageController::class,'update'])->name('images.update');
-            Route::delete('images/destroy/{id}', [ImageController::class,'destroy'])->name('images.destroy');
+            Route::get('videos', [VideoController::class,'index'])->name('videos.index');
+            Route::post('videos/store', [VideoController::class,'store'])->name('videos.store');
+            Route::get('videos/edit/{id}', [VideoController::class,'edit'])->name('videos.edit');
+            Route::delete('videos/destroy/{id}', [VideoController::class,'destroy'])->name('videos.destroy');
         });
 
         Route::group([], function () {
