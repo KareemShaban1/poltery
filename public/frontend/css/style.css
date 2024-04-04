@@ -513,15 +513,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Intro Section
 --------------------------------------------------------------*/
 
-#intro {
+ /* {
   width: 100%;
-  /* height: 100vh; */
-  /* background-size: cover; */
   overflow: hidden;
   position: relative;
-}
+} */
 
-/* #intro:before {
+/* :before {
   content: "";
   background: rgba(6, 12, 34, 0.8);
   position: absolute;
@@ -531,7 +529,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: 0;
 } */
 
-#intro .intro-container {
+.intro-container {
     background: rgba(6, 12, 34, 0.8);
     position: absolute;
     height: 130px;
@@ -557,7 +555,32 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 }
 
-#intro h1 {
+.intro-container-home {
+    background: rgba(6, 12, 34, 0.8);
+    position: absolute;
+    height: 130px;
+    bottom: 0;
+    left: 0;
+    top: 260px;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+
+}
+ h1 {
   color: #fff;
   font-family: "Mirza";
   font-size: 70px;
@@ -565,17 +588,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
-#intro h1 span {
+ h1 span {
   color: #f20311;
 }
 
-#intro p {
+ p {
   color: #ebebeb;
   font-weight: 700;
   font-size: 20px;
 }
 
-#intro .play-btn {
+ .play-btn {
   width: 94px;
   height: 94px;
   background: radial-gradient(#f20311 50%, rgba(101, 111, 150, 0.15) 52%);
@@ -585,7 +608,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
 }
 
-#intro .play-btn::after {
+ .play-btn::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -601,7 +624,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-#intro .play-btn:before {
+ .play-btn:before {
   content: '';
   position: absolute;
   width: 120px;
@@ -624,13 +647,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: rgba(198, 16, 0, 0);
 }
 
-#intro .play-btn:hover::after {
+ .play-btn:hover::after {
   border-left: 15px solid #f20311;
   -webkit-transform: scale(20);
   transform: scale(20);
 }
 
-#intro .play-btn:hover::before {
+ .play-btn:hover::before {
   content: '';
   position: absolute;
   left: 50%;
@@ -649,7 +672,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 0;
 }
 
-#intro .about-btn {
+ .about-btn {
   /* font-family: "Raleway", sans-serif; */
   font-family: "Mirza";
 
@@ -668,7 +691,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 2px solid #f20311;
 }
 
-#intro .about-btn:hover {
+ .about-btn:hover {
   background: #f20311;
   color: #fff;
 }
@@ -1635,7 +1658,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (min-width: 1024px) {
-  #intro {
+   {
     background-attachment: fixed;
   }
 
@@ -1683,15 +1706,15 @@ h6 {
     display: inline;
   }
 
-  #intro .intro-container {
+   .intro-container {
     top: 260px;
   }
 
-  #intro h1 {
+   h1 {
     font-size: 34px;
   }
 
-  #intro p {
+   p {
     font-size: 16px;
   }
 

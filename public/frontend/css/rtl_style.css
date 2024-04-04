@@ -475,7 +475,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1630,7 +1630,7 @@ float: right;
   #intro .intro-container {
     top: 260px;
   }
-  
+
 
   #intro h1 {
     font-size: 34px;

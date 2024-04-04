@@ -2,6 +2,13 @@
           padding: 7em 0;
 }
 
+.background-clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
 .service-heading {
           margin-bottom: 30px;
       }
@@ -301,13 +308,22 @@
     margin-top: 20px;
     /* margin: 0px; */
 }
-}
-
-
 .background-clip {
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 105px;
+    height: 200px;
+    width: 100%;
 }
+.default-section {
+    padding: 0;
+}
+.intro-container-home {
+    top: 135px;
+}
+}
+
+
+
 
 
