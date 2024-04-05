@@ -1,5 +1,5 @@
 .default-section {
-          padding: 7em 0;
+          padding: 6em 0;
 }
 
 .background-clip {
@@ -40,7 +40,7 @@
             border-radius: 6px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
             position: relative;
-            margin: 20px auto;
+            margin: 10px auto;
         }
 
         .wsk-cp-img {
@@ -73,7 +73,7 @@
         }
 
         .wsk-cp-text {
-            padding-top: 100%;
+            padding-top: 70%;
         }
 
         .wsk-cp-text .category {
@@ -231,7 +231,8 @@
 
         @media screen and (max-width: 991px) {
             .wsk-cp-product {
-                margin: 40px auto;
+                /* margin: 40px auto; */
+                margin-bottom: 30px;
             }
 
             .wsk-cp-product .wsk-cp-img {
@@ -272,8 +273,8 @@
             background:#094499;
         }
         #card-container {
-            margin: 5% auto;
-            width: 65%;
+            margin: 0 5% auto;
+            /* width: 65%; */
         }
 
         .logo-image {
@@ -328,7 +329,20 @@
     top: 190px;
 }
 
+.slogan {
+    font-size: 19px;
+}
 
+.wsk-cp-product .wsk-cp-text .category>span {
+    border-color: #ddd;
+    box-shadow: none;
+    padding: 10px;
+}
+.wsk-cp-product:hover .wsk-cp-text .category>span {
+    border-color: #ddd;
+    box-shadow: none;
+    padding: 10px;
+}
 }
 
 
