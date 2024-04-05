@@ -36,14 +36,20 @@
 
 
 @section('content')
-   @include('frontend.pages.pages_parts.page_desc')
+    @include('frontend.pages.pages_parts.page_desc')
     <section class="default-section" id="products">
 
         <div class="container">
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-12 text-center service-heading animate-box section-header">
                     <h2>{{ trans('frontend.products') }}</h2>
+                </div>
+            </div> --}}
+            <div class="row" style="text-align: center">
+                <div class="col-md-12 text-center service-heading animate-box section-header">
+                    <h2>{{ trans('frontend.products') }}</h2>
+
                 </div>
             </div>
             <div>

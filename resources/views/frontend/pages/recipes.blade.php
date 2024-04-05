@@ -14,7 +14,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                        background-attachment: fixed; */
+                                                                            background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -53,10 +53,10 @@
             overflow: hidden;
             position: relative;
             /* top: 50%;
-                                                                                                                                                                                                                                                                                                                                                    right: 50%;
-                                                                                                                                                                                                                                                                                                                                                    bottom: 50%;
-                                                                                                                                                                                                                                                                                                                                                    left: 50%;
-                                                                                                                                                                                                                                                                                                                                                    position: absolute; */
+                                                                                                                                                                                                                                                                                                                                                        right: 50%;
+                                                                                                                                                                                                                                                                                                                                                        bottom: 50%;
+                                                                                                                                                                                                                                                                                                                                                        left: 50%;
+                                                                                                                                                                                                                                                                                                                                                        position: absolute; */
             /* transform: translate(-50%, -50%); */
         }
 
@@ -123,7 +123,8 @@
         .ft-recipe .ft-recipe__content .content__header .row-wrapper .recipe-title {
             /* font-family: var(--headlinesFont); */
             font-weight: 600;
-            margin-top: 20px
+            margin-top: 20px;
+            font-size: 24px
         }
 
         .ft-recipe .ft-recipe__content .content__header .recipe-details {
