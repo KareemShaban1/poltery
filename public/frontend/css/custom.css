@@ -17,6 +17,10 @@
     font-size: 20px;
 }
 
+.slogan-mob {
+display: none;
+}
+
 .service-heading {
           margin-bottom: 30px;
       }
@@ -330,10 +334,18 @@
     top: 190px;
 }
 
+
 .slogan {
-    font-size: 19px;
+    display: none;
 }
 
+.slogan-mob {
+    font-family: 'Rubic';
+    color: #ebebeb;
+    font-weight: 700;
+    font-size: 19px;
+    display: block;
+}
 .wsk-cp-product .wsk-cp-text .category>span {
     border-color: #ddd;
     box-shadow: none;
