@@ -77,7 +77,7 @@ display: none;
         }
 
         .wsk-cp-text {
-            padding-top: 70%;
+            padding-top: 100%;
         }
 
         .wsk-cp-text .category {
@@ -355,6 +355,9 @@ display: none;
     border-color: #ddd;
     box-shadow: none;
     padding: 10px;
+}
+.wsk-cp-text {
+    padding-top: 70%;
 }
 }
 
