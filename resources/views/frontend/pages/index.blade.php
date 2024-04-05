@@ -50,6 +50,10 @@
             .desc {
                 margin-bottom: 40px
             }
+
+            .home-title {
+                font-size: 26px;
+            }
         }
 
         .g-6,
@@ -265,8 +269,8 @@
                             <div class="services">
                                 <i class="icon-laptop"></i>
                                 <div class="desc">
-                                    <h3>{{ $info->key }}</h3>
-                                    <p>{!! $info->value !!}</p>
+                                    <h3 class="home-title">{{ $info->key }}</h3>
+                                    <p class="home-desc">{!! $info->value !!}</p>
                                 </div>
                             </div>
                         </div>
