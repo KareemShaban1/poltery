@@ -35,15 +35,20 @@
             .intro-section {
                 width: 100%;
                 height: 350px;
+                background-color: black
             }
 
             #intro .intro-container {
                 top: 70px;
                 height: 200px;
             }
+
+            .section-header h2 {
+                font-size: 30px
+            }
         }
 
-        CSS.g-6,
+        .g-6,
         .gx-6 {
             --bs-gutter-x: 4.5rem;
         }
@@ -248,7 +253,7 @@
             $counts = App\Models\WebsiteInfo::where('type', 'counts')->pluck('value', 'key')->toArray();
 
         @endphp
-        <div id="home-section" style="padding: 5em 0;">
+        <div id="home-section" style="padding: 3em 0;">
             <div class="container">
                 <div class="row" style="text-align: center">
                     <div class="col-md-12 text-center service-heading animate-box section-header">

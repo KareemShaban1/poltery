@@ -77,11 +77,11 @@
         }
 
         /* #recipe-image {
-                                                                                                        overflow: hidden;
-                                                                                                        height: 450px;
-                                                                                                        width: 972px;
-                                                                                                        background-size: cover;
-                                                                                                    } */
+                                                                                                                overflow: hidden;
+                                                                                                                height: 450px;
+                                                                                                                width: 972px;
+                                                                                                                background-size: cover;
+                                                                                                            } */
 
         #recipe-image {
             max-width: 100%;
@@ -108,7 +108,7 @@
         .intro-section {
             background: url({{ asset('frontend/img/Recipes.jpg') }});
             /* background-size: cover;
-                            background-attachment: fixed; */
+                                    background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -139,9 +139,9 @@
         </div>
     </section>
     <section class="default-section" id="recipesDetails">
-        <div class="container-fluid">
+        <div class="container">
 
-            <div class="row pt-5">
+            <div class="row">
                 <div class="col-md-12 text-center service-heading animate-box section-header">
                     <h2>{{ trans('frontend.recipes_details') }}</h2>
                 </div>

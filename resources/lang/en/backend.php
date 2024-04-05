@@ -75,5 +75,9 @@ return [
     '' => '',
     'Add_Image' => 'Add Image',
     'Edit_Image' => 'Edit Image',
+    'total_products' => 'Total Products',
+    'total_facilities' => 'Total Facilities',
+    'total_recipes' => 'Total Recipes',
+    'total_sponsors' => 'Total Sponsors ',
 
 ];

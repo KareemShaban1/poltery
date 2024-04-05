@@ -66,13 +66,15 @@
 
         @media (max-width: 991px) {
             #header #logo .intro-img {
-                height: 45px;
+                height: 65px;
                 bottom: 0;
+                width: 120px;
             }
 
             .header-scrolled #logo .intro-img-2 {
                 height: 65px;
                 bottom: 0;
+                width: 120px;
             }
         }
     </style>

@@ -13,7 +13,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                        background-attachment: fixed; */
+                                                                                background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -30,6 +30,10 @@
                 background-attachment: fixed;
                 background-position-y: 60px;
                 /* Adjust other styles as needed for smaller devices */
+            }
+
+            .about-title {
+                font-size: 28px
             }
         }
     </style>
@@ -69,8 +73,8 @@
                         <div class="services">
                             <i class="icon-laptop"></i>
                             <div class="desc">
-                                <h3>{{ $info->key }}</h3>
-                                <p>{!! $info->value !!}</p>
+                                <h3 class="about-title">{{ $info->key }}</h3>
+                                <p class="about-desc">{!! $info->value !!}</p>
                             </div>
                         </div>
                     @endforeach
