@@ -46,6 +46,10 @@
             .section-header h2 {
                 font-size: 30px
             }
+
+            .desc {
+                margin-bottom: 40px
+            }
         }
 
         .g-6,
@@ -228,13 +232,7 @@
                 <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
             </div>
         </div>
-        {{-- <div id="video-popup" class="white-popup mfp-hide"
-            style="display: flex; justify-content: center; flex-direction: column; align-items: center">
-            <iframe id="video-player" class="venoframe vbvid figlio" webkitallowfullscreen="" mozallowfullscreen=""
-                allowfullscreen="" allow="autoplay" frameborder="0"
-                src="https://www.youtube.com/embed/i43raBmR_Ys?autoplay=1" style="padding: 0px;"></iframe>
-            <button id="close-btn" style="width: 70px; height: 50px">Close</button> <!-- Button to close the popup -->
-        </div> --}}
+
     </section>
 
 

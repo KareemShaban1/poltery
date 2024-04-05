@@ -13,13 +13,17 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                                background-attachment: fixed; */
+                                                                                                background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
             /* background-size: contain; */
             background-size: 100% auto;
             background-repeat: no-repeat;
+        }
+
+        .desc {
+            margin-bottom: 60px
         }
 
         /* Media query for smaller devices */
@@ -35,18 +39,17 @@
             .about-title {
                 font-size: 28px
             }
+
+            .desc {
+                margin-bottom: 60px
+            }
         }
     </style>
 @endpush
 
 @section('content')
-    <section id="intro" class="intro-section">
-        <div class="intro-container wow fadeIn">
-            <h1 class="mb-1 pb-0 company-title">ElAbed <span>Poultry</span></h1>
-            <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
+    @include('frontend.pages.pages_parts.page_desc')
 
-        </div>
-    </section>
     <section class="default-section" id="about-us">
         <div class="container">
             <div class="row">

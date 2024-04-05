@@ -60,7 +60,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                        background-attachment: fixed; */
+                                                                background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -82,13 +82,7 @@
 @endpush
 
 @section('content')
-    <section id="intro" class="intro-section">
-        <div class="intro-container wow fadeIn">
-            <h1 class="mb-1 pb-0 company-title">ElAbed <span>Poultry</span></h1>
-            <p class="mb-4 pb-0 slogan">FROM OUR FARMS TO YOUR TABLE - THE BEST QUALITY YOU CAN FIND</p>
-
-        </div>
-    </section>
+    @include('frontend.pages.pages_parts.page_desc')
 
     <section class="default-section" id="facilities">
         <div class="container">
