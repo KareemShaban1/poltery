@@ -471,15 +471,7 @@
                             <span class="menu-title">Website Info</span>
                         </a>
                     </div>
-                    <div class="menu-item">
-                        <a class="{{ request()->routeIs('info.create') ? 'menu-link active' : 'menu-link' }} "
-                            href="{{ route('info.create') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Add Website Info</span>
-                        </a>
-                    </div>
+
                 </div>
             </div>
 

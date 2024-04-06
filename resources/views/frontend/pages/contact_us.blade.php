@@ -107,7 +107,7 @@
                     @endphp
                     <div style="display:flex; justify-content:center; padding:20px 0px">
 
-                        <p style="color: #094499">{!! $contact_quote->value ?? '' !!}</p>
+                        <p style="color: #094499; font-family: 'Rubic';">{!! $contact_quote->value ?? '' !!}</p>
                     </div>
                     <div class="form">
                         <div id="sendmessage">Your message has been sent. Thank you!</div>

@@ -21,6 +21,17 @@
 display: none;
 }
 
+h1 {
+    color: #fff;
+    font-family: "Mirza";
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+   h1 span {
+    color: #f20311;
+  }
 .service-heading {
           margin-bottom: 30px;
       }
