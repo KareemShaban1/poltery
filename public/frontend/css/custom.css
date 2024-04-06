@@ -1,3 +1,38 @@
+@font-face {
+    font-family: "Merriweather";
+    src: url(../fonts/Merriweather-Black.ttf);
+    src: url(../fonts/Merriweather-BlackItalic.ttf);
+    src: url(../fonts/Merriweather-Bold.ttf);
+    src: url(../fonts/Merriweather-BoldItalic.ttf);
+    src: url(../fonts/Merriweather-Italic.ttf);
+    src: url(../fonts/Merriweather-Light.ttf);
+    src: url(../fonts/Merriweather-LightItalic.ttf);
+    src: url(../fonts/Merriweather-Regular.ttf);
+    }
+    @font-face {
+        font-family: "Mirza";
+        src: url(../fonts/Mirza-Regular.ttf);
+        src: url(../fonts/Mirza-Medium.ttf);
+        src: url(../fonts/Mirza-SemiBold.ttf);
+        src: url(../fonts/Mirza-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: "Rubic";
+        src: url(../fonts/Rubik-Black.ttf);
+        src: url(../fonts/Rubik-BlackItalic.ttf);
+        src: url(../fonts/Rubik-Bold.ttf);
+        src: url(../fonts/Rubik-BoldItalic.ttf);
+        src: url(../fonts/Rubik-ExtraBold.ttf);
+        src: url(../fonts/Rubik-ExtraBoldItalic.ttf);
+        src: url(../fonts/Rubik-Italic.ttf);
+        src: url(../fonts/Rubik-Light.ttf);
+        src: url(../fonts/Rubik-LightItalic.ttf);
+        src: url(../fonts/Rubik-Medium.ttf);
+        src: url(../fonts/Rubik-MediumItalic.ttf);
+        src: url(../fonts/Rubik-Regular.ttf);
+
+    }
 .default-section {
           padding: 50px 0;
 }
@@ -351,10 +386,10 @@ h1 {
 }
 
 .slogan-mob {
-    font-family: 'Rubic';
+    font-family: 'Merriweather';
     color: #ebebeb;
     font-weight: 700;
-    font-size: 19px;
+    font-size: 18px;
     display: block;
 }
 .wsk-cp-product .wsk-cp-text .category>span {
@@ -370,6 +405,18 @@ h1 {
 .wsk-cp-text {
     padding-top: 70%;
 }
+
+h1 {
+    color: #fff;
+    font-family: "Mirza";
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+   h1 span {
+    color: #f20311;
+  }
 }
 
 
