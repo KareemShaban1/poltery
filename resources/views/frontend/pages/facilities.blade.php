@@ -60,7 +60,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                background-attachment: fixed; */
+                                                                    background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -158,7 +158,7 @@
                                                 </div>
 
                                                 <div class="description-prod">
-                                                    <p class="description">{!! $facility->content !!}</p>
+                                                    <p class="description">{!! $facility->content ?? '' !!}</p>
                                                 </div>
 
                                             </div>

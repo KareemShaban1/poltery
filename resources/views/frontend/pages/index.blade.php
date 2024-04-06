@@ -255,7 +255,7 @@
             $counts = App\Models\WebsiteInfo::where('type', 'counts')->pluck('value', 'key')->toArray();
 
         @endphp
-        <div id="home-section" style="padding: 50px 0;">
+        <div id="home-section" style="padding: 30px 0;">
             <div class="container">
                 <div class="row" style="text-align: center">
                     <div class="col-md-12 text-center service-heading animate-box section-header">
@@ -270,7 +270,7 @@
                                 <i class="icon-laptop"></i>
                                 <div class="desc">
                                     <h3 class="home-title">{{ $info->key }}</h3>
-                                    <p class="home-desc">{!! $info->value !!}</p>
+                                    <p class="home-desc">{!! $info->value ?? '' !!}</p>
                                 </div>
                             </div>
                         </div>
@@ -293,7 +293,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['ducks_counts'] !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['ducks_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">Ducks per year</p>
@@ -309,7 +309,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['quails_counts'] !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['quails_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">Quails per year</p>
@@ -324,7 +324,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retail_counts'] !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retail_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">Retail outlets</p>
@@ -339,7 +339,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_count'] !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_count'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">Farms across egypt</p>

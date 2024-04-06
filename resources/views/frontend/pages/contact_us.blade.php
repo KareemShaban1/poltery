@@ -59,6 +59,8 @@
 
                     <div class="row contact-info">
 
+
+
                         <div class="col-md-4">
                             <div class="contact-address">
                                 <i class="ion-ios-location-outline"></i>
@@ -88,9 +90,24 @@
 
                     <div>
                         <iframe allowtransparency="true" frameborder="0" scrolling="no" title="elabed_poultry_map"
-                            style="width: 100%; height: 350px; margin-top: 20px; margin-bottom: 20px;"
+                            style="width: 100%; height: 260px; margin-top: 20px; margin-bottom: 20px;"
                             src="//www.weebly.com/weebly/apps/generateMap.php?map=google&elementid=369949245161704105&ineditor=0&control=3&width=auto&height=250px&overviewmap=0&scalecontrol=0&typecontrol=0&zoom=16&long=31.2476834&lat=30.0650099&domain=www&point=1&align=1&reseller=false"></iframe>
 
+                    </div>
+                    @php
+                        if (App::getLocale() == 'ar') {
+                            $contact_quote = App\Models\WebsiteInfo::where('key', 'contact_quote')
+                                ->where('language', 'arabic')
+                                ->first();
+                        } else {
+                            $contact_quote = App\Models\WebsiteInfo::where('key', 'contact_quote')
+                                ->where('language', 'english')
+                                ->first();
+                        }
+                    @endphp
+                    <div style="display:flex; justify-content:center; padding:20px 0px">
+
+                        <p style="color: #094499">{!! $contact_quote->value ?? '' !!}</p>
                     </div>
                     <div class="form">
                         <div id="sendmessage">Your message has been sent. Thank you!</div>
