@@ -326,7 +326,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retail_counts'] ?? '' !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retails_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">Retail outlets</p>
@@ -341,7 +341,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_count'] ?? '' !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">Farms across egypt</p>
