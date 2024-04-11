@@ -33,7 +33,7 @@ class WebsiteInfoSeeder extends Seeder
             ],
             [
                 'key' => 'og:title',
-                'value' => '=',
+                'value' => '','type' => 'seo', 'language' => '',
             ],
 
             [
@@ -143,6 +143,10 @@ class WebsiteInfoSeeder extends Seeder
                 'key' => 'Quality Assurance',
                 'value' => '<span style="color: rgb(47, 49, 56); font-family: Merriweather; font-size: 16px; text-align: start;">Choose ElAbed Poultry for unrivaled quality, trusted expertise, and a commitment to excellence. Experience the difference that comes from a company deeply rooted in its heritage, yet constantly evolving to meet the demands of the modern market.</span>', 'type' => 'home_content', 'language' => 'english',
             ],
+            [
+                'key' => 'Commitment to Excellence',
+                'value' => '<span style=\"color: rgb(47, 49, 56); font-family: Merriweather; font-size: 16px; text-align: start;\">As we continue to grow, we remain committed to our core values of integrity, quality, and customer satisfaction. We believe in fostering long-term partnerships with our customers and stakeholders, and we strive to exceed expectations at every turn. Join us on our journey as we continue to make a positive impact on the poultry industry, one delicious and nutritious product at a time.</span>', 'type' => 'home_content', 'language' => 'english',
+            ],
 
             [
                 'key' => 'Integrated Poultry Production Process',
@@ -165,12 +169,12 @@ class WebsiteInfoSeeder extends Seeder
 
             [
                 'key' => 'Our Story',
-                'value' => '', 'type' => 'about_content', 'language' => 'english',
+                'value' => '<span style=\"color: rgb(47, 49, 56); font-family: Merriweather; font-size: 16px; text-align: start;\">Welcome to ElAbed Poultry, Egypt\'s Leading Duck and Quail provider with a rich history rooted in family values and a commitment to delivering the highest quality poultry products. Founded in 1985 by Mr. Abed Ramsis, our company has steadily grown from a small, humble farm into a thriving enterprise with over 40 farms spread across Egypt.</span>', 'type' => 'about_content', 'language' => 'english',
             ],
 
             [
                 'key' => 'Our Mission',
-                'value' => '', 'type' => 'about_content', 'language' => 'english',
+                'value' => '<span style=\"color: rgb(47, 49, 56); font-family: Merriweather; font-size: 16px; text-align: start;\">At El Abed Poultry, our mission is clear: to be Egypt\'s poultry leader by consistently delivering the highest quality products to our customers. We are committed to raising cage-free, hormone-free, and antibiotic-free birds, ensuring their well-being and the production of wholesome poultry. Our dedication extends beyond the farm, as we carefully select the finest corn and soy to create a 100% vegetarian diet for our birds. We take pride in our quality assurance process, which includes slaughtering the birds under Islamic ritual at our own abattoir, and utilizing state-of-the-art commercial freezers to freeze the processed birds at -40°C. With every step we take, our mission is to provide exceptional poultry that meets the highest standards of quality, integrity, and customer satisfaction.</span>', 'type' => 'about_content', 'language' => 'english',
             ],
 
 

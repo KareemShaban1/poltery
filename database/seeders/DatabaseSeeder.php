@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Sponsor;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,5 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RecipeTypeSeeder::class);
         $this->call(RecipeSeeder::class);
         $this->call(WebsiteInfoSeeder::class);
+        $this->call(ImageSeeder::class);
+        $this->call(sponsorSeeder::class);
     }
 }
