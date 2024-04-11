@@ -43,7 +43,7 @@ class ProductController extends Controller
         $validatedData['image'] = $this->ProcessImage($request, 'image', 'products');
         // dd($request->all(), $validatedData);
         Product::create($validatedData);
-        return redirect()->route('products.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
+        return redirect()->route('products.index')->with('toast_success', 'تم أضافة منتج بنجاح');
 
     }
 
@@ -82,7 +82,7 @@ class ProductController extends Controller
         $oldImage = $product->image;
         $validatedData['image'] = $request->image ? $this->ProcessImage($request, 'image', 'products', $oldImage) : $oldImage;
         $product->update($validatedData);
-        return redirect()->route('products.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
+        return redirect()->route('products.index')->with('toast_success', 'تم تعديل منتج بنجاح');
 
     }
 
@@ -94,7 +94,7 @@ class ProductController extends Controller
         //
         $product = Product::findOrFail($id);
         $product->delete();
-        return redirect()->route('products.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
+        return redirect()->route('products.index')->with('toast_success', 'تم خذف  منتج بنجاح');
 
     }
 }

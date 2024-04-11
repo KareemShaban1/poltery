@@ -28,6 +28,7 @@
                 <form id="kt_modal_video_form" class="form" enctype="multipart/form-data"
                     action="{{ route('videos.update', $video->id) }}" method="POST">
                     @csrf
+                    @method('PUT')
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
@@ -39,59 +40,87 @@
 
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="d-block fw-bold fs-6 mb-5">{{ trans('backend.video') }}</label>
+                        <label class="d-block fw-bold fs-6 mb-5">{{ trans('backend.Image') }}</label>
                         <!--end::Label-->
-                        <!--begin::video input-->
-                        <div class="video-input video-input-outline" data-kt-video-input="true">
+                        <!--begin::Image input-->
+                        <div class="image-input image-input-outline" data-kt-image-input="true"
+                            style="background-image: url(assets/media/avatars/blank.png)">
                             <!--begin::Preview existing avatar-->
-                            <div class="video-input-wrapper w-125px h-125px"
-                                style="background-video: url({{ $video->video_url }});"></div>
+                            <div class="image-input-wrapper w-125px h-125px"
+                                style="background-image: url({{ $video->image_url }});"></div>
                             <!--end::Preview existing avatar-->
                             <!--begin::Label-->
                             <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-video-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                                 <i class="bi bi-pencil-fill fs-7"></i>
                                 <!--begin::Inputs-->
-                                <input type="file" name="video" accept=".png, .jpg, .jpeg" />
+                                <input type="file" name="image" value="{{ $video->image_url }}"
+                                    accept=".png, .jpg, .jpeg" />
                                 <input type="hidden" name="avatar_remove" />
                                 <!--end::Inputs-->
                             </label>
                             <!--end::Label-->
                             <!--begin::Cancel-->
                             <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-video-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
                                 <i class="bi bi-x fs-2"></i>
                             </span>
                             <!--end::Cancel-->
                             <!--begin::Remove-->
                             <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                data-kt-video-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
                                 <i class="bi bi-x fs-2"></i>
                             </span>
                             <!--end::Remove-->
                         </div>
-                        <!--end::video input-->
+                        <!--end::Image input-->
                         <!--begin::Hint-->
                         <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
                         <!--end::Hint-->
                     </div>
 
+                    <div class="fv-row mb-7">
+                        <label class="d-block fw-bold fs-6 mb-2">{{ trans('backend.Video') }}</label>
+                        <input type="file" name="video" accept=".mp4, .mov, .avi, .wmv" />
+                        <div class="form-text">{{ trans('backend.Allowed file types: mp4, mov, avi, wmv.') }}</div>
+                    </div>
 
-                    <input type="hidden" name="type" value="main_video">
+
                     <div class="row">
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                 <span class="required">{{ trans('backend.Title') }}</span>
-                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                    title="Specify a video title"></i>
+
                             </label>
 
-                            <input type="text" class="form-control form-control-solid" value="{{ $video->title }}"
+                            <input type="text" value="{{ $video->title }}" class="form-control form-control-solid"
                                 name="title" />
                         </div>
 
+                        <div class="col-md-6">
+                            <label class="form-label fs-6 fw-bold">Type:</label>
+                            <select class="form-select form-select-solid fw-bolder" name="type"
+                                data-placeholder="Select Type" data-allow-clear="true" data-kt-user-table-filter="role"
+                                data-hide-search="true">
+                                <option value="home_video" @selected($video->type == 'home_video')>
+                                    {{ trans('backend.Home_Video') }}</option>
+                                <option value="about_video" @selected($video->type == 'about_video')>
+                                    {{ trans('backend.About_Video') }}</option>
+                                <option value="product_video" @selected($video->type == 'product_video')>
+                                    {{ trans('backend.Product_Video') }}</option>
+                                <option value="facility_video" @selected($video->type == 'facility_video')>
+                                    {{ trans('backend.Facility_Video') }}</option>
+                                <option value="recipe_video" @selected($video->type == 'recipe_video')>
+                                    {{ trans('backend.Recipe_Video') }}</option>
+                                <option value="other" @selected($video->type == 'other')> {{ trans('backend.Other') }}
+                                </option>
+
+                            </select>
+
+                        </div>
                     </div>
+
 
 
                     <!--begin::Actions-->
@@ -100,8 +129,7 @@
                             class="btn btn-light me-3">{{ trans('backend.Cancel') }}</button>
                         <button type="submit" id="kt_modal_video_submit" class="btn btn-primary">
                             <span class="indicator-label">{{ trans('backend.Submit') }}</span>
-                            <span class="indicator-progress">Please wait...
-                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+
                         </button>
                     </div>
                     <!--end::Actions-->

@@ -59,4 +59,9 @@ class Recipe extends Model
     {
         return App::getLocale() === 'en' ? $this->description_en : $this->description_ar;
     }
+
+    public function recipeType()
+    {
+        return $this->belongsTo(RecipeType::class);
+    }
 }

@@ -31,15 +31,15 @@
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">Add New Product</h1>
+                        <h1 class="mb-3">{{ trans('backend.Add_Product') }}</h1>
                         <!--end::Title-->
 
                     </div>
                     <!--end::Heading-->
 
-                    <div class="fv-row mb-7">
+                    <div class="fv-row mb-7 image-container">
                         <!--begin::Label-->
-                        <label class="d-block fw-bold fs-6 mb-5">Image</label>
+                        <label class="d-block fw-bold fs-6 mb-5">{{ trans('backend.Image') }}</label>
                         <!--end::Label-->
                         <!--begin::Image input-->
                         <div class="image-input image-input-outline" data-kt-image-input="true"
@@ -81,32 +81,30 @@
 
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
-                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Name EN</span>
-                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                    title="Specify a product english title"></i>
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2 text-label">
+                                <span class="required">{{ trans('backend.Name_En') }}</span>
+
                             </label>
 
-                            <input type="text" class="form-control form-control-solid"
-                                placeholder="Enter English Name" name="name_en" />
+                            <input type="text" class="form-control form-control-solid input-text"
+                                placeholder="{{ trans('backend.Enter_English_Name') }}" name="name_en" />
                         </div>
 
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
-                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Name Ar</span>
-                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                    title="Specify a product arabic title "></i>
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2 text-label">
+                                <span class="required">{{ trans('backend.Name_Ar') }}</span>
+
                             </label>
 
-                            <input type="text" class="form-control form-control-solid"
-                                placeholder="Enter Arabic Name" name="name_ar" />
+                            <input type="text" class="form-control form-control-solid input-text"
+                                placeholder="{{ trans('backend.Enter_Arabic_Name') }}" name="name_ar" />
                         </div>
                     </div>
 
 
                     <div class="mb-10">
-                        <label class="form-label fs-6 fw-bold">Category:</label>
+                        <label class="d-flex form-label fs-6 fw-bold text-label">{{ trans('backend.Category') }}</label>
                         <select class="form-select form-select-solid fw-bolder" name="category_id"
                             data-placeholder="Select Category" data-allow-clear="true" data-kt-user-table-filter="role"
                             data-hide-search="true">
@@ -123,11 +121,10 @@
                     <!--begin::Actions-->
                     <div class="text-center">
                         <button type="reset" id="kt_modal_new_product_cancel" data-bs-dismiss="modal"
-                            class="btn btn-light me-3">Cancel</button>
+                            class="btn btn-light me-3">{{ trans('backend.Cancel') }}</button>
                         <button type="submit" id="kt_modal_new_product_submit" class="btn btn-primary">
-                            <span class="indicator-label">Submit</span>
-                            <span class="indicator-progress">Please wait...
-                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                            <span class="indicator-label">{{ trans('backend.Submit') }}</span>
+
                         </button>
                     </div>
                     <!--end::Actions-->

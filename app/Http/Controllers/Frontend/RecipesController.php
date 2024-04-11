@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Recipe;
+use App\Models\RecipeType;
 use Illuminate\Http\Request;
 
 class RecipesController extends Controller
@@ -15,8 +16,8 @@ class RecipesController extends Controller
     {
         //
         $recipes = Recipe::all();
-
-        return view('frontend.pages.recipes', compact('recipes'));
+        $recipeTypes = RecipeType::all();
+        return view('frontend.pages.recipes', compact('recipes','recipeTypes'));
     }
 
     /**

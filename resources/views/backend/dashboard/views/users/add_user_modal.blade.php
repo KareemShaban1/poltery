@@ -24,46 +24,43 @@
                     action="{{ route('users.store') }}" method="POST">
                     @csrf
                     <div class="mb-13 text-center">
-                        <h1 class="mb-3">Add New user</h1>
+                        <h1 class="mb-3">{{ trans('backend.Add_User') }}</h1>
 
                     </div>
 
 
                     <div class="d-flex flex-column mb-8 fv-row">
 
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Name</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a user name"></i>
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2 text-label">
+                            <span class="required">{{ trans('backend.Name') }}</span>
+
                         </label>
 
-                        <input type="text" class="form-control form-control-solid" placeholder="Enter User Name"
-                            name="name" />
+                        <input type="text" class="form-control form-control-solid input-text"
+                            placeholder="{{ trans('backend.Enter_User_Name') }}" name="name" />
                     </div>
 
                     <div class="d-flex flex-column mb-8 fv-row ">
 
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Email</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a user email "></i>
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2 text-label">
+                            <span class="required">{{ trans('backend.Email') }}</span>
+
                         </label>
 
-                        <input type="email" class="form-control form-control-solid" placeholder="Enter User Email"
-                            name="email" />
+                        <input type="email" class="form-control form-control-solid input-text"
+                            placeholder="{{ trans('backend.Enter_User_Email') }}" name="email" />
                     </div>
 
 
                     <div class="d-flex flex-column mb-8 fv-row">
 
-                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                            <span class="required">Password</span>
-                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                title="Specify a user password"></i>
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2 text-label">
+                            <span class="required">{{ trans('backend.Password') }}</span>
+
                         </label>
 
-                        <input type="password" class="form-control form-control-solid" placeholder="Enter User Password"
-                            name="password" />
+                        <input type="password" class="form-control form-control-solid input-text"
+                            placeholder="{{ trans('backend.Enter_User_Password') }}" name="password" />
                     </div>
 
 
@@ -71,11 +68,10 @@
                     <!--begin::Actions-->
                     <div class="text-center">
                         <button type="reset" id="kt_modal_new_user_cancel" class="btn btn-light me-3"
-                            data-bs-dismiss="modal">Cancel</button>
+                            data-bs-dismiss="modal">{{ trans('backend.Cancel') }}</button>
                         <button type="submit" id="kt_modal_new_user_submit" class="btn btn-primary">
-                            <span class="indicator-label">Submit</span>
-                            <span class="indicator-progress">Please wait...
-                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                            <span class="indicator-label">{{ trans('backend.Submit') }}</span>
+
                         </button>
                     </div>
                     <!--end::Actions-->

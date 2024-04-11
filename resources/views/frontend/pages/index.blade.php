@@ -220,14 +220,15 @@
 
 @php
     $metaData = App\Models\WebsiteInfo::pluck('value', 'key')->toArray();
+    $home_video = App\Models\Video::where('type', 'home_video')->where('title', 'home_video')->first() ?? null;
 @endphp
 
 
 @section('content')
     <section class="intro-section">
         <video preload="none" autoplay muted loop class="background-clip">
-            <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/mp4">
-            <source src="{{ asset('frontend/img/home_video.mp4') }}" type="video/ogg">
+            <source src="{{ $home_video->video_url ?? asset('frontend/img/home_video.mp4') }}" type="video/mp4">
+            <source src="{{ $home_video->video_url ?? asset('frontend/img/home_video.mp4') }}" type="video/ogg">
         </video>
 
         <div class="intro-container-home wow fadeIn">

@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Traits\UploadImageTrait;
 use App\Models\Image;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
+    use UploadImageTrait;
     /**
       * Display a listing of the resource.
       */
@@ -33,8 +35,7 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        //
+
         $validatedData = $request->validate([
           "title" => "nullable|string",
           "image" => "required",
@@ -48,14 +49,16 @@ class VideoController extends Controller
 
         }
         // Process the uploaded video file
-        $videoPath = $request->file('video')->store('uploads/thumbnail/videos');
+        $video = $request->file('video'); // Get the original name of the video file
+        $videoFileName =  time() . '.' . $video->getClientOriginalExtension();
+        $videoPath = $request->file('video')->storeAs('uploads/thumbnail/videos', $videoFileName);
 
         // Save the video file path in the database
         Video::create([
             'title' => $validatedData['title'],
             'type' => $validatedData['type'],
             'image' => $validatedData['image'],
-            'video_path' => $videoPath,
+            'video' => $videoFileName, // Save the video file name instead of its path
         ]);
 
         // Redirect back with success message
@@ -79,12 +82,42 @@ class VideoController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        // Validate the form data
+        $validatedData = $request->validate([
+            'title' => 'nullable|string',
+            'image' => 'required',
+            'type' => 'required|string',
+            'video' => 'nullable|mimes:mp4,mov,avi,wmv|max:100000', // Adjust max file size as needed
+        ]);
+
+        // Retrieve the video record
+        $video = Video::findOrFail($id);
+
+        // Update the video's title and type
+        $video->title = $validatedData['title'];
+        $video->type = $validatedData['type'];
+
+        // Update the image if provided
+        if ($request->hasFile('image')) {
+            $validatedData['image'] = $this->ProcessImage($request, 'image', 'videos');
+            $video->image = $validatedData['image'];
+        }
+
+        // Update the video file if provided
+        if ($request->hasFile('video')) {
+            $videoFile = $request->file('video');
+            $videoFileName = time() . '.' . $videoFile->getClientOriginalExtension();
+            $videoPath = $videoFile->storeAs('uploads/thumbnail/videos', $videoFileName);
+            $video->video = $videoFileName;
+        }
+
+        // Save the updated video
+        $video->save();
+
+        // Redirect back with success message
+        return redirect()->route('videos.index')->with('toast_success', 'تم تحديث الفيديو بنجاح');
     }
 
     /**
@@ -93,5 +126,11 @@ class VideoController extends Controller
     public function destroy(string $id)
     {
         //
+        $video = Video::findOrFail($id);
+        $video->delete();
+
+        // Redirect back with success message
+        return redirect()->route('videos.index')->with('toast_success', 'تم حذف الفيديو بنجاح');
+
     }
 }

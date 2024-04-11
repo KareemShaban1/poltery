@@ -15,8 +15,9 @@ return new class () extends Migration {
 
             $table->string('title_en');
             $table->string('title_ar')->nullable();
-            $table->string('type_en');
-            $table->string('type_ar')->nullable();
+            // $table->string('type_en');
+            // $table->string('type_ar')->nullable();
+            $table->foreignId('recipe_type_id')->constrained('recipe_types', 'id')->cascadeOnDelete();
             $table->string('image');
             $table->text('description_en');
             $table->text('description_ar')->nullable();

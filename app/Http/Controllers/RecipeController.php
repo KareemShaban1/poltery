@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Traits\UploadImageTrait;
 use App\Models\Recipe;
+use App\Models\RecipeType;
 use Illuminate\Http\Request;
 
 class RecipeController extends Controller
@@ -15,7 +16,7 @@ class RecipeController extends Controller
     public function index()
     {
         //
-        $recipes = Recipe::all();
+        $recipes = Recipe::with('recipeType')->get();
 
         return view('backend.dashboard.views.recipes.index', compact('recipes'));
 
@@ -27,7 +28,8 @@ class RecipeController extends Controller
     public function create()
     {
         //
-        return view('backend.dashboard.views.recipes.create');
+        $recipeTypes = RecipeType::all();
+        return view('backend.dashboard.views.recipes.create', compact('recipeTypes'));
     }
 
     /**
@@ -73,7 +75,8 @@ class RecipeController extends Controller
     {
         //
         $recipe = Recipe::findOrFail($id);
-        return view('backend.dashboard.views.recipes.edit', compact('recipe'));
+        $recipeTypes = RecipeType::all();
+        return view('backend.dashboard.views.recipes.edit', compact('recipe', 'recipeTypes'));
 
     }
 

@@ -43,6 +43,7 @@
 
                                 <th>{{ trans('backend.Id') }}</th>
                                 <th>{{ trans('backend.Name') }}</th>
+                                <th>{{ trans('backend.Recipe_Types') }}</th>
                                 <th>{{ trans('backend.Image') }}</th>
                                 <th>{{ trans('backend.Actions') }}</th>
                             </tr>
@@ -51,8 +52,11 @@
                             @foreach ($recipes as $recipe)
                                 <tr>
 
+
+
                                     <td>{{ $recipe->id }}</td>
-                                    <td>{{ $recipe->title_en }}</td>
+                                    <td>{{ $recipe->title }}</td>
+                                    <td>{{ $recipe->recipeType->name }}</td>
 
                                     <td>
                                         <img src="{{ $recipe->image_url }}" height="50" width="50" alt="">

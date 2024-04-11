@@ -14,6 +14,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\RecipeTypeController;
 use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
@@ -70,6 +71,13 @@ Route::group(
         });
 
         Route::group([], function () {
+            Route::get('/recipeTypes', [RecipeTypeController::class,'index'])->name('recipeTypes.index');
+            Route::post('/recipeTypes/store', [RecipeTypeController::class,'store'])->name('recipeTypes.store');
+            Route::put('/recipeTypes/update/{id}', [RecipeTypeController::class,'update'])->name('recipeTypes.update');
+            Route::delete('/recipeTypes/destroy/{id}', [RecipeTypeController::class,'destroy'])->name('recipeTypes.destroy');
+        });
+
+        Route::group([], function () {
             Route::get('info', [InfoController::class,'index'])->name('info.index');
             Route::get('info/create', [InfoController::class,'create'])->name('info.create');
             Route::post('info/store', [InfoController::class,'store'])->name('info.store');
@@ -83,6 +91,7 @@ Route::group(
             Route::get('videos', [VideoController::class,'index'])->name('videos.index');
             Route::post('videos/store', [VideoController::class,'store'])->name('videos.store');
             Route::get('videos/edit/{id}', [VideoController::class,'edit'])->name('videos.edit');
+            Route::put('videos/update/{id}', [VideoController::class,'update'])->name('videos.update');
             Route::delete('videos/destroy/{id}', [VideoController::class,'destroy'])->name('videos.destroy');
         });
 

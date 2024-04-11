@@ -26,12 +26,12 @@
             <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
                 <!--begin:Form-->
                 <form id="kt_modal_image_form" class="form" enctype="multipart/form-data"
-                    action="{{ route('images.store') }}" method="POST">
+                    action="{{ route('videos.store') }}" method="POST">
                     @csrf
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">{{ trans('backend.Add_Image') }}</h1>
+                        <h1 class="mb-3">{{ trans('backend.Add_Video') }}</h1>
                         <!--end::Title-->
 
                     </div>
@@ -53,7 +53,7 @@
                                 data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                                 <i class="bi bi-pencil-fill fs-7"></i>
                                 <!--begin::Inputs-->
-                                <input type="file" name="video" accept=".mp4" />
+                                <input type="file" name="image" accept=".png, .jpg, .jpeg" />
                                 <input type="hidden" name="avatar_remove" />
                                 <!--end::Inputs-->
                             </label>
@@ -77,20 +77,39 @@
                         <!--end::Hint-->
                     </div>
 
+                    <div class="fv-row mb-7">
+                        <label class="d-block fw-bold fs-6 mb-2">{{ trans('backend.Video') }}</label>
+                        <input type="file" name="video" accept=".mp4, .mov, .avi, .wmv" />
+                        <div class="form-text">{{ trans('backend.Allowed file types: mp4, mov, avi, wmv.') }}</div>
+                    </div>
 
-                    <input type="hidden" name="type" value="main_image">
+
                     <div class="row">
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                 <span class="required">{{ trans('backend.Title') }}</span>
-                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                    title="Specify a video title"></i>
+
                             </label>
 
                             <input type="text" class="form-control form-control-solid" name="title" />
                         </div>
 
+                        <div class="col-md-6">
+                            <label class="form-label fs-6 fw-bold"> {{ trans('backend.Type') }}:</label>
+                            <select class="form-select form-select-solid fw-bolder" name="type"
+                                data-placeholder="Select Type" data-allow-clear="true" data-kt-user-table-filter="role"
+                                data-hide-search="true">
+                                <option value="home_video"> {{ trans('backend.Home_Video') }}</option>
+                                <option value="about_video"> {{ trans('backend.About_Video') }}</option>
+                                <option value="product_video"> {{ trans('backend.Product_Video') }}</option>
+                                <option value="facility_video"> {{ trans('backend.Facility_Video') }}</option>
+                                <option value="recipe_video"> {{ trans('backend.Recipe_Video') }}</option>
+                                <option value="other"> {{ trans('backend.Other') }}</option>
+
+                            </select>
+
+                        </div>
                     </div>
 
 

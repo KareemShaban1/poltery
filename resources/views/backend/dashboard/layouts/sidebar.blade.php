@@ -34,7 +34,7 @@
                 </a>
             </div>
 
-            {{-- user management --}}
+            {{-- pages management --}}
             <div class="menu-item">
                 <div class="menu-content pt-8 pb-2">
                     <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ trans('backend.Pages') }}</span>
@@ -120,7 +120,7 @@
             </div>
 
             {{-- pages --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -153,15 +153,15 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- products --}}
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
                                 <path
                                     d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z"
                                     fill="black" />
@@ -203,6 +203,7 @@
             </div>
 
 
+            {{-- Facilities --}}
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -249,6 +250,7 @@
             </div>
 
 
+            {{-- Recipes --}}
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -273,6 +275,16 @@
                 <div class="menu-sub menu-sub-accordion">
 
                     <div class="menu-item">
+                        <a class="{{ request()->routeIs('recipeTypes.index') ? 'menu-link active' : 'menu-link' }}"
+                            href="{{ route('recipeTypes.index') }}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">{{ trans('backend.All_Recipe_Types') }}</span>
+                        </a>
+                    </div>
+
+                    <div class="menu-item">
                         <a class="{{ request()->routeIs('recipes.index') ? 'menu-link active' : 'menu-link' }}"
                             href="{{ route('recipes.index') }}">
                             <span class="menu-bullet">
@@ -282,11 +294,10 @@
                         </a>
                     </div>
 
-
                 </div>
             </div>
 
-            {{-- sponsors --}}
+            {{-- Sponsors --}}
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -381,7 +392,7 @@
                             </svg>
                         </span>
                     </span>
-                    <span class="menu-title">Videos</span>
+                    <span class="menu-title">{{ trans('backend.Videos') }}</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
@@ -392,7 +403,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Videos</span>
+                            <span class="menu-title">{{ trans('backend.All_Videos') }}</span>
                         </a>
                     </div>
 
@@ -419,7 +430,7 @@
                             </svg>
                         </span>
                     </span>
-                    <span class="menu-title">Images</span>
+                    <span class="menu-title">{{ trans('backend.Images') }}</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
@@ -430,7 +441,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">All Images</span>
+                            <span class="menu-title">{{ trans('backend.All_Images') }}</span>
                         </a>
                     </div>
 
@@ -457,7 +468,7 @@
                             </svg>
                         </span>
                     </span>
-                    <span class="menu-title">Website Info</span>
+                    <span class="menu-title">{{ trans('backend.Website_Info') }}</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <div class="menu-sub menu-sub-accordion">
@@ -468,7 +479,7 @@
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">Website Info</span>
+                            <span class="menu-title">{{ trans('backend.Website_Info') }}</span>
                         </a>
                     </div>
 

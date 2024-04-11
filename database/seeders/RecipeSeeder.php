@@ -17,7 +17,7 @@ class RecipeSeeder extends Seeder
         //
         $data = [
             ['title_en' => 'Stuffed Duck and Potatoes','title_ar' => 'البط المحشو والبطاطس',
-            'type_en' => 'traditional Egyptian','type_ar' => 'المصرية التقليدية',
+            'recipe_type_id' => 1,
             'description_en' => 'Stuffed duck has been a traditional recipe since the ancient Egyptians. At least that is what most of Egyptian housewives believe.',
             'description_ar' => 'البط المحشي وصفة تقليدية منذ القدماء المصريين. على الأقل هذا ما تعتقده معظم ربات البيوت المصريات.',
             'ingredients_en' => '
@@ -62,8 +62,7 @@ class RecipeSeeder extends Seeder
             'image' => '', 'updated_at' => Carbon::now()],
 
             ['title_en' => 'Duck Confit (Confit De Canard)','title_ar' => 'Duck Confit (Confit De Canard)',
-            'type_en' => 'french cuisine','type_ar' => 'المطبخ الفرنسي',
-            'description_en' => 'This is the traditional confit de canard recipe. A classic confit de canard includes beautifully cured duck drumsticks cooked in duck fat until the meat starts to separate from the bone. Classically served with confit potatoes and fresh salad, the duck confit is a supremely tender and flavorful piece of meatatarian extravaganza.',
+            'recipe_type_id' => 2,            'description_en' => 'This is the traditional confit de canard recipe. A classic confit de canard includes beautifully cured duck drumsticks cooked in duck fat until the meat starts to separate from the bone. Classically served with confit potatoes and fresh salad, the duck confit is a supremely tender and flavorful piece of meatatarian extravaganza.',
             'description_ar' => 'This is the traditional confit de canard recipe. A classic confit de canard includes beautifully cured duck drumsticks cooked in duck fat until the meat starts to separate from the bone. Classically served with confit potatoes and fresh salad, the duck confit is a supremely tender and flavorful piece of meatatarian extravaganza.',
             'ingredients_en' => '* sea salt
             * freshly cracked black pepper
@@ -118,7 +117,7 @@ class RecipeSeeder extends Seeder
             'image' => '', 'updated_at' => Carbon::now()],
 
             ['title_en' => 'Roasted Braised Duck','title_ar' => 'بط مشوي مطهو ببطء',
-            'type_en' => 'chinese cuisine','type_ar' => 'المطبخ الصيني',
+            'recipe_type_id' => 3,
             'description_en' => 'This roasted braised duck recipe is so good. With a few special ingredients and a little time, you’ll have an amazing, special dinner on your hands.',
             'description_ar' => 'This roasted braised duck recipe is so good. With a few special ingredients and a little time, you’ll have an amazing, special dinner on your hands.',
             'ingredients_en' => '* 4-5 lb. duck (innards removed)

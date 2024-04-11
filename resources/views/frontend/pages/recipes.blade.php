@@ -14,7 +14,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                            background-attachment: fixed; */
+                                                                                                                                                                                                                    background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -30,6 +30,16 @@
                 background-attachment: fixed;
                 background-position-y: 60px;
                 /* Adjust other styles as needed for smaller devices */
+            }
+
+            #schedule .nav-tabs {
+                display: flex;
+                flex-direction: column;
+                margin: 10px
+            }
+
+            #schedule .nav-tabs a {
+                margin: 10px
             }
         }
 
@@ -53,10 +63,10 @@
             overflow: hidden;
             position: relative;
             /* top: 50%;
-                                                                                                                                                                                                                                                                                                                                                        right: 50%;
-                                                                                                                                                                                                                                                                                                                                                        bottom: 50%;
-                                                                                                                                                                                                                                                                                                                                                        left: 50%;
-                                                                                                                                                                                                                                                                                                                                                        position: absolute; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                right: 50%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                bottom: 50%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                left: 50%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                position: absolute; */
             /* transform: translate(-50%, -50%); */
         }
 
@@ -201,8 +211,77 @@
                     <h2>{{ trans('frontend.recipes') }}</h2>
                 </div>
             </div>
-            <div>
-                <div class="shell">
+
+            <section id="schedule" class="section-with-bg">
+                <div class="wow fadeInUp">
+
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        @foreach ($recipeTypes as $type)
+                            <li class="nav-item">
+                                <a class="nav-link" href="#type-{{ $type->id }}" role="tab"
+                                    data-toggle="tab">{{ $type->name }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+
+
+                    <div class="tab-content row justify-content-center">
+
+                        @foreach ($recipeTypes as $type)
+                            <div role="tabpanel"
+                                class="col-lg-9 tab-pane {{ $type->id == 1 ? 'fade show active' : 'fade' }}"
+                                id="type-{{ $type->id }}">
+
+
+                                <div class="shell">
+
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            @foreach ($type->recipes as $recipe)
+                                                <div class="col-md-4 p-0"
+                                                    style="display: flex;justify-content: center; margin-bottom: 20px">
+                                                    <div class="ft-recipe">
+
+                                                        <div class="ft-recipe__thumb">
+                                                            <h3 style="font-family: 'Rubic';">
+                                                                {{ $recipe->recipeType->name }}</h3><img
+                                                                src="{{ $recipe->image_url }}" alt="Strawberry Waffle" />
+                                                        </div>
+                                                        <div class="ft-recipe__content">
+                                                            <header class="content__header">
+                                                                <div class="row-wrapper">
+                                                                    <h4 class="recipe-title">{{ $recipe->title }}</h4>
+                                                                    <div class="user-rating"></div>
+                                                                </div>
+
+                                                            </header>
+                                                            <p class="description">
+                                                                {!! \Illuminate\Support\Str::words(strip_tags($recipe->description), 25, '...') !!}
+
+                                                            </p>
+                                                            <footer class="content__footer"><a
+                                                                    href="{{ route('recipeDetails', $recipe->id) }}">View
+                                                                    Recipe</a>
+                                                            </footer>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        @endforeach
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {{-- <div class="shell">
 
                     <div class="container-fluid">
                         <div class="row">
@@ -214,7 +293,7 @@
                                     <div class="ft-recipe">
 
                                         <div class="ft-recipe__thumb">
-                                            <h3 style="font-family: 'Rubic';">{{ $recipe->type }}</h3><img
+                                            <h3 style="font-family: 'Rubic';">{{ $recipe->recipeType->name }}</h3><img
                                                 src="{{ $recipe->image_url }}" alt="Strawberry Waffle" />
                                         </div>
                                         <div class="ft-recipe__content">
@@ -238,9 +317,8 @@
                             @endforeach
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
 
-            </div>
     </section>
 @endsection

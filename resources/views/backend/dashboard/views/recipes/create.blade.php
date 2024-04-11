@@ -106,7 +106,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        {{-- <div class="row">
 
                             <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
@@ -131,6 +131,19 @@
                                 <input type="text" class="form-control form-control-solid"
                                     placeholder="Enter Arabic Type" name="type_ar" />
                             </div>
+                        </div> --}}
+
+                        <div class="mb-10">
+                            <label
+                                class="d-flex form-label fs-6 fw-bold text-label">{{ trans('backend.Recipe_Types') }}</label>
+                            <select class="form-select form-select-solid fw-bolder" name="recipe_type_id"
+                                data-placeholder="Select Recipe Types" data-allow-clear="true"
+                                data-kt-user-table-filter="role" data-hide-search="true">
+                                @foreach ($recipeTypes as $recipeType)
+                                    <option value="{{ $recipeType->id }}">{{ $recipeType->name }}</option>
+                                @endforeach
+
+                            </select>
                         </div>
 
                         <div class="d-flex flex-column mb-8 fv-row" style="direction: ltr">

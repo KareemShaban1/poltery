@@ -1,9 +1,9 @@
 @extends('backend.dashboard.layouts.master')
 
 @section('page-title')
-    <div class="user-title d-flex flex-column me-5">
+    <div class="page-title d-flex flex-column me-5">
         <!--begin::Title-->
-        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">{{ trans('backend.All_Users') }}</h1>
+        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">{{ trans('backend.All_Recipe_Types') }}</h1>
         <!--end::Title-->
         <!--begin::Breadcrumb-->
         <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 pt-1">
@@ -18,7 +18,7 @@
             </li>
             <!--end::Item-->
             <!--begin::Item-->
-            <li class="breadcrumb-item text-dark">{{ trans('backend.All_Users') }}</li>
+            <li class="breadcrumb-item text-dark">{{ trans('backend.All_Recipe_Types') }}</li>
             <!--end::Item-->
         </ul>
         <!--end::Breadcrumb-->
@@ -27,10 +27,10 @@
 
 @section('content')
     <a href="#" class="btn btn-primary er fs-6 px-8 py-4 mb-5" data-bs-toggle="modal"
-        data-bs-target="#kt_modal_new_user">{{ trans('backend.Add_User') }}</a>
+        data-bs-target="#kt_modal_new_recipe_type">{{ trans('backend.Add_Recipe_Type') }}</a>
 
 
-    @include('backend.dashboard.views.users.add_user_modal')
+    @include('backend.dashboard.views.recipesType.add_recipe_type_modal')
 
 
     <!-- row -->
@@ -44,29 +44,27 @@
 
                                 <th>{{ trans('backend.Id') }}</th>
                                 <th>{{ trans('backend.Name') }}</th>
-                                <th>{{ trans('backend.Email') }}</th>
                                 <th>{{ trans('backend.Actions') }}</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($users as $user)
+                            @foreach ($recipeTypes as $recipeType)
                                 <tr>
 
-                                    <td>{{ $user->id }}</td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $recipeType->id }}</td>
+                                    <td>{{ $recipeType->name }}</td>
 
                                     <td>
 
 
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#kt_modal_edit_user{{ $user->id }}">
+                                            data-bs-target="#kt_modal_edit_recipe_type{{ $recipeType->id }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
 
-                                        @include('backend.dashboard.views.users.edit_user_modal')
+                                        @include('backend.dashboard.views.recipesType.edit_recipe_type_modal')
 
-                                        <form action="{{ Route('users.destroy', $user->id) }}" method="post"
+                                        <form action="{{ Route('recipeTypes.destroy', $recipeType->id) }}" method="post"
                                             style="display:inline">
                                             @csrf
                                             @method('delete')

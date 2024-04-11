@@ -27,8 +27,7 @@
 
 @section('content')
     <a href="#" class="btn btn-primary er fs-6 px-8 py-4 mb-5" data-bs-toggle="modal"
-        data-bs-target="#kt_modal_new_product">Add
-        New Product</a>
+        data-bs-target="#kt_modal_new_product">{{ trans('backend.Add_Product') }}</a>
 
 
     @include('backend.dashboard.views.products.add_product_modal')
@@ -38,16 +37,15 @@
     <div class="row">
         <div class="col-md-12 mb-30">
             <div class="card card-statistics h-100">
-                {{-- @include('backend.dashboard.views.products.product_table') --}}
                 <div class="card-body">
                     <table id="custom_table" class="display">
                         <thead>
                             <tr>
 
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>الصورة</th>
-                                <th>التحكم</th>
+                                <th>{{ trans('backend.Id') }}</th>
+                                <th>{{ trans('backend.Name') }}</th>
+                                <th>{{ trans('backend.Image') }}</th>
+                                <th>{{ trans('backend.Actions') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,12 +69,12 @@
                                         @if ($seo)
                                             <a href="{{ Route('seo.edit', [$product->id, 'product']) }}"
                                                 class="btn btn-success btn-sm">
-                                                Edit Seo
+                                                {{ trans('backend.Edit_Seo') }}
                                             </a>
                                         @else
                                             <a href="{{ Route('seo.create', [$product->id, 'product']) }}"
                                                 class="btn btn-primary btn-sm">
-                                                Add Seo
+                                                {{ trans('backend.Add_Seo') }}
                                             </a>
                                         @endif
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
