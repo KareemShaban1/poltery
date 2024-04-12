@@ -87,7 +87,7 @@ class VideoController extends Controller
         // Validate the form data
         $validatedData = $request->validate([
             'title' => 'nullable|string',
-            'image' => 'required',
+            'image' => 'nullable',
             'type' => 'required|string',
             'video' => 'nullable|mimes:mp4,mov,avi,wmv|max:100000', // Adjust max file size as needed
         ]);

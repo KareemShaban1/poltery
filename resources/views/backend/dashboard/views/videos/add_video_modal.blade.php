@@ -80,7 +80,7 @@
                     <div class="fv-row mb-7">
                         <label class="d-block fw-bold fs-6 mb-2">{{ trans('backend.Video') }}</label>
                         <input type="file" name="video" accept=".mp4, .mov, .avi, .wmv" />
-                        <div class="form-text">{{ trans('backend.Allowed file types: mp4, mov, avi, wmv.') }}</div>
+                        <div class="form-text"> Allowed file types: mp4, mov, avi, wmv.</div>
                     </div>
 
 
