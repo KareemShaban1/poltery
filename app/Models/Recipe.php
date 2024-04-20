@@ -65,7 +65,7 @@ class Recipe extends Model
         return App::getLocale() === 'en' ? $this->ingredients_en : $this->ingredients_ar;
     }
 
-    public function getPrepAttribute()
+    public function getPreparationAttribute()
     {
         return App::getLocale() === 'en' ? $this->preparation_en : $this->preparation_ar;
     }
