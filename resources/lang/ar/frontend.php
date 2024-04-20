@@ -27,8 +27,8 @@ return [
           'Ingredients' => 'المكونات',
           'Preparation' => 'التحضير',
           'View_Recipe' => 'عرض الوصفة',
-          '' => '',
-          '' => '',
+          'Our_Awesome_Features' => 'مميزاتنا الرائعة',
+          'About_Us' => 'من نحن',
           '' => '',
           '' => '',
 

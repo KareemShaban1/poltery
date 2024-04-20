@@ -54,7 +54,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center service-heading animate-box section-header">
-                    <h2>About Us</h2>
+                    <h2>{{ trans('backend.About_Us') }}</h2>
                 </div>
             </div>
 

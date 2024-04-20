@@ -261,7 +261,7 @@
             <div class="container">
                 <div class="row" style="text-align: center">
                     <div class="col-md-12 text-center service-heading animate-box section-header">
-                        <h2>Our Awesome Features</h2>
+                        <h2>{{ trans('frontend.Our_Awesome_Features') }}</h2>
 
                     </div>
                 </div>
