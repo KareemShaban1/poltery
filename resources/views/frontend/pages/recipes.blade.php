@@ -261,8 +261,7 @@
 
                                                             </p>
                                                             <footer class="content__footer"><a
-                                                                    href="{{ route('recipeDetails', $recipe->id) }}">View
-                                                                    Recipe</a>
+                                                                    href="{{ route('recipeDetails', $recipe->id) }}">{{ trans('frontend.View_Recipe') }}</a>
                                                             </footer>
                                                         </div>
                                                     </div>
