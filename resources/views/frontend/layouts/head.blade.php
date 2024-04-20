@@ -36,9 +36,9 @@
     <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
 
     <style>
-        p {
+        /* p {
             margin: 0
-        }
+        } */
 
         #header #logo .intro-img {
             position: relative;
