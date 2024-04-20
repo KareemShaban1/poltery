@@ -27,13 +27,22 @@
                   align-items: center;">
                       <h4 style="font-size:22px; font-family: 'Rubic'">{{ trans('frontend.Contact_Us') }}</h4>
                       <div class="d-flex">
-                          <strong>{{ trans('frontend.Address') }}: </strong> {!! $website_info['Address'] ?? '' !!}
+                          <strong>{{ trans('frontend.Address') }}: </strong>
+                          <div style="direction: ltr">
+                              {!! $website_info['Address'] ?? '' !!}
+                          </div>
                       </div>
                       <div class="d-flex">
-                          <strong>{{ trans('frontend.Phone') }}:  </strong> {!! $website_info['Phone'] ?? '' !!}
+                          <strong>{{ trans('frontend.Phone') }}: </strong>
+                          <div style="direction: ltr">
+                              {!! $website_info['Phone'] ?? '' !!}
+                          </div>
                       </div>
                       <div class="d-flex">
-                          <strong>{{ trans('frontend.Email') }}:  </strong> {!! $website_info['Email'] ?? '' !!}
+                          <strong>{{ trans('frontend.Email') }}: </strong>
+                          <div style="direction: ltr">
+                              {!! $website_info['Email'] ?? '' !!}
+                          </div>
                       </div>
 
 
