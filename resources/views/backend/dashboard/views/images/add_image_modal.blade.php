@@ -28,6 +28,7 @@
                 <form id="kt_modal_image_form" class="form" enctype="multipart/form-data"
                     action="{{ route('images.store') }}" method="POST">
                     @csrf
+                    @method('PUT')
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->

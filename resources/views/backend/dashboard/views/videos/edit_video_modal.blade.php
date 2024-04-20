@@ -32,7 +32,7 @@
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">{{ trans('backend.Add_video') }}</h1>
+                        <h1 class="mb-3">{{ trans('backend.Edit_Video') }}</h1>
                         <!--end::Title-->
 
                     </div>
