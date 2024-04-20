@@ -33,7 +33,6 @@
     $(document).ready(function() {
         $('.summernote').summernote({
             fontNames: ['XBRiyaz','Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana', 'Roboto'],
-            fontNamesIgnoreCheck: ['Roboto']
             height: 150,
 
         });
