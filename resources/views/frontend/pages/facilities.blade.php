@@ -60,7 +60,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                    background-attachment: fixed; */
+                                                                        background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -154,11 +154,12 @@
 
                                                 <div class="facility-name">
                                                     <span
-                                                        style="font-weight: bold; color:#f82249">{{ $facility->name }}</span>
+                                                        style="font-weight: bold; color:#f82249;">{{ $facility->name }}</span>
                                                 </div>
 
-                                                <div class="description-prod">
-                                                    <p class="description">{!! $facility->content ?? '' !!}</p>
+                                                <div class="description-prod mt-2">
+                                                    {!! $facility->content ?? '' !!}
+                                                    {{-- <p class="description">{!! $facility->content ?? '' !!}</p> --}}
                                                 </div>
 
                                             </div>
