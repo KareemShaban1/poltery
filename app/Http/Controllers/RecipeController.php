@@ -41,8 +41,7 @@ class RecipeController extends Controller
         $validatedData = $request->validate([
         'title_en' => 'required|string|max:255',
         'title_ar' => 'nullable|string|max:255',
-        'type_en' => 'required|string|max:255',
-            'type_ar' => 'nullable|string|max:255',
+        'recipe_type_id' => 'required|exists:recipe_types,id', // Check existence in recipe_types table
         'description_en' => 'required|string',
         'description_ar' => 'nullable|string',
         'ingredients_en' => 'required|string',
@@ -55,7 +54,7 @@ class RecipeController extends Controller
 
         Recipe::create($validatedData);
 
-        return redirect()->route('recipes.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
+        return redirect()->route('recipes.index')->with('toast_success', 'تم أضافة الوصفة بنجاح');
 
 
     }
@@ -92,8 +91,7 @@ class RecipeController extends Controller
         $validatedData = $request->validate([
             'title_en' => 'required|string|max:255',
             'title_ar' => 'nullable|string|max:255',
-            'type_en' => 'required|string|max:255',
-            'type_ar' => 'nullable|string|max:255',
+            'recipe_type_id' => 'required|exists:recipe_types,id', // Check existence in recipe_types table
             'description_en' => 'required|string',
             'description_ar' => 'nullable|string',
             'ingredients_en' => 'required|string',
@@ -108,7 +106,7 @@ class RecipeController extends Controller
 
         $recipe->update($validatedData);
 
-        return redirect()->route('recipes.index')->with('toast_success', 'تم أضافة خدمة / منتج بنجاح');
+        return redirect()->route('recipes.index')->with('toast_success', 'تم تعديل الوصفة بنجاح');
 
 
     }
@@ -119,5 +117,9 @@ class RecipeController extends Controller
     public function destroy(string $id)
     {
         //
+        $recipe = Recipe::findOrFail($id);
+        $recipe->delete();
+        return redirect()->route('recipes.index')->with('toast_success', 'تم حذف الوصفة بنجاح');
+
     }
 }
