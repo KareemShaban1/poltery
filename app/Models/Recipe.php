@@ -60,6 +60,15 @@ class Recipe extends Model
         return App::getLocale() === 'en' ? $this->description_en : $this->description_ar;
     }
 
+    public function getIngredientsAttribute()
+    {
+        return App::getLocale() === 'en' ? $this->ingredients_en : $this->ingredients_ar;
+    }
+
+    public function getPrepAttribute()
+    {
+        return App::getLocale() === 'en' ? $this->preparation_en : $this->preparation_ar;
+    }
     public function recipeType()
     {
         return $this->belongsTo(RecipeType::class);

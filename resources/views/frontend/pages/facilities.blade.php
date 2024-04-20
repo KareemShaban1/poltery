@@ -89,8 +89,7 @@
 
             <div class="row" style="text-align: center">
                 <div class="col-md-12 text-center service-heading animate-box section-header">
-                    <h2>Facilities</h2>
-
+                    <h2>{{ trans('frontend.facilities') }}</h2>
                 </div>
             </div>
             <div>

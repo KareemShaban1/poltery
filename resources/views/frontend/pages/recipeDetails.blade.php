@@ -77,11 +77,11 @@
         }
 
         /* #recipe-image {
-                                                                                                                    overflow: hidden;
-                                                                                                                    height: 450px;
-                                                                                                                    width: 972px;
-                                                                                                                    background-size: cover;
-                                                                                                                } */
+                                                                                                                        overflow: hidden;
+                                                                                                                        height: 450px;
+                                                                                                                        width: 972px;
+                                                                                                                        background-size: cover;
+                                                                                                                    } */
 
         #recipe-image {
             max-width: 100%;
@@ -108,7 +108,7 @@
         .intro-section {
             background: url({{ asset('frontend/img/Recipes.jpg') }});
             /* background-size: cover;
-                                        background-attachment: fixed; */
+                                            background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -156,7 +156,7 @@
 
                         @php
                             // Split the ingredients string into an array using a delimiter (e.g., newline)
-                            $ingredients = explode("\n", $recipe->ingredients_en);
+                            $ingredients = explode("\n", $recipe->ingredients);
                         @endphp
                         @foreach ($ingredients as $ingredient)
                             {{-- Trim the ingredient to remove any leading/trailing whitespace --}}
@@ -174,7 +174,7 @@
                 <div id="method">
                     <span class="card-item-title">Preparation:</span>
                     <ol>
-                        {!! $recipe->preparation_en !!}
+                        {!! $recipe->preparation !!}
                     </ol>
 
                 </div>
