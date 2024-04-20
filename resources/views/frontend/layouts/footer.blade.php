@@ -5,27 +5,31 @@
       <div class="footer-top">
           <div class="container">
               <div class="row">
-
+                  @php
+                      if (App::getLocale() == 'en') {
+                          $website_info = App\Models\WebsiteInfo::where('language', 'english')->pluck('value', 'key');
+                      } else {
+                          $website_info = App\Models\WebsiteInfo::where('language', 'arabic')->pluck('value', 'key');
+                      }
+                  @endphp
                   <div class="col-lg-5 col-md-5 footer-info"
                       style="display: flex; flex-direction: column; align-items: center;">
-                      <h3 style="font-family: 'Rubic'">El Abed Meat & Poultry Co.</h3>
+                      <h3 style="font-family: 'Rubic'">{{ $website_info['Company_Name'] ?? '' }}</h3>
                       {{-- <p style="font-size:18px; font-family: 'Rubic'">El Abed Meat & Poultry Co.
                       </p> --}}
                       <img class="logo-image" src="{{ asset('frontend/img/logo_1.png') }}" alt="" title="">
                   </div>
 
-                  @php
-                      $website_info = App\Models\WebsiteInfo::pluck('value', 'key');
-                  @endphp
+
                   <div class="col-lg-6 col-md-6 footer-contact"
                       style="display: flex;
                   flex-direction: column;
                   align-items: center;">
-                      <h4 style="font-size:22px; font-family: 'Rubic'">Contact Us</h4>
+                      <h4 style="font-size:22px; font-family: 'Rubic'">{{ trans('frontend.Contact_Us') }}</h4>
                       <p style="font-size:18px; font-family: 'Rubic'">
-                          <strong>Address:</strong> 28 Ahmed Helmy Street, Shobra, Cairo, Egypt 11231 <br>
-                          <strong>Phone:</strong> +2 015 222 222 50<br>
-                          <strong>Email:</strong> info@elabedfarms.com<br>
+                          <strong>{{ trans('frontend.Address') }}:</strong> {{ $website_info['Address'] ?? '' }} <br>
+                          <strong>{{ trans('frontend.Phone') }}:</strong> {{ $website_info['Phone'] ?? '' }}<br>
+                          <strong>{{ trans('frontend.Email') }}:</strong> {{ $website_info['Email'] ?? '' }}<br>
                       </p>
 
 

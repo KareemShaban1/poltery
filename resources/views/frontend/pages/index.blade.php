@@ -298,7 +298,7 @@
                                         <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['ducks_counts'] ?? '' !!}
                                         </h5>
                                     </div>
-                                    <p class="text-secondary m-0">Ducks per year</p>
+                                    <p class="text-secondary m-0">{{ trans('frontend.Ducks_Per_Year') }}</p>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
@@ -314,7 +314,7 @@
                                         <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['quails_counts'] ?? '' !!}
                                         </h5>
                                     </div>
-                                    <p class="text-secondary m-0">Quails per year</p>
+                                    <p class="text-secondary m-0">{{ trans('frontend.Quails_Per_Year') }}</p>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
@@ -329,7 +329,7 @@
                                         <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retails_counts'] ?? '' !!}
                                         </h5>
                                     </div>
-                                    <p class="text-secondary m-0">Retail outlets</p>
+                                    <p class="text-secondary m-0">{{ trans('frontend.Retail_Outlets') }}</p>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
@@ -344,7 +344,7 @@
                                         <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_counts'] ?? '' !!}
                                         </h5>
                                     </div>
-                                    <p class="text-secondary m-0">Farms across egypt</p>
+                                    <p class="text-secondary m-0">{{ trans('frontend.Farms_Across_Egypt') }}</p>
                                 </div>
                             </div>
                         </div>
