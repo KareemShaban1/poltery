@@ -1444,6 +1444,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
+  direction: rtl;
 }
 
 #footer .footer-top .footer-info h3 {
