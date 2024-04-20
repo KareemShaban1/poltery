@@ -14,7 +14,7 @@
                   @endphp
                   <div class="col-lg-5 col-md-5 footer-info"
                       style="display: flex; flex-direction: column; align-items: center;">
-                      <h3 style="font-family: 'Rubic'">{{ $website_info['Company_Name'] ?? '' }}</h3>
+                      <h3 style="font-family: 'Rubic'">{!! $website_info['Company_Name'] ?? '' !!}</h3>
                       {{-- <p style="font-size:18px; font-family: 'Rubic'">El Abed Meat & Poultry Co.
                       </p> --}}
                       <img class="logo-image" src="{{ asset('frontend/img/logo_1.png') }}" alt="" title="">
@@ -27,9 +27,9 @@
                   align-items: center;">
                       <h4 style="font-size:22px; font-family: 'Rubic'">{{ trans('frontend.Contact_Us') }}</h4>
                       <p style="font-size:18px; font-family: 'Rubic'">
-                          <strong>{{ trans('frontend.Address') }}:</strong> {{ $website_info['Address'] ?? '' }} <br>
-                          <strong>{{ trans('frontend.Phone') }}:</strong> {{ $website_info['Phone'] ?? '' }}<br>
-                          <strong>{{ trans('frontend.Email') }}:</strong> {{ $website_info['Email'] ?? '' }}<br>
+                          <strong>{{ trans('frontend.Address') }}:</strong> {!! $website_info['Address'] ?? '' !!} <br>
+                          <strong>{{ trans('frontend.Phone') }}:</strong> {!! $website_info['Phone'] ?? '' !!}<br>
+                          <strong>{{ trans('frontend.Email') }}:</strong> {!! $website_info['Email'] ?? '' !!}<br>
                       </p>
 
 
