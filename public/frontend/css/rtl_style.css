@@ -1719,3 +1719,7 @@ float: right;
 .card-footer .wcf-footer-right {
     float: left;
 }
+
+.footer-item p{
+    margin: 0 10px 15px 0;
+}
