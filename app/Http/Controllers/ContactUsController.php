@@ -34,6 +34,22 @@ class ContactUsController extends Controller
     public function store(Request $request)
     {
         //
+        // Validate the form data
+        $validatedData = $request->validate([
+         'name' => 'required|string|max:255',
+         'email' => 'required|string|email|max:255|unique:users',
+         'number' => 'required|string|min:11',
+         'message' => 'required|string',
+
+        ]);
+
+        // Create a new user instance
+        $contactUs = ContactUs::create($validatedData);
+
+
+        // Redirect back with success message
+        return redirect()->route('home')->with('toast_success', 'Message Send successfully.');
+
     }
 
     /**
