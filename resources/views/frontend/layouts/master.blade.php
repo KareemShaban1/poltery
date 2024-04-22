@@ -46,7 +46,9 @@
     <!-- Template Main Javascript File -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
 
-    <script src="{{ asset('backend/js/toastr.js') }}"></script>
+    {{-- <script src="{{ asset('backend/js/toastr.js') }}"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <script>
         @if (session('toast_success'))
             toastr.success("{{ session('toast_success') }}", "", {
