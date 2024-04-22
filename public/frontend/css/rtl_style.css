@@ -1673,6 +1673,12 @@ float: right;
   #schedule .nav-tabs a {
     padding: 8px 60px;
   }
+
+  #footer .footer-top .footer-contact p {
+    /* line-height: 26px; */
+    margin: 0px 5px 15px 0px;
+
+  }
 }
 
 @media (max-width: 768px) {

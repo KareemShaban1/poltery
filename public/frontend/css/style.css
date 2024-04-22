@@ -1712,6 +1712,11 @@ h6 {
   #schedule .nav-tabs a {
     padding: 8px 60px;
   }
+
+  #footer .footer-top .footer-contact p {
+    /* line-height: 26px; */
+    margin: 0px 0px 15px 5px;
+  }
 }
 
 @media (max-width: 768px) {
