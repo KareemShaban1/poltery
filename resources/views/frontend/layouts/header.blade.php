@@ -7,6 +7,7 @@
         <div id="logo">
 
             <a href="#intro" class="scrollto">
+                <span class="visually-hidden">link</span>
                 <div class="intro-img">
 
                 </div>

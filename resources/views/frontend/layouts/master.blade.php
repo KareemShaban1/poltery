@@ -9,14 +9,15 @@
 
     <div>
 
-
         @yield('content')
     </div>
 
 
     @include('frontend.layouts.footer')
 
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <a href="#" class="back-to-top">
+        <span class="visually-hidden">link</span>
+        <i class="fa fa-angle-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="{{ asset('frontend/lib/jquery/jquery.min.js') }}"></script>
@@ -40,7 +41,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
     <!-- Contact Form JavaScript File -->
-    <script src="{{ asset('frontend/contactform/contactform.js') }}"></script>
+    {{-- <script src="{{ asset('frontend/contactform/contactform.js') }}"></script> --}}
 
     <!-- Template Main Javascript File -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
