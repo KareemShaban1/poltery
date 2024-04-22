@@ -295,7 +295,8 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['ducks_counts'] ?? '' !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up" style="direction: ltr">
+                                            {!! $counts['ducks_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">{{ trans('frontend.Ducks_Per_Year') }}</p>
@@ -311,7 +312,8 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['quails_counts'] ?? '' !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up" style="direction: ltr">
+                                            {!! $counts['quails_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">{{ trans('frontend.Quails_Per_Year') }}</p>
@@ -326,7 +328,8 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['retails_counts'] ?? '' !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up" style="direction: ltr">
+                                            {!! $counts['retails_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">{{ trans('frontend.Retail_Outlets') }}</p>
@@ -341,7 +344,8 @@
                                     </div>
                                     <div style="display: flex; justify-content: center">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">{!! $counts['farms_counts'] ?? '' !!}
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up" style="direction: ltr">
+                                            {!! $counts['farms_counts'] ?? '' !!}
                                         </h5>
                                     </div>
                                     <p class="text-secondary m-0">{{ trans('frontend.Farms_Across_Egypt') }}</p>
