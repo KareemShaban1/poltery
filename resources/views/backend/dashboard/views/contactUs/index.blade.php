@@ -40,6 +40,8 @@
                                 <th>{{ trans('backend.Email') }}</th>
                                 <th>{{ trans('backend.Number') }}</th>
                                 <th>{{ trans('backend.Message') }}</th>
+                                <th>{{ trans('backend.Time') }}</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -49,9 +51,10 @@
                                     <td>{{ $contact->id }}</td>
                                     <td>{{ $contact->name }}</td>
                                     <td>{{ $contact->email }}</td>
-
                                     <td>{{ $contact->number }}</td>
                                     <td>{{ $contact->message }}</td>
+                                    <td>{{ $contact->created_at->format('Y-m-d H:i:s') }}</td>
+
 
                                 </tr>
                             @endforeach

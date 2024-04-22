@@ -79,5 +79,9 @@ return [
     'total_facilities' => 'Total Facilities',
     'total_recipes' => 'Total Recipes',
     'total_sponsors' => 'Total Sponsors ',
+    'Contact_Us' => 'التواصل',
+    'Number' => 'الرقم',
+    'Message' => 'الرسالة',
+    'Time' => 'الوقت',
 
 ];
