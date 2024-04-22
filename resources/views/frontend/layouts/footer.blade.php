@@ -26,8 +26,9 @@
                   flex-direction: column;
                   align-items: center;">
                       <h4 style="font-size:22px; font-family: 'Rubic'">{{ trans('frontend.Contact_Us') }}</h4>
-                      <div style="display: flex;
-
+                      <div
+                          style="display: flex;
+                        flex-direction: column;
                       align-items: start;">
                           <div class="d-flex footer-item">
                               <strong>{{ trans('frontend.Address') }} : </strong>

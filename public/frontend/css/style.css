@@ -1579,7 +1579,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-contact p {
-  line-height: 26px;
+  /* line-height: 26px; */
+  margin: 0px 0px 15px 10px;
+
 }
 
 #footer .footer-top .footer-newsletter {
@@ -1761,3 +1763,7 @@ h6 {
     float: right;
 }
 
+
+.footer-item p{
+    margin: 0 10px 15px 0;
+}
