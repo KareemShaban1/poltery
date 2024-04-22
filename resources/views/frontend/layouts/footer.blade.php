@@ -34,7 +34,7 @@
                       align-items: start;">
                           <div class="d-flex footer-item">
                               <strong>{{ trans('frontend.Address') }} : </strong>
-                              <div style="direction: ltr">
+                              <div>
                                   {!! $website_info['Address'] ?? '' !!}
                               </div>
                           </div>
