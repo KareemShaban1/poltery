@@ -82,7 +82,7 @@
                             <div class="contact-phone">
                                 <i class="ion-ios-telephone-outline"></i>
                                 <h3 style="font-family: 'Rubic';">{{ trans('frontend.Phone') }}</h3>
-                                <div>
+                                <div style="direction: ltr">
                                     {!! $website_info['Phone'] ?? '' !!}
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                             <div class="contact-email">
                                 <i class="ion-ios-email-outline"></i>
                                 <h3 style="font-family: 'Rubic';">{{ trans('frontend.Email') }}</h3>
-                                <div>
+                                <div style="direction: ltr">
                                     {!! $website_info['Email'] ?? '' !!}
                                 </div>
                             </div>
