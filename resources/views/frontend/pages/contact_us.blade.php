@@ -128,13 +128,13 @@
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="text" name="name" class="form-control" id="name"
+                                    <input type="text" name="name" class="form-control" id="name" required
                                         placeholder="{{ trans('frontend.Name') }}" data-rule="minlen:4"
                                         data-msg="Please enter at least 4 chars" />
                                     <div class="validation"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" name="email" id="email"
+                                    <input type="email" class="form-control" name="email" id="email" required
                                         placeholder="{{ trans('frontend.Email') }}" data-rule="email"
                                         data-msg="Please enter a valid email" />
                                     <div class="validation"></div>
@@ -142,12 +142,12 @@
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="number" id="number"
-                                    placeholder="{{ trans('frontend.Number') }}" data-rule="minlen:11"
+                                    placeholder="{{ trans('frontend.Number') }}" data-rule="minlen:11" required
                                     data-msg="Please enter your number" />
                                 <div class="validation"></div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                <textarea class="form-control" name="message" rows="5" data-rule="required" required
                                     data-msg="Please write something for us" placeholder="{{ trans('frontend.Message') }}"></textarea>
                                 <div class="validation"></div>
                             </div>
