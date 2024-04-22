@@ -32,8 +32,19 @@
 <script>
     $(document).ready(function() {
         $('.summernote').summernote({
-            fontNames: ['XBRiyaz','Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana', 'Roboto'],
+            fontNames: ['XBRiyaz', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica',
+                'Impact', 'Tahoma', 'Times New Roman', 'Verdana', 'Roboto'
+            ],
             height: 150,
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ]
 
         });
     });

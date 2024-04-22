@@ -15,9 +15,7 @@
                   <div class="col-lg-5 col-md-5 footer-info"
                       style="display: flex; flex-direction: column; align-items: center;">
                       <div style="text-align: center">
-                          {{-- <h3 style="font-family: 'Rubic'"> --}}
-                            {!! $website_info['Company_Name'] ?? '' !!}
-                        {{-- </h3> --}}
+                          {!! $website_info['Company_Name'] ?? '' !!}
                       </div>
                       {{-- <p style="font-size:18px; font-family: 'Rubic'">El Abed Meat & Poultry Co.
                       </p> --}}
