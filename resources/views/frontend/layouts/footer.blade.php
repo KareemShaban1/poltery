@@ -59,11 +59,17 @@
                       <div class="social-links">
 
                           <a @if (!empty($links['facebook_link'])) href="{{ $links['facebook_link'] }}" @endif
-                              class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                              class="facebook" target="_blank">
+                              <span class="visually-hidden">link</span>
+                              <i class="fa fa-facebook"></i></a>
                           <a @if (!empty($links['instagram_link'])) href="{{ $links['instagram_link'] }}" @endif
-                              class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                              class="instagram" target="_blank">
+                              <span class="visually-hidden">link</span>
+                              <i class="fa fa-instagram"></i></a>
                           <a @if (!empty($links['youtube_link'])) href="{{ $links['youtube_link'] }}" @endif
-                              class="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+                              class="youtube" target="_blank">
+                              <span class="visually-hidden">link</span>
+                              <i class="fa fa-youtube"></i></a>
 
                       </div>
 

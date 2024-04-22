@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>AL Abed Poultry</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     @yield('seo_data')
 
