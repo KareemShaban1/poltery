@@ -3,7 +3,7 @@
 @section('title')
     website Info
 @endsection
-@section('page-header')
+@section('page-title')
     <!-- breadcrumb -->
     <div class="page-title">
         <div class="row">
