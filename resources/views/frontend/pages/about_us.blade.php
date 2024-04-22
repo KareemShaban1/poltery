@@ -13,7 +13,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                                                    background-attachment: fixed; */
+                                                                                                        background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -54,7 +54,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center service-heading animate-box section-header">
-                    <h2>{{ trans('backend.About_Us') }}</h2>
+                    <h2>{{ trans('frontend.About_Us') }}</h2>
                 </div>
             </div>
 

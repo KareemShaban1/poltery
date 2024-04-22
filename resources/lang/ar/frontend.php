@@ -31,7 +31,6 @@ return [
           'Quails_Per_Year' => 'سمانة سنوياً',
           'Retail_Outlets' => 'منافذ بيع بالتجزئة',
           'Farms_Across_Egypt' => 'مزرعة في جميع أنحاء مصر',
-          'About_Us' => 'من نحن',
           'Our_Partners' => 'شركاؤنا في مجال البيع بالتجزئة',
           'Abed_Ramsis' => 'عابد رمسيس',
           'Founder_Ceo' => 'المؤسس والرئيس التنفيذي',

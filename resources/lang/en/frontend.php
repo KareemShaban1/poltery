@@ -33,7 +33,6 @@ return [
     'Retail_Outlets' => 'Retail Outlets',
     'Farms_Across_Egypt' => 'Farms Across Egypt',
     'Contact_Us' => 'Contact Us',
-    'About_Us' => 'About Us',
     'Our_Partners' => 'Our Retail Partners',
     'Abed_Ramsis' => 'Abed Ramsis',
     'Founder_Ceo' => 'Founder & CEO',
