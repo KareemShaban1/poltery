@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\ContactUs;
+use App\Http\Requests\StoreContactUsRequest;
+use App\Http\Requests\UpdateContactUsRequest;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -13,6 +15,9 @@ class ContactUsController extends Controller
     public function index()
     {
         //
+        $contactUs = ContactUs::all();
+        return view('backend.dashboard.views.contactUs.index', compact('contactUs', ));
+
     }
 
     /**
@@ -34,7 +39,7 @@ class ContactUsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(ContactUs $contactUs)
     {
         //
     }
@@ -42,7 +47,7 @@ class ContactUsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(ContactUs $contactUs)
     {
         //
     }
@@ -50,7 +55,7 @@ class ContactUsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, ContactUs $contactUs)
     {
         //
     }
@@ -58,7 +63,7 @@ class ContactUsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(ContactUs $contactUs)
     {
         //
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\websiteInfosController;
 use App\Http\Controllers\SeoController;
 use App\Http\Controllers\DashboardController;
@@ -18,6 +19,7 @@ use App\Http\Controllers\RecipeTypeController;
 use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
+use App\Models\ContactUs;
 use App\Models\Image;
 use Illuminate\Support\Facades\Route;
 
@@ -142,6 +144,10 @@ Route::group(
             Route::put('/facilityCategory/update/{id}', [FacilityCategoryController::class,'update'])->name('facilitiesCategory.update');
             Route::delete('/facilityCategory/destroy/{id}', [FacilityCategoryController::class,'destroy'])->name('facilitiesCategory.destroy');
         });
+
+        Route::get('/contactUs', [ContactUsController::class,'index'])->name('contactUs.index');
+
+
     }
 );
 
@@ -155,6 +161,11 @@ Route::group(
             return view('frontend.pages.index');
         })->name('home');
 
+        Route::group([], function () {
+            Route::post('/contactUs/store', [ContactUsController::class,'store'])->name('contactUs.store');
+            Route::put('/contactUs/update/{id}', [ContactUsController::class,'update'])->name('contactUs.update');
+            Route::delete('/contactUs/destroy/{id}', [ContactUsController::class,'destroy'])->name('contactUs.destroy');
+        });
         Route::get('/about-us', function () {
             return view('frontend.pages.about_us');
         })->name('about-us');
