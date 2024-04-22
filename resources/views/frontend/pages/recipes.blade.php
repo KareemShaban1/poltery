@@ -244,8 +244,9 @@
                                                     <div class="ft-recipe">
 
                                                         <div class="ft-recipe__thumb">
-                                                            <h3 style="font-family: 'Rubic';">
-                                                                {{ $recipe->recipeType->name }}</h3><img
+                                                            {{-- <h3 style="font-family: 'Rubic';">
+                                                                {{ $recipe->recipeType->name }}</h3> --}}
+                                                                <img
                                                                 src="{{ $recipe->image_url }}" alt="Strawberry Waffle" />
                                                         </div>
                                                         <div class="ft-recipe__content">

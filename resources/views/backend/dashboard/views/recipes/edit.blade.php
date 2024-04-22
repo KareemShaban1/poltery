@@ -102,7 +102,7 @@
                                 </label>
 
                                 <input type="text" class="form-control form-control-solid"
-                                    value="{{ $recipe->title_en }}" placeholder="Enter Arabic Title" name="title_ar" />
+                                    value="{{ $recipe->title_ar }}" placeholder="Enter Arabic Title" name="title_ar" />
                             </div>
                         </div>
 
