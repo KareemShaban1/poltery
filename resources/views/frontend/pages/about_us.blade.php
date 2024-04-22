@@ -13,7 +13,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                                                background-attachment: fixed; */
+                                                                                                    background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;
@@ -116,8 +116,8 @@
 
                     <img class="owner-image" src="{{ asset('frontend/img/elabed.png') }}" alt="">
 
-                    <h2 class="m-0">Abed Ramsis</h2>
-                    <p class="m-0" style="">Founder & CEO</p>
+                    <h2 class="m-0">{{ trans('frontend.Abed_Ramsis') }}</h2>
+                    <p class="m-0" style="">{{ trans('frontend.Founder_Ceo') }}</p>
 
                 </div>
             </div>
