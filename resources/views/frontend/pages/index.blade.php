@@ -293,9 +293,9 @@
 
 
                                     </div>
-                                    <div style="display: flex; justify-content: center">
+                                    <div style="display: flex; justify-content: center; direction: ltr">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up" style="direction: ltr">
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">
                                             {!! $counts['ducks_counts'] ?? '' !!}
                                         </h5>
                                     </div>
@@ -310,9 +310,9 @@
 
 
                                     </div>
-                                    <div style="display: flex; justify-content: center">
+                                    <div style="display: flex; justify-content: center; direction: ltr">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up" style="direction: ltr">
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">
                                             {!! $counts['quails_counts'] ?? '' !!}
                                         </h5>
                                     </div>
@@ -326,9 +326,9 @@
                                         <img src="{{ asset('frontend/img/icons/retail_icon.png') }}" alt="">
 
                                     </div>
-                                    <div style="display: flex; justify-content: center">
+                                    <div style="display: flex; justify-content: center; direction: ltr">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up" style="direction: ltr">
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">
                                             {!! $counts['retails_counts'] ?? '' !!}
                                         </h5>
                                     </div>
@@ -342,9 +342,9 @@
                                         <img src="{{ asset('frontend/img/icons/farm_icon.png') }}" alt="">
 
                                     </div>
-                                    <div style="display: flex; justify-content: center">
+                                    <div style="display: flex; justify-content: center; direction: ltr">
                                         <h5 class="display-6 fw-bold m-1">+</h5>
-                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up" style="direction: ltr">
+                                        <h5 class="display-6 fw-bold m-1" data-toggle="counter-up">
                                             {!! $counts['farms_counts'] ?? '' !!}
                                         </h5>
                                     </div>
