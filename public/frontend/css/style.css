@@ -1476,7 +1476,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .footer-top .footer-info h3 {
   font-size: 26px;
-  margin: 0 0 20px 0;
+  margin: 0;
   padding: 2px 0 2px 0;
   line-height: 1;
   /* font-family: "Raleway", sans-serif; */
