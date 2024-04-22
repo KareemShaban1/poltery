@@ -26,22 +26,26 @@
                   flex-direction: column;
                   align-items: center;">
                       <h4 style="font-size:22px; font-family: 'Rubic'">{{ trans('frontend.Contact_Us') }}</h4>
-                      <div class="d-flex footer-item">
-                          <strong>{{ trans('frontend.Address') }}  : </strong>
-                          <div style="direction: ltr">
-                              {!! $website_info['Address'] ?? '' !!}
+                      <div style="display: flex;
+
+                      align-items: start;">
+                          <div class="d-flex footer-item">
+                              <strong>{{ trans('frontend.Address') }} : </strong>
+                              <div style="direction: ltr">
+                                  {!! $website_info['Address'] ?? '' !!}
+                              </div>
                           </div>
-                      </div>
-                      <div class="d-flex footer-item">
-                          <strong>{{ trans('frontend.Phone') }}  : </strong>
-                          <div style="direction: ltr">
-                              {!! $website_info['Phone'] ?? '' !!}
+                          <div class="d-flex footer-item">
+                              <strong>{{ trans('frontend.Phone') }} : </strong>
+                              <div style="direction: ltr">
+                                  {!! $website_info['Phone'] ?? '' !!}
+                              </div>
                           </div>
-                      </div>
-                      <div class="d-flex footer-item">
-                          <strong>{{ trans('frontend.Email') }}  : </strong>
-                          <div style="direction: ltr">
-                              {!! $website_info['Email'] ?? '' !!}
+                          <div class="d-flex footer-item">
+                              <strong>{{ trans('frontend.Email') }} : </strong>
+                              <div style="direction: ltr">
+                                  {!! $website_info['Email'] ?? '' !!}
+                              </div>
                           </div>
                       </div>
 
