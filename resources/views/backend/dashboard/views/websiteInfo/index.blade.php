@@ -4,21 +4,28 @@
     website Info
 @endsection
 @section('page-title')
-    <!-- breadcrumb -->
-    <div class="page-title">
-        <div class="row">
-            <div class="col-sm-6">
-                <h4 class="mb-0"> website Info</h4>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
-                    <li class="breadcrumb-item"><a href="#" class="default-color">Dashboard</a></li>
-                    <li class="breadcrumb-item active">website Info</li>
-                </ol>
-            </div>
-        </div>
+    <div class="page-title d-flex flex-column me-5">
+        <!--begin::Title-->
+        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">Website Info</h1>
+        <!--end::Title-->
+        <!--begin::Breadcrumb-->
+        <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 pt-1">
+            <!--begin::Item-->
+            <li class="breadcrumb-item text-muted">
+                <a href="{{ route('dashboard') }}" class="text-muted text-hover-primary">Dashboard</a>
+            </li>
+            <!--end::Item-->
+            <!--begin::Item-->
+            <li class="breadcrumb-item">
+                <span class="bullet bg-gray-200 w-5px h-2px"></span>
+            </li>
+            <!--end::Item-->
+            <!--begin::Item-->
+            <li class="breadcrumb-item text-dark">Website Info</li>
+            <!--end::Item-->
+        </ul>
+        <!--end::Breadcrumb-->
     </div>
-    <!-- breadcrumb -->
 @endsection
 @section('content')
     <a href="#" class="btn btn-primary er fs-6 px-8 py-4 mb-5" data-bs-toggle="modal"
