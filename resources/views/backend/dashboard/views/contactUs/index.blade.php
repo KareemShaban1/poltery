@@ -3,7 +3,7 @@
 @section('page-title')
     <div class="user-title d-flex flex-column me-5">
         <!--begin::Title-->
-        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">{{ trans('backend.Conatct_Us') }}</h1>
+        <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">{{ trans('backend.Emails') }}</h1>
         <!--end::Title-->
         <!--begin::Breadcrumb-->
         <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 pt-1">
@@ -18,7 +18,7 @@
             </li>
             <!--end::Item-->
             <!--begin::Item-->
-            <li class="breadcrumb-item text-dark">{{ trans('backend.Conatct_Us') }}</li>
+            <li class="breadcrumb-item text-dark">{{ trans('backend.Emails') }}</li>
             <!--end::Item-->
         </ul>
         <!--end::Breadcrumb-->
@@ -41,6 +41,7 @@
                                 <th>{{ trans('backend.Number') }}</th>
                                 <th>{{ trans('backend.Message') }}</th>
                                 <th>{{ trans('backend.Time') }}</th>
+                                <th>{{ trans('backend.Actions') }}</th>
 
                             </tr>
                         </thead>
@@ -52,10 +53,26 @@
                                     <td>{{ $contact->name }}</td>
                                     <td>{{ $contact->email }}</td>
                                     <td>{{ $contact->number }}</td>
-                                    <td>{{ $contact->message }}</td>
+                                    <td> <a href="#" class="btn btn-primary er fs-6 px-8 py-4 mb-5"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#kt_modal_emails{{ $contact->id }}">Show</a>
+
+                                        @include('backend.dashboard.views.contactUs.emails_modal')
+
+                                    </td>
                                     <td>{{ $contact->created_at->format('Y-m-d H:i:s') }}</td>
 
+                                    <td>
+                                        <form action="{{ Route('contactUs.destroy', $contact->id) }}" method="post"
+                                            style="display:inline">
+                                            @csrf
+                                            @method('delete')
 
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -79,32 +96,25 @@
                 stateSave: true,
                 sortable: true,
                 oLanguage: {
-                    sSearch: 'البحث',
+                    sSearch: 'Search',
                     sInfo: "Got a total of _TOTAL_ entries to show (_START_ to _END_)",
                     sZeroRecords: 'لا يوجد سجل متتطابق',
                     sEmptyTable: 'لا يوجد بيانات في الجدول',
                     oPaginate: {
                         sFirst: "First",
-                        sLast: "الأخير",
-                        sNext: "التالى",
-                        sPrevious: "السابق"
+                        sLast: "Last",
+                        sNext: "Next",
+                        sPrevious: "Previous"
                     },
                 },
                 dom: 'Bfrtip',
                 buttons: [{
-                        extend: 'copyHtml5',
-                        exportOptions: {
-                            columns: [0, ':visible']
-                        }
-                    },
-                    {
                         extend: 'excelHtml5',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6, 7, 8]
+                            columns: [0, 1, 2, 3, 4]
                         }
                     },
 
-                    'colvis'
                 ],
                 responsive: true
             });

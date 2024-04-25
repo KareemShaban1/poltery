@@ -79,8 +79,12 @@ class ContactUsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ContactUs $contactUs)
+    public function destroy($id)
     {
         //
+        $contactUs = ContactUs::findOrFail($id);
+        $contactUs->delete();
+        return redirect()->route('contactUs.index')->with('toast_success', 'Email Deleted successfully.');
+
     }
 }

@@ -100,12 +100,12 @@
                             <select class="form-select form-select-solid fw-bolder" name="type"
                                 data-placeholder="Select Type" data-allow-clear="true" data-kt-user-table-filter="role"
                                 data-hide-search="true">
-                                <option value="home_video"> {{ trans('backend.Home_Video') }}</option>
-                                <option value="about_video"> {{ trans('backend.About_Video') }}</option>
-                                <option value="product_video"> {{ trans('backend.Product_Video') }}</option>
-                                <option value="facility_video"> {{ trans('backend.Facility_Video') }}</option>
-                                <option value="recipe_video"> {{ trans('backend.Recipe_Video') }}</option>
-                                <option value="other"> {{ trans('backend.Other') }}</option>
+                                <option value="home_video"> Home</option>
+                                <option value="about_video"> About</option>
+                                <option value="product_video"> Product</option>
+                                <option value="facility_video"> Facility</option>
+                                <option value="recipe_video"> Recipe</option>
+                                <option value="other"> Other</option>
 
                             </select>
 

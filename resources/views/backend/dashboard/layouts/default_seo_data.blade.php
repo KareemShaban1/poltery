@@ -1,8 +1,8 @@
 @php
-    $metaData = App\Models\MetaData::pluck('value', 'key')->toArray(); // Populate the $metaData property
+    $metaData = App\Models\WebsiteInfo::pluck('value', 'key')->toArray(); // Populate the $metaData property
 @endphp
 
-@section('title', 'المصاعد الدولية')
+@section('title', ' Al Abed Poultry')
 
 <meta content="{{ $metaData['description'] }}" name="description">
 <meta content="{{ $metaData['keywords'] }}" name="keywords">
@@ -14,7 +14,7 @@
 <meta property="og:title" content="{{ $metaData['og:title'] }}">
 <meta property="og:description" content="{{ $metaData['og:description'] }}">
 <meta property="og:url" content="{{ $metaData['og:url'] }}">
-<meta property="og:type" content="{{ $metaData['og:type'] }}"> 
+<meta property="og:type" content="{{ $metaData['og:type'] }}">
 <meta property="og:site_name" content="{{ $metaData['og:site_name'] }}">
 <meta property="og:updated_time" content="{{ $metaData['og:updated_time'] }}">
 <meta property="og:image" content="{{ $metaData['og:image'] }}">

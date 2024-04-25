@@ -1,4 +1,5 @@
-<div class="modal fade" id="kt_edit_modal_image{{ $image->id }}" tabindex="-1" aria-hidden="true" style="direction: ltr">
+<div class="modal fade" id="kt_edit_facility_image{{ $image->id }}" tabindex="-1" aria-hidden="true"
+    style="direction: ltr">
     <!--begin::Modal dialog-->
     <div class="modal-dialog modal-lg modal-dialog-centered mw-850px">
         <!--begin::Modal content-->
@@ -25,19 +26,19 @@
             <!--begin::Modal body-->
             <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
                 <!--begin:Form-->
-                <form id="kt_modal_image_form" class="form" enctype="multipart/form-data"
+                <form id="kt_edit_facility_image_form" class="form" enctype="multipart/form-data"
                     action="{{ route('images.update', $image->id) }}" method="POST">
                     @csrf
                     @method('PUT')
-
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">{{ trans('backend.Add_Image') }}</h1>
+                        <h1 class="mb-3">{{ trans('backend.Edit_Image') }}</h1>
                         <!--end::Title-->
 
                     </div>
                     <!--end::Heading-->
+
 
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
@@ -79,7 +80,7 @@
                     </div>
 
 
-                    <input type="hidden" name="type" value="main_image">
+                    <input type="hidden" name="type" value="facility_image">
                     <div class="row">
                         <div class="d-flex flex-column mb-8 fv-row col-md-6">
 
@@ -93,34 +94,33 @@
                                 name="title" />
                         </div>
 
-                        <div class="col-md-6">
-                            <label class="form-label fs-6 fw-bold">Type:</label>
-                            <select class="form-select form-select-solid fw-bolder" name="type"
-                                data-placeholder="Select Type" data-allow-clear="true" data-kt-user-table-filter="role"
-                                data-hide-search="true">
-                                <option value="main_image" @selected($image->type == 'main_image')>
-                                    Main Image</option>
-                                <option value="product_image" @selected($image->type == 'product_image')>
-                                    Product Image</option>
-                                <option value="facility_image" @selected($image->type == 'facility_image')>
-                                    Facility Image</option>
-                                <option value="recipes_image" @selected($image->type == 'recipes_image')>
-                                    Recipes Image</option>
+                        <input type="text" hidden name="facility_id" value="{{ $facility->id }}" />
 
-                                <option value="other" @selected($image->type == 'other')> {{ trans('backend.Other') }}
-                                </option>
+
+
+                        {{-- <div class="d-flex flex-column mb-8 fv-row col-md-6">
+                            <label class="form-label fs-6 fw-bold">{{ trans('backend.Facility') }}:</label>
+                            <select class="form-select form-select-solid fw-bolder" name="facility_id"
+                                data-placeholder="Select Facility" data-allow-clear="true"
+                                data-kt-user-table-filter="role" data-hide-search="true">
+                                @foreach ($facilities as $facility)
+                                    <option value="{{ $facility->id }}">{{ $facility->name_en }}</option>
+                                @endforeach
 
                             </select>
+                        </div> --}}
 
-                        </div>
+
                     </div>
+
+
 
 
                     <!--begin::Actions-->
                     <div class="text-center">
-                        <button type="reset" id="kt_modal_image_cancel" data-bs-dismiss="modal"
+                        <button type="reset" id="kt_edit_facility_image_cancel" data-bs-dismiss="modal"
                             class="btn btn-light me-3">{{ trans('backend.Cancel') }}</button>
-                        <button type="submit" id="kt_modal_image_submit" class="btn btn-primary">
+                        <button type="submit" id="kt_edit_facility_image_submit" class="btn btn-primary">
                             <span class="indicator-label">{{ trans('backend.Submit') }}</span>
                             <span class="indicator-progress">Please wait...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>

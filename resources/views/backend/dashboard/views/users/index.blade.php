@@ -102,32 +102,29 @@
                 stateSave: true,
                 sortable: true,
                 oLanguage: {
-                    sSearch: 'البحث',
+                    sSearch: 'Search',
                     sInfo: "Got a total of _TOTAL_ entries to show (_START_ to _END_)",
                     sZeroRecords: 'لا يوجد سجل متتطابق',
                     sEmptyTable: 'لا يوجد بيانات في الجدول',
                     oPaginate: {
                         sFirst: "First",
-                        sLast: "الأخير",
-                        sNext: "التالى",
-                        sPrevious: "السابق"
+                        sLast: "Last",
+                        sNext: "Next",
+                        sPrevious: "Previous"
                     },
                 },
                 dom: 'Bfrtip',
-                buttons: [{
-                        extend: 'copyHtml5',
-                        exportOptions: {
-                            columns: [0, ':visible']
-                        }
-                    },
+                buttons: [
+
                     {
                         extend: 'excelHtml5',
+                        text: 'Export to excel',
+                        title: 'Users',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6, 7, 8]
+                            columns: [0, 1, 2]
                         }
                     },
 
-                    'colvis'
                 ],
                 responsive: true
             });

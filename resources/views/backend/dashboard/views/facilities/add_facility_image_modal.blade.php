@@ -1,4 +1,5 @@
-<div class="modal fade" id="kt_modal_facility_image" tabindex="-1" aria-hidden="true" style="direction: ltr">
+<div class="modal fade" id="kt_modal_facility_image{{ $facility->id }}" tabindex="-1" aria-hidden="true"
+    style="direction: ltr">
     <!--begin::Modal dialog-->
     <div class="modal-dialog modal-lg modal-dialog-centered mw-850px">
         <!--begin::Modal content-->
@@ -31,7 +32,7 @@
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">{{ trans('backend.Add_Facility') }}</h1>
+                        <h1 class="mb-3">{{ trans('backend.Add_Image') }}</h1>
                         <!--end::Title-->
 
                     </div>
@@ -77,9 +78,7 @@
                         <!--end::Hint-->
                     </div>
 
-                    @php
-                        $facilities = App\Models\Facility::all();
-                    @endphp
+                   
 
                     <input type="hidden" name="type" value="facility_image">
                     <div class="row">
@@ -94,17 +93,8 @@
                             <input type="text" class="form-control form-control-solid" name="title" />
                         </div>
 
-                        <div class="d-flex flex-column mb-8 fv-row col-md-6">
-                            <label class="form-label fs-6 fw-bold">{{ trans('backend.Facility') }}:</label>
-                            <select class="form-select form-select-solid fw-bolder" name="facility_id"
-                                data-placeholder="Select Facility" data-allow-clear="true"
-                                data-kt-user-table-filter="role" data-hide-search="true">
-                                @foreach ($facilities as $facility)
-                                    <option value="{{ $facility->id }}">{{ $facility->name_en }}</option>
-                                @endforeach
+                        <input type="text" hidden name="facility_id" value="{{ $facility->id }}" />
 
-                            </select>
-                        </div>
 
 
                     </div>

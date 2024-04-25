@@ -62,22 +62,7 @@
 
                                     <td>
 
-                                        @php
-                                            $seo = App\Models\SeoData::where('entity_id', $sponsor->id)
-                                                ->where('entity_type', 'sponsor')
-                                                ->first();
-                                        @endphp
-                                        @if ($seo)
-                                            <a href="{{ Route('seo.edit', [$sponsor->id, 'sponsor']) }}"
-                                                class="btn btn-success btn-sm">
-                                                {{ trans('backend.Edit_Seo') }}
-                                            </a>
-                                        @else
-                                            <a href="{{ Route('seo.create', [$sponsor->id, 'sponsor']) }}"
-                                                class="btn btn-primary btn-sm">
-                                                {{ trans('backend.Add_Seo') }}
-                                            </a>
-                                        @endif
+
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#kt_modal_edit_sponsor{{ $sponsor->id }}">
                                             <i class="fa fa-edit"></i>
@@ -121,32 +106,27 @@
                 stateSave: true,
                 sortable: true,
                 oLanguage: {
-                    sSearch: 'البحث',
+                    sSearch: 'Search',
                     sInfo: "Got a total of _TOTAL_ entries to show (_START_ to _END_)",
                     sZeroRecords: 'لا يوجد سجل متتطابق',
                     sEmptyTable: 'لا يوجد بيانات في الجدول',
                     oPaginate: {
                         sFirst: "First",
-                        sLast: "الأخير",
-                        sNext: "التالى",
-                        sPrevious: "السابق"
+                        sLast: "Last",
+                        sNext: "Next",
+                        sPrevious: "Previous"
                     },
                 },
                 dom: 'Bfrtip',
                 buttons: [{
-                        extend: 'copyHtml5',
-                        exportOptions: {
-                            columns: [0, ':visible']
-                        }
-                    },
-                    {
                         extend: 'excelHtml5',
+                        text: 'Export To Excel',
+                        title: 'Retail Partners',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6, 7, 8]
+                            columns: [0, 1]
                         }
                     },
 
-                    'colvis'
                 ],
                 responsive: true
             });

@@ -81,7 +81,7 @@
                                                 @method('delete')
 
                                                 <button type="submit" class="btn btn-danger">
-                                                    حذف
+                                                    {{ trans('backend.Delete') }}
                                                 </button>
                                             </form>
                                         </td>
@@ -102,34 +102,28 @@
             stateSave: true,
             responsive: true,
             oLanguage: {
-                sSearch: 'البحث',
+                sSearch: 'Search',
                 sInfo: "Got a total of _TOTAL_ entries to show (_START_ to _END_)",
                 sZeroRecords: 'لا يوجد سجل متتطابق',
                 sEmptyTable: 'لا يوجد بيانات في الجدول',
                 oPaginate: {
                     sFirst: "First",
-                    sLast: "الأخير",
-                    sNext: "التالى",
-                    sPrevious: "السابق"
+                    sLast: "Last",
+                    sNext: "Next",
+                    sPrevious: "Previous"
                 },
             },
             sortable: true,
             dom: 'Bfrtip',
             buttons: [{
-                    extend: 'copyHtml5',
-                    exportOptions: {
-                        columns: [0, ':visible']
-                    }
+                extend: 'excelHtml5',
+                title: "Images",
+                text: "Export To Excel",
+
+                exportOptions: {
+                    columns: [0, 1, 3]
                 },
-                {
-                    extend: 'excelHtml5',
-                    exportOptions: {
-                        columns: [0, 1, 2]
-                    },
-                    title: "المستخدمين"
-                },
-                'colvis'
-            ],
+            }, ],
 
         });
     </script>

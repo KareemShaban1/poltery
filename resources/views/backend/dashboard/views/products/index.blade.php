@@ -61,22 +61,7 @@
 
                                     <td>
 
-                                        @php
-                                            $seo = App\Models\SeoData::where('entity_id', $product->id)
-                                                ->where('entity_type', 'product')
-                                                ->first();
-                                        @endphp
-                                        @if ($seo)
-                                            <a href="{{ Route('seo.edit', [$product->id, 'product']) }}"
-                                                class="btn btn-success btn-sm">
-                                                {{ trans('backend.Edit_Seo') }}
-                                            </a>
-                                        @else
-                                            <a href="{{ Route('seo.create', [$product->id, 'product']) }}"
-                                                class="btn btn-primary btn-sm">
-                                                {{ trans('backend.Add_Seo') }}
-                                            </a>
-                                        @endif
+
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#kt_modal_edit_product{{ $product->id }}">
                                             <i class="fa fa-edit"></i>
@@ -120,32 +105,36 @@
                 stateSave: true,
                 sortable: true,
                 oLanguage: {
-                    sSearch: 'البحث',
+                    sSearch: 'Search',
                     sInfo: "Got a total of _TOTAL_ entries to show (_START_ to _END_)",
                     sZeroRecords: 'لا يوجد سجل متتطابق',
                     sEmptyTable: 'لا يوجد بيانات في الجدول',
                     oPaginate: {
                         sFirst: "First",
-                        sLast: "الأخير",
+                        sLast: "Last",
                         sNext: "التالى",
-                        sPrevious: "السابق"
+                        sPrevious: "Previous"
                     },
                 },
                 dom: 'Bfrtip',
-                buttons: [{
-                        extend: 'copyHtml5',
-                        exportOptions: {
-                            columns: [0, ':visible']
-                        }
-                    },
+                buttons: [
+
                     {
                         extend: 'excelHtml5',
+                        text: 'Export To Excel',
+                        title: 'Products',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6, 7, 8]
+                            columns: [0, 1]
                         }
                     },
+                    // {
+                    //     extend: 'pdfHtml5',
+                    //     text: 'Export To PDF',
+                    //     exportOptions: {
+                    //         columns: [0, 1]
+                    //     }
+                    // },
 
-                    'colvis'
                 ],
                 responsive: true
             });

@@ -3,7 +3,7 @@
     <div class="aside-user d-flex align-items-sm-center justify-content-center py-5">
         <!--begin::Symbol-->
         <div class="symbol symbol-50px">
-            <img src="{{ asset('backend/media/avatars/150-26.jpg') }}" alt="" />
+            <img src="{{ asset('backend/media/avatars/img.jpg') }}" alt="" />
         </div>
         <!--end::Symbol-->
         <!--begin::Wrapper-->

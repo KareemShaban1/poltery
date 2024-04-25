@@ -82,7 +82,7 @@
                     <div class="fv-row mb-7">
                         <label class="d-block fw-bold fs-6 mb-2">{{ trans('backend.Video') }}</label>
                         <input type="file" name="video" accept=".mp4, .mov, .avi, .wmv" />
-                        <div class="form-text">{{ trans('backend.Allowed file types: mp4, mov, avi, wmv.') }}</div>
+                        <div class="form-text">Allowed file types: mp4, mov, avi, wmv.</div>
                     </div>
 
 
@@ -104,15 +104,15 @@
                                 data-placeholder="Select Type" data-allow-clear="true" data-kt-user-table-filter="role"
                                 data-hide-search="true">
                                 <option value="home_video" @selected($video->type == 'home_video')>
-                                    {{ trans('backend.Home_Video') }}</option>
+                                    Home</option>
                                 <option value="about_video" @selected($video->type == 'about_video')>
-                                    {{ trans('backend.About_Video') }}</option>
+                                    About</option>
                                 <option value="product_video" @selected($video->type == 'product_video')>
-                                    {{ trans('backend.Product_Video') }}</option>
+                                    Product</option>
                                 <option value="facility_video" @selected($video->type == 'facility_video')>
-                                    {{ trans('backend.Facility_Video') }}</option>
+                                    Facility</option>
                                 <option value="recipe_video" @selected($video->type == 'recipe_video')>
-                                    {{ trans('backend.Recipe_Video') }}</option>
+                                    Recipe</option>
                                 <option value="other" @selected($video->type == 'other')> {{ trans('backend.Other') }}
                                 </option>
 

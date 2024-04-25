@@ -45,7 +45,7 @@ class ImageController extends Controller
           "recipe_id" => "sometimes|exists:recipes,id",
         ]);
         if($request->type == 'main_image') {
-            $validatedData['image'] = $this->ProcessImage($request, 'image', 'images',null,true);
+            $validatedData['image'] = $this->ProcessImage($request, 'image', 'images', null, true);
         } else {
             $validatedData['image'] = $this->ProcessImage($request, 'image', 'images');
 
@@ -53,11 +53,10 @@ class ImageController extends Controller
         Image::create($validatedData);
 
         if($request->type == "facility_image") {
-            return redirect()->route('facilities.index')->with('toast_success', 'تم أنشاء الصورة بنجاح');
-
+            return redirect()->route('facilities.index')->with('toast_success', 'تم أضافة الصورة بنجاح');
         }
 
-        return redirect()->route('images.index')->with('toast_success', 'تم أنشاء الصورة بنجاح');
+        return redirect()->route('images.index')->with('toast_success', 'تم أضافة الصورة بنجاح');
 
     }
 
@@ -82,8 +81,31 @@ class ImageController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $image = Image::findOrFail($id);
+
+        $validatedData = $request->validate([
+            "title" => "nullable|string",
+            "image" => "nullable", // Make the image field nullable for update
+            "type" => "required|string",
+            "product_id" => "sometimes|exists:products,id",
+            "facility_id" => "sometimes|exists:facilities,id",
+            "recipe_id" => "sometimes|exists:recipes,id",
+        ]);
+
+        if ($request->hasFile('image')) {
+            // If a new image is uploaded, process it
+            $validatedData['image'] = $this->ProcessImage($request, 'image', 'images');
+        }
+
+        $image->update($validatedData);
+
+        if ($image->type == "facility_image") {
+            return redirect()->route('facilities.index')->with('toast_success', 'تم تحديث الصورة بنجاح');
+        }
+
+        return redirect()->route('images.index')->with('toast_success', 'تم تحديث الصورة بنجاح');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -91,5 +113,16 @@ class ImageController extends Controller
     public function destroy(string $id)
     {
         //
+
+        $image = Image::findOrFail($id);
+
+        $image->delete();
+        if($image->type == "facility_image") {
+            return redirect()->route('facilities.index')->with('toast_success', 'تم حذف الصورة بنجاح');
+        }
+
+        return redirect()->route('images.index')->with('toast_success', 'تم حذف الصورة بنجاح');
+
+
     }
 }

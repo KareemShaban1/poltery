@@ -28,7 +28,7 @@
     </div>
 @endsection
 @section('content')
-    <a href="#" class="btn btn-success btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#kt_add_modal_video">
+    <a href="#" class="btn btn-success btn-sm mb-5" data-bs-toggle="modal" data-bs-target="#kt_add_modal_video">
         {{ trans('backend.Add_Video') }}
     </a>
     @include('backend.dashboard.views.videos.add_video_modal')
@@ -63,19 +63,19 @@
                                         </td>
                                         <td>
                                             @if ($video->type == 'home_video')
-                                                <span class="text-info text-bold"> {{ trans('backend.Home_Video') }}</span>
+                                                <span class="text-info text-bold">Home</span>
                                             @elseif ($video->type == 'product_video')
                                                 <span class="text-info text-bold">
-                                                    {{ trans('backend.Product_Video') }}</span>
+                                                    Product</span>
                                             @elseif ($video->type == 'facility_video')
                                                 <span class="text-info text-bold">
-                                                    {{ trans('backend.Facility_Video') }}</span>
+                                                    Facility</span>
                                             @elseif ($video->type == 'recipes_video')
                                                 <span class="text-info text-bold">
-                                                    {{ trans('backend.Recipe_Video') }}</span>
+                                                    Recipe</span>
                                             @else
                                                 <span class="text-info text-bold">
-                                                    {{ trans('backend.Other') }}</span>
+                                                    Other</span>
                                             @endif
                                         </td>
                                         <td>
@@ -119,28 +119,21 @@
                 sEmptyTable: 'لا يوجد بيانات في الجدول',
                 oPaginate: {
                     sFirst: "First",
-                    sLast: "الأخير",
-                    sNext: "التالى",
-                    sPrevious: "السابق"
+                    sLast: "Last",
+                    sNext: "Next",
+                    sPrevious: "Previous"
                 },
             },
             sortable: true,
             dom: 'Bfrtip',
             buttons: [{
-                    extend: 'copyHtml5',
-                    exportOptions: {
-                        columns: [0, ':visible']
-                    }
+                extend: 'excelHtml5',
+                title: "Videos",
+                text: "Export To Excel",
+                exportOptions: {
+                    columns: [0, 1, 3]
                 },
-                {
-                    extend: 'excelHtml5',
-                    exportOptions: {
-                        columns: [0, 1, 2]
-                    },
-                    title: "المستخدمين"
-                },
-                'colvis'
-            ],
+            }, ],
 
         });
     </script>

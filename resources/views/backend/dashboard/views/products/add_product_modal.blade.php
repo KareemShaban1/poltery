@@ -103,7 +103,7 @@
                     </div>
 
 
-                    <div class="mb-10">
+                    {{-- <div class="mb-10">
                         <label class="d-flex form-label fs-6 fw-bold text-label">{{ trans('backend.Category') }}</label>
                         <select class="form-select form-select-solid fw-bolder" name="category_id"
                             data-placeholder="Select Category" data-allow-clear="true" data-kt-user-table-filter="role"
@@ -113,7 +113,7 @@
                             @endforeach
 
                         </select>
-                    </div>
+                    </div> --}}
 
 
 

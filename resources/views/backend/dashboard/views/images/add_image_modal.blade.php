@@ -28,7 +28,6 @@
                 <form id="kt_modal_image_form" class="form" enctype="multipart/form-data"
                     action="{{ route('images.store') }}" method="POST">
                     @csrf
-                    @method('PUT')
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
@@ -92,6 +91,20 @@
                             <input type="text" class="form-control form-control-solid" name="title" />
                         </div>
 
+                        <div class="col-md-6">
+                            <label class="form-label fs-6 fw-bold"> {{ trans('backend.Type') }}:</label>
+                            <select class="form-select form-select-solid fw-bolder" name="type"
+                                data-placeholder="Select Type" data-allow-clear="true" data-kt-user-table-filter="role"
+                                data-hide-search="true">
+                                <option value="main_image"> Main Image</option>
+                                <option value="product_image">Product Image</option>
+                                <option value="facility_image"> Facility Image</option>
+                                <option value="recipes_image"> Recipes Image</option>
+                                <option value="other"> Other</option>
+
+                            </select>
+
+                        </div>
                     </div>
 
 

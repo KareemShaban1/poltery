@@ -40,6 +40,8 @@
                     <span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ trans('backend.Pages') }}</span>
                 </div>
             </div>
+
+            {{-- User managment --}}
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -119,49 +121,37 @@
                 </div>
             </div>
 
-            {{-- pages --}}
-            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-                <span class="menu-link">
+
+            {{-- Products --}}
+            <div class="menu-item">
+                <a class="{{ request()->routeIs('products.index') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('products.index') }}">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
-                                <path
-                                    d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z"
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
                                     fill="black" />
-                                <path opacity="0.3"
-                                    d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z"
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
                                     fill="black" />
-                                <path opacity="0.3"
-                                    d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z"
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
                                     fill="black" />
                             </svg>
                         </span>
                     </span>
-                    <span class="menu-title">{{ trans('backend.Pages') }}</span>
-                    <span class="menu-arrow"></span>
-                </span>
-                <div class="menu-sub menu-sub-accordion">
+                    <span class="menu-title">{{ trans('backend.Products') }}</span>
+                </a>
+            </div>
 
-                    <div class="menu-item">
-                        <a class="{{ request()->routeIs('pages.index') ? 'menu-link active' : 'menu-link' }} "
-                            href="{{ route('pages.index') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">{{ trans('backend.All_Pages') }}</span>
-                        </a>
-                    </div>
-                </div>
-            </div> --}}
 
             {{-- products --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
                                 <path
                                     d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z"
                                     fill="black" />
@@ -190,21 +180,34 @@
                         </a>
                     </div>
 
-                    <div class="menu-item">
-                        <a class="{{ request()->routeIs('productsCategory.index') ? 'menu-link active' : 'menu-link' }}"
-                            href="{{ route('productsCategory.index') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">{{ trans('backend.All_Products_Category') }}</span>
-                        </a>
-                    </div>
+
                 </div>
+            </div> --}}
+
+
+            <div class="menu-item">
+                <a class="{{ request()->routeIs('facilities.index') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('facilities.index') }}">
+                    <span class="menu-icon">
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="menu-title">{{ trans('backend.Facilities') }}</span>
+                </a>
             </div>
 
-
             {{-- Facilities --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -237,17 +240,8 @@
                         </a>
                     </div>
 
-                    <div class="menu-item">
-                        <a class="{{ request()->routeIs('facilitiesCategory.index') ? 'menu-link active' : 'menu-link' }}"
-                            href="{{ route('facilitiesCategory.index') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">{{ trans('backend.All_Facilities_Category') }}</span>
-                        </a>
-                    </div>
                 </div>
-            </div>
+            </div> --}}
 
 
             {{-- Recipes --}}
@@ -297,8 +291,32 @@
                 </div>
             </div>
 
+
+
             {{-- Sponsors --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <div class="menu-item">
+                <a class="{{ request()->routeIs('sponsors.index') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('sponsors.index') }}">
+                    <span class="menu-icon">
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="menu-title">{{ trans('backend.Sponsors') }}</span>
+                </a>
+            </div>
+
+            {{-- Sponsors --}}
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -315,7 +333,6 @@
                                     fill="black" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->
                     </span>
                     <span class="menu-title">{{ trans('backend.Sponsors') }}</span>
                     <span class="menu-arrow"></span>
@@ -334,10 +351,10 @@
 
 
                 </div>
-            </div>
+            </div> --}}
 
             {{-- SEO --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -370,11 +387,32 @@
                         </a>
                     </div>
                 </div>
-            </div>
-
+            </div> --}}
 
             {{-- Videos --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <div class="menu-item">
+                <a class="{{ request()->routeIs('videos.index') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('videos.index') }}">
+                    <span class="menu-icon">
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="menu-title">{{ trans('backend.Videos') }}</span>
+                </a>
+            </div>
+
+            {{-- Videos --}}
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -408,11 +446,32 @@
                     </div>
 
                 </div>
-            </div>
-
+            </div> --}}
 
             {{-- Images --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <div class="menu-item">
+                <a class="{{ request()->routeIs('images.index') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('images.index') }}">
+                    <span class="menu-icon">
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="menu-title">{{ trans('backend.Images') }}</span>
+                </a>
+            </div>
+
+            {{-- Images --}}
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -446,11 +505,33 @@
                     </div>
 
                 </div>
-            </div>
+            </div> --}}
 
 
             {{-- Website info --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <div class="menu-item">
+                <a class="{{ request()->routeIs('info.index') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('info.index') }}">
+                    <span class="menu-icon">
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="menu-title">{{ trans('backend.Website_Info') }}</span>
+                </a>
+            </div>
+
+            {{-- Website info --}}
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -484,11 +565,33 @@
                     </div>
 
                 </div>
-            </div>
+            </div> --}}
 
 
             {{-- Contact Us --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <div class="menu-item">
+                <a class="{{ request()->routeIs('contactUs.index') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('contactUs.index') }}">
+                    <span class="menu-icon">
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="menu-title">{{ trans('backend.Emails') }}</span>
+                </a>
+            </div>
+
+            {{-- Contact Us --}}
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -523,7 +626,9 @@
 
 
                 </div>
-            </div>
+            </div> --}}
+
+
             <div class="menu-item">
                 <div class="menu-content">
                     <div class="separator mx-1 my-4"></div>

@@ -38,8 +38,10 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(
     [
-        'prefix' => LaravelLocalization::setLocale().'/dashboard',
-        'middleware' => ['auth', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+        'prefix' => '/dashboard',
+        'middleware' => ['auth']
+        // 'prefix' => LaravelLocalization::setLocale().'/dashboard',
+        // 'middleware' => ['auth', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ],
     function () {
 
@@ -146,6 +148,8 @@ Route::group(
         });
 
         Route::get('/contactUs', [ContactUsController::class,'index'])->name('contactUs.index');
+        Route::put('/contactUs/update/{id}', [ContactUsController::class,'update'])->name('contactUs.update');
+        Route::delete('/contactUs/destroy/{id}', [ContactUsController::class,'destroy'])->name('contactUs.destroy');
 
 
     }
@@ -163,8 +167,6 @@ Route::group(
 
         Route::group([], function () {
             Route::post('/contactUs/store', [ContactUsController::class,'store'])->name('contactUs.store');
-            Route::put('/contactUs/update/{id}', [ContactUsController::class,'update'])->name('contactUs.update');
-            Route::delete('/contactUs/destroy/{id}', [ContactUsController::class,'destroy'])->name('contactUs.destroy');
         });
         Route::get('/about-us', function () {
             return view('frontend.pages.about_us');

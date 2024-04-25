@@ -80,7 +80,7 @@
 
                     align-items: center">
 
-                        @if (App::getLocale() == 'en')
+                        {{-- @if (App::getLocale() == 'en')
                             <span>
                                 <a href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">
                                     <img src="{{ URL::asset('backend/flags/EG.png') }}" alt="">
@@ -94,7 +94,7 @@
                                         src="{{ URL::asset('backend/flags/US.png') }}" alt="">
                                 </a>
                             </span>
-                        @endif
+                        @endif --}}
 
 
                         <div>

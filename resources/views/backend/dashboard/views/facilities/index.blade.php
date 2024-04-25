@@ -39,12 +39,14 @@
             <div class="card card-statistics h-100">
                 <div class="card-body">
                     <table id="custom_table" class="display">
+
                         <thead>
                             <tr>
 
                                 <th>{{ trans('backend.Id') }}</th>
                                 <th>{{ trans('backend.Name') }}</th>
                                 <th>{{ trans('backend.Image') }}</th>
+                                <th>{{ trans('backend.Additional_Images') }}</th>
                                 <th>{{ trans('backend.Actions') }}</th>
                             </tr>
                         </thead>
@@ -60,26 +62,53 @@
                                     </td>
 
                                     <td>
-
                                         @php
-                                            $seo = App\Models\SeoData::where('entity_id', $facility->id)
-                                                ->where('entity_type', 'facility')
-                                                ->first();
+                                            $images = App\Models\Image::where('facility_id', $facility->id)->get();
                                         @endphp
-                                        @if ($seo)
-                                            <a href="{{ Route('seo.edit', [$facility->id, 'facility']) }}"
-                                                class="btn btn-success btn-sm">
-                                                {{ trans('backend.Edit_Seo') }}
-                                            </a>
-                                        @else
-                                            <a href="{{ Route('seo.create', [$facility->id, 'facility']) }}"
-                                                class="btn btn-primary btn-sm">
-                                                {{ trans('backend.Add_Seo') }}
-                                            </a>
-                                        @endif
+                                        <div style="display: flex">
+
+                                            @foreach ($images as $image)
+                                                <div
+                                                    style="    display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                margin:0px 5px">
+
+                                                    <img src="{{ asset('storage/thumbnail/images/' . $image->image) }}"
+                                                        height="50" width="50" alt="">
+
+                                                    <div>
+                                                        <a href="#" class="btn btn-warning btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#kt_edit_facility_image{{ $image->id }}">
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>
+
+                                                        <form action="{{ Route('images.destroy', $image->id) }}"
+                                                            method="post" style="display:inline">
+                                                            @csrf
+                                                            @method('delete')
+
+                                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                                <i class="fa fa-trash"></i>
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                                @include('backend.dashboard.views.facilities.edit_facility_image_modal')
+                                            @endforeach
+                                        </div>
+                                    </td>
+
+
+
+                                    <td>
+
+
 
                                         <a href="#" class="btn btn-success btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#kt_modal_facility_image">
+                                            data-bs-target="#kt_modal_facility_image{{ $facility->id }}">
                                             {{ trans('backend.Add_Image') }}
                                             {{-- <i class="fa fa-create"></i> --}}
                                         </a>
@@ -127,32 +156,27 @@
                 stateSave: true,
                 sortable: true,
                 oLanguage: {
-                    sSearch: 'البحث',
+                    sSearch: 'Search',
                     sInfo: "Got a total of _TOTAL_ entries to show (_START_ to _END_)",
                     sZeroRecords: 'لا يوجد سجل متتطابق',
                     sEmptyTable: 'لا يوجد بيانات في الجدول',
                     oPaginate: {
                         sFirst: "First",
-                        sLast: "الأخير",
-                        sNext: "التالى",
-                        sPrevious: "السابق"
+                        sLast: "Last",
+                        sNext: "Next",
+                        sPrevious: "Previous"
                     },
                 },
                 dom: 'Bfrtip',
                 buttons: [{
-                        extend: 'copyHtml5',
-                        exportOptions: {
-                            columns: [0, ':visible']
-                        }
-                    },
-                    {
                         extend: 'excelHtml5',
+                        text: 'Export to Excel',
+                        title: 'Facilities',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6, 7, 8]
+                            columns: [0, 1]
                         }
                     },
 
-                    'colvis'
                 ],
                 responsive: true
             });
