@@ -42,10 +42,9 @@
             </div>
 
             {{-- User managment --}}
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
+            {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
                 <span class="menu-link">
                     <span class="menu-icon">
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen051.svg-->
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
@@ -57,7 +56,6 @@
                                     fill="black" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->
                     </span>
                     <span class="menu-title">{{ trans('backend.User_Management') }}</span>
                     <span class="menu-arrow"></span>
@@ -83,44 +81,31 @@
 
                         </div>
                     </div>
-                    {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-                        <span class="menu-link">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Roles</span>
-                            <span class="menu-arrow"></span>
-                        </span>
-                        <div class="menu-sub menu-sub-accordion">
-                            <div class="menu-item">
-                                <a class="menu-link" href="../../demo8/dist/apps/user-management/roles/list.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Roles List</span>
-                                </a>
-                            </div>
-                            <div class="menu-item">
-                                <a class="menu-link" href="../../demo8/dist/apps/user-management/roles/view.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">View Role</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <a class="menu-link" href="../../demo8/dist/apps/user-management/permissions.html">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Permissions</span>
-                        </a>
-                    </div> --}}
-                </div>
-            </div>
 
+                </div>
+            </div> --}}
+
+            {{-- Users --}}
+            <div class="menu-item">
+                <a class="{{ request()->routeIs('users.index') ? 'menu-link active' : 'menu-link' }} "
+                    href="{{ route('users.index') }}">
+                    <span class="menu-icon">
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="menu-title">{{ trans('backend.Users') }}</span>
+                </a>
+            </div>
 
             {{-- Products --}}
             <div class="menu-item">

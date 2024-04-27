@@ -3,7 +3,7 @@
     <div class="aside-user d-flex align-items-sm-center justify-content-center py-5">
         <!--begin::Symbol-->
         <div class="symbol symbol-50px">
-            <img src="{{ asset('backend/media/avatars/img.jpg') }}" alt="" />
+            <img src="{{ Auth::user()->image_url }}" alt="" />
         </div>
         <!--end::Symbol-->
         <!--begin::Wrapper-->

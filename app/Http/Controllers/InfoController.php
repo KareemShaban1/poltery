@@ -22,7 +22,7 @@ class InfoController extends Controller
     {
         $validateData = $request->validate([
             'key' => 'required|string',
-            'value' => 'nullable|string',
+            'value' => 'required|string',
             'type' => 'nullable|string',
             'language' => 'nullable|string',
 
@@ -40,7 +40,7 @@ class InfoController extends Controller
     {
         $validateData = $request->validate([
             'key' => 'required|string',
-            'value' => 'nullable|string',
+            'value' => 'required|string',
             'type' => 'nullable|string',
             'language' => 'nullable|string',
         ], [

@@ -14,7 +14,7 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = Image::all();
+        $images = Image::where('type', '<>', 'facility_image')->get();
         return view('backend.dashboard.views.images.index', compact('images'));
 
     }

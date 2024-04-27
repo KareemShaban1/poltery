@@ -1680,6 +1680,15 @@ float: right;
     margin: 0px 5px 15px 0px;
 
   }
+
+  .contact-key {
+    font-family: 'XBRiyaz'; 
+    text-align:center
+}
+
+.contact-value {
+    text-align:center
+}
 }
 
 @media (max-width: 768px) {
@@ -1731,4 +1740,9 @@ float: right;
 
 .footer-item p{
     margin: 0 10px 15px 0;
+}
+
+.contact-value p{
+    font-family: "XBRiyaz";
+    font-size: 16px;
 }

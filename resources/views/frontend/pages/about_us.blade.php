@@ -4,8 +4,8 @@
     @include('frontend.layouts.default_seo_data')
 @endsection
 @php
-    $bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'About BG')->first();
-    $mob_bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'About Mob BG')->first();
+    $bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'About Us BG')->first();
+    $mob_bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'About Us Mob BG')->first();
 
 @endphp
 @push('styles')
@@ -13,7 +13,7 @@
         .intro-section {
             background: url({{ $bg_image->image_url }});
             /* background-size: cover;
-                                                                                                        background-attachment: fixed; */
+                                                                                                            background-attachment: fixed; */
             background-attachment: fixed;
             width: 100%;
             height: 800px;

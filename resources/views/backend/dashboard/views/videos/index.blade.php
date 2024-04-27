@@ -113,7 +113,7 @@
             stateSave: true,
             responsive: true,
             oLanguage: {
-                sSearch: 'البحث',
+                sSearch: 'Search',
                 sInfo: "Got a total of _TOTAL_ entries to show (_START_ to _END_)",
                 sZeroRecords: 'لا يوجد سجل متتطابق',
                 sEmptyTable: 'لا يوجد بيانات في الجدول',

@@ -1649,20 +1649,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-@media (min-width: 1024px) {
-   {
-    background-attachment: fixed;
-  }
 
-  #about {
-    background-attachment: fixed;
-  }
 
-  #subscribe {
-    background-attachment: fixed;
-  }
-}
 
+/* work on this */
 @media (max-width: 1199px) {
   #header .container {
     max-width: 100%;
@@ -1671,6 +1661,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   .nav-menu a {
     padding: 8px 4px;
   }
+
+  .contact-key {
+    font-family: 'Rubic'; 
+    text-align:center
+}
+
+.contact-value {
+    text-align:center
+}
 }
 
 @media (max-width: 991px) {
@@ -1771,4 +1770,12 @@ h6 {
 
 .footer-item p{
     margin: 0 10px 15px 0;
+}
+
+.contact-value p{
+    font-family: "Merriweather";
+    font-size: 16px;
+}
+.contact-key {
+    font-family: 'Rubic'; 
 }

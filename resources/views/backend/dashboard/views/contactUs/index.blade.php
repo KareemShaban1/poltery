@@ -110,8 +110,10 @@
                 dom: 'Bfrtip',
                 buttons: [{
                         extend: 'excelHtml5',
+                        text: 'Export to excel',
+                        tile: 'Emails',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4]
+                            columns: [0, 1, 2, 3, 5]
                         }
                     },
 

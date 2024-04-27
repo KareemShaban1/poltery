@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Traits\UploadImageTrait;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    use UploadImageTrait;
     /**
      * Display a listing of the resource.
      */
@@ -27,13 +29,19 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Assuming maximum file size is 2MB
         ]);
+
+
+        $imagePath = $this->processImage($request, 'image', 'users');
 
         // Create a new user instance
         $user = new User();
         $user->name = $validatedData['name'];
         $user->email = $validatedData['email'];
         $user->password = Hash::make($validatedData['password']);
+        $user->image = $imagePath; // Assign the image path to the user's image field
+
         $user->save();
 
         // Redirect back with success message
@@ -48,10 +56,14 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $id,
             'password' => 'nullable|string|min:8',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Assuming maximum file size is 2MB
+
         ]);
 
         // Find the user by ID
         $user = User::findOrFail($id);
+
+        $imagePath = $this->processImage($request, 'image', 'users');
 
         // Update the user details
         $user->name = $validatedData['name'];
@@ -61,6 +73,8 @@ class UserController extends Controller
         if ($request->filled('password')) {
             $user->password = Hash::make($validatedData['password']);
         }
+
+        $user->image = $imagePath; // Assign the image path to the user's image field
 
         $user->save();
 

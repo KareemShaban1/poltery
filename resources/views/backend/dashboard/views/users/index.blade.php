@@ -43,7 +43,9 @@
                             <tr>
 
                                 <th>{{ trans('backend.Id') }}</th>
+                                <th>{{ trans('backend.Image') }}</th>
                                 <th>{{ trans('backend.Name') }}</th>
+
                                 <th>{{ trans('backend.Email') }}</th>
                                 <th>{{ trans('backend.Actions') }}</th>
                             </tr>
@@ -53,6 +55,9 @@
                                 <tr>
 
                                     <td>{{ $user->id }}</td>
+                                    <td>
+                                        <img src="{{ $user->image_url }}" height="50" width="50" alt="">
+                                    </td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
 

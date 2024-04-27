@@ -4,8 +4,8 @@
     @include('frontend.layouts.default_seo_data')
 @endsection
 @php
-    $bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Contact BG')->first();
-    $mob_bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Contact Mob BG')->first();
+    $bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Contact Us BG')->first();
+    $mob_bg_image = App\Models\Image::where('type', 'main_image')->where('title', 'Contact Us Mob BG')->first();
 
 @endphp
 @push('styles')
@@ -71,8 +71,9 @@
                         <div class="col-md-4">
                             <div class="contact-address">
                                 <i class="ion-ios-location-outline"></i>
-                                <h3 style="font-family: 'Rubic';">{{ trans('frontend.Address') }}</h3>
-                                <div>
+                                <h3 class="contact-key">
+                                    {{ trans('frontend.Address') }}</h3>
+                                <div class="contact-value">
                                     {!! $website_info['Address'] ?? '' !!}
                                 </div>
                             </div>
@@ -81,8 +82,9 @@
                         <div class="col-md-4">
                             <div class="contact-phone">
                                 <i class="ion-ios-telephone-outline"></i>
-                                <h3 style="font-family: 'Rubic';">{{ trans('frontend.Phone') }}</h3>
-                                <div style="direction: ltr">
+                                <h3 class="contact-key">
+                                    {{ trans('frontend.Phone') }}</h3>
+                                <div style="direction: ltr" class="contact-value">
                                     {!! $website_info['Phone'] ?? '' !!}
                                 </div>
                             </div>
@@ -91,8 +93,9 @@
                         <div class="col-md-4">
                             <div class="contact-email">
                                 <i class="ion-ios-email-outline"></i>
-                                <h3 style="font-family: 'Rubic';">{{ trans('frontend.Email') }}</h3>
-                                <div style="direction: ltr">
+                                <h3 class="contact-key">
+                                    {{ trans('frontend.Email') }}</h3>
+                                <div style="direction: ltr" class="contact-value">
                                     {!! $website_info['Email'] ?? '' !!}
                                 </div>
                             </div>
